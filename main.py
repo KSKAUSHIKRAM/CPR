@@ -11,11 +11,10 @@ from kivy.core.window import Window
 from kivy.uix.anchorlayout import AnchorLayout
 import speech_recognition as sr
 
-
+Window.size=(800,600)
 class MyApp(App):
     def build(self):
         Window.clearcolor = (1, 1, 1, 1)  # <--- white background
-
         self.layout = BoxLayout(orientation='vertical', padding=10, spacing=20)
 
         self.text_input = TextInput(
