@@ -9,6 +9,7 @@ from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 from kivy.graphics import Color, Rectangle
 from kivy.core.window import Window
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.image import Image
@@ -28,8 +29,9 @@ categories = [
     "food", "animals", "clothes", "emotions", "body", "sports", "school", "family",
     "nature", "transport", "weather", "home", "health", "jobs", "colors", "toys"
 ]
-class AACApp(App):
-    def build(self):
+class AACApp(Screen):
+    def __init__(self,**kwargs):
+        super().__init__(**kwargs)
         self.showing_category = False
         root = FloatLayout()  # ✅ Root: allows overlay
         # Main left/right panel as before
@@ -64,8 +66,7 @@ class AACApp(App):
             ("Mic", self.start_voice_thread),
             ("Retry", self.on_retry_press),
             ("Speak", self.on_speak_press),
-            ("Display", self.process_input),
-            ("Exit", self.stop)
+            ("Display", self.process_input)
         ]:
             btn = Button(text=label, font_size='20sp', size_hint=(1, None), height=80)
             btn.bind(on_press=callback)
@@ -83,7 +84,7 @@ class AACApp(App):
         root.add_widget(self.virtual_keyboard)
 
         self.call_populate_async()
-        return root
+        self.add_widget(root)
 
     def on_focus(self, instance, value):
         """ Show/hide keyboard based on focus """
@@ -152,8 +153,9 @@ class AACApp(App):
         self.back_button.disabled = True
         self.showing_category = False
 
-    def on_enter(self, instance):
-        print("Entered:", self.text_input.text)
+    def on_enter(self):
+        #print("Entered:", self.text_input.text)
+        print("AAC screen loaded")
 
     def add_result_widget(self, word, url):
         widget = ClickableImage(word, url)
@@ -206,5 +208,3 @@ class AACApp(App):
     def exit(self, instance):
         App.get_running_app().stop()
 
-if __name__ == '__main__':
-    AACApp().run()
