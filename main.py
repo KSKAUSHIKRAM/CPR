@@ -22,7 +22,7 @@ import requests
 import speech_recognition as sr
 from ClickableImage import *
 from Virtualkeyboard import * 
-
+from splashscreen import Myapp
 Window.size = (1024, 600)
 
 categories = [
@@ -66,7 +66,8 @@ class AACApp(Screen):
             ("Mic", self.start_voice_thread),
             ("Retry", self.on_retry_press),
             ("Speak", self.on_speak_press),
-            ("Display", self.process_input)
+            ("Display", self.process_input),
+            ("Exit",self.exit_app)
         ]:
             btn = Button(text=label, font_size='20sp', size_hint=(1, None), height=80)
             btn.bind(on_press=callback)
@@ -85,6 +86,8 @@ class AACApp(Screen):
 
         self.call_populate_async()
         self.add_widget(root)
+    def exit_app(self, instance):
+        App.get_running_app().stop()
 
     def on_focus(self, instance, value):
         """ Show/hide keyboard based on focus """
@@ -98,7 +101,7 @@ class AACApp(Screen):
     def call_populate_async(self):
         self.show_loading_spinner()
         threading.Thread(target=self.populate_category_grid, daemon=True).start()
-
+    
     def populate_category_grid(self):
         widgets_data = []
 
@@ -113,14 +116,16 @@ class AACApp(Screen):
         #self.loading_image = Image(source='loading.gif')  # Can be static or animated
         #self.image_grid.add_widget(self.loading_image)
         self.image_grid.clear_widgets()
-        anchor = AnchorLayout(anchor_x='center', anchor_y='center',size_hint=(2,1))
+        #anchor = AnchorLayout(anchor_x='center', anchor_y='center',size_hint=(0.4,0.3))
+        root=FloatLayout()
         self.loading_image = Image(
             source='loading.gif',
-            size_hint=(None, None),
-            size=(150, 150),  # You can change this size as needed
+            size_hint=(0.3, 0.2),
+            pos_hint={"center_x":0.2,"center_y":0.5},
+              anim_delay=0.05  # You can change this size as needed
         )
-        anchor.add_widget(self.loading_image)
-        self.image_grid.add_widget(anchor)
+        root.add_widget(self.loading_image)
+        self.image_grid.add_widget(root)
 
     def create_widgets_on_main_thread(self, widgets_data):
         widgets = []
@@ -173,19 +178,26 @@ class AACApp(Screen):
             url = get_arasaac_image_url(token)
             if url:
                 self.add_result_widget(token, url)
-
+    def set_input_text(self,text):
+        self.text_input.text=text
     def start_voice_thread(self, instance):
         threading.Thread(target=self.capture_voice, daemon=True).start()
 
     def capture_voice(self):
+        #Clock.schedule_once(lambda dt:self.set_input_text("Say Something"),1)
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Say something...")
+            #self.text_input.text="Say something"
             audio = r.listen(source)
         try:
             text = r.recognize_google(audio)
+            print(text)
+            #Clock.schedule_once(lambda dt:self.set_input_text(text),1)
             Clock.schedule_once(lambda dt: setattr(self.text_input, 'text', text))
+            return
         except Exception as e:
+            Clock.schedule_once(lambda dt:self.set_input_text("Could not capture your voice"))
             print(f"Voice error: {e}")
 
     def on_retry_press(self, instance):
@@ -206,5 +218,5 @@ class AACApp(Screen):
             os.remove("tmp.mp3")
 
     def exit(self, instance):
-        App.get_running_app().stop()
+        App.stop()
 
