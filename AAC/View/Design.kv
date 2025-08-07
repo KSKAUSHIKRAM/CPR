@@ -1,0 +1,73 @@
+<ImageLabelButton>:
+    orientation: 'vertical'
+    spacing: 5
+    size_hint: None, None
+    width: 140
+    height: 150
+
+    Image:
+        id: img
+        source: root.image_source
+        size_hint: 1, None
+        height: 100
+        allow_stretch: True
+
+    Label:
+        id: lbl
+        text: root.text
+        font_size: '16sp'
+        color: 1, 1, 1, 1
+        size_hint: 1, None
+        height: 40
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.size
+
+<SplashScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 10
+
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            size_hint: 1, None
+            height: 250
+            Image:
+                source: 'logo.png'
+                size_hint: None, None
+                width: 600
+                height: 600
+                allow_stretch: True
+
+        Label:
+            text: 'Please select your current location:'
+            font_size: '20sp'
+            color: 1, 1, 1, 1
+            size_hint: 1, None
+            height: 40
+
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            size_hint: 1, None
+            height: 170
+
+            BoxLayout:
+                id: location_row
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint: None, None
+                height: 160
+                width: self.minimum_width
+
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+
+        Label:
+            text: 'Welcome to the CPR-SAT!'
+            font_size: '24sp'
+            color: 1, 1, 1, 1
