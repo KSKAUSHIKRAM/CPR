@@ -19,7 +19,7 @@ import speech_recognition as sr
 import shelve
 import time
 from kivy.properties import StringProperty
-from Control.Controller import  insert
+from Control.Database_helper import  Database_helper
 # --- Configuration ---
 Window.size = (1024, 600)
 Window.clearcolor = (1, 1, 1, 1)
@@ -132,11 +132,13 @@ class AACApp(App):
     def __init__(self, location_label, **kwargs):
         super().__init__(**kwargs)
         self.location_label = location_label
+        self.db_help = Database_helper()  
+
 
     def build(self):
         root = FloatLayout()
         main = BoxLayout(orientation='horizontal')
-
+        self.g=""
         # --- Left panel ---
         self.left = BoxLayout(orientation='vertical', spacing=0, padding=0)
         with self.left.canvas.before:
@@ -234,15 +236,18 @@ class AACApp(App):
     # --- Functionality ---
     def on_enter(self, instance): self.process_text(None)
     def process_text(self, _):
+        
         tokens = self.text_input.text.lower().split()
         self.result_grid.clear_widgets()
         for token in tokens:
+            print(token)
             url = get_arasaac_image_url(token)
             if url:
                 widget = ClickableImage(token, url, bg_color=(1,1,0.8,1))
+                self.g+=token+" "
                 widget.callback = lambda *_: self.result_grid.remove_widget(widget)
                 self.result_grid.add_widget(widget)
-        insert(tokens,self.location_label)
+
     def load_categories(self):
         for cat in categories:
             Clock.schedule_once(lambda dt, cat=cat: self.add_placeholder(cat))
@@ -272,7 +277,8 @@ class AACApp(App):
         widget = ClickableImage(label, url, bg_color=(1,1,0.8,1))
         widget.callback = lambda *_: self.result_grid.remove_widget(widget)
         self.result_grid.add_widget(widget)
-    def recommend(self, _): pass
+    def recommend(self, _):
+           self.db_help.recommend(self.location_label)
     def start_voice_thread(self, _): threading.Thread(target=self.capture_voice, daemon=True).start()
     def capture_voice(self):
         r = sr.Recognizer()
@@ -284,11 +290,13 @@ class AACApp(App):
         except Exception as e:
             print(f"Voice error: {e}")
     def speak_text(self, _):
-        text = self.text_input.text.strip()
+        temp_text=self.g
+        text = self.g.strip()
+        tmp = "tmp.mp3"
         if text:
             try:
+                # Try converting text to speech
                 tts = gTTS(text=text, lang='en', slow=False)
-                tmp = "tmp.mp3"
                 tts.save(tmp)
                 pygame.mixer.init()
                 pygame.mixer.music.load(tmp)
@@ -296,9 +304,19 @@ class AACApp(App):
                 while pygame.mixer.music.get_busy():
                     pygame.time.Clock().tick(10)
                 pygame.mixer.quit()
-                os.remove(tmp)
             except Exception as e:
+                # If network fails or any TTS error occurs, just log it
                 print(f"TTS error: {e}")
+
+            finally:
+                # Insert only if there is still a prompt
+                if self.g.strip():
+                    temp_text=temp_text.rstrip()
+                    self.db_help.insert(temp_text, self.location_label)
+                self.g = ""  # clear after saving
+                os.remove(tmp)
+
+
     def clear_all(self, _):
         self.text_input.text = ""
         self.result_grid.clear_widgets()
