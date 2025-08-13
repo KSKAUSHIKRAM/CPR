@@ -2,7 +2,8 @@ import os
 import sqlite3
 from datetime import datetime
 from sklearn.feature_extraction.text import TfidfVectorizer
-
+from collections import Counter
+import numpy as np
 class Database:
     def __init__(self, db_name="aac.db"):
         self.base_dir = os.path.dirname(os.path.abspath(__file__))  # Current file's directory
@@ -67,25 +68,42 @@ class Database:
         )
         rows = self.cursor.fetchall()
         sentences = [row[0] for row in rows]
+        sentence_counts = Counter(sentences)
+
+# Extract unique sentences to match TF-IDF order
+        unique_sentences = list(sentence_counts.keys())
         if not sentences:
             print("No sentences found.")
             return
 
     # Calculate TF-IDF
         vectorizer = TfidfVectorizer()
-        tfidf_matrix = vectorizer.fit_transform(sentences)
-
+        tfidf_matrix = vectorizer.fit_transform(unique_sentences)
+        tfidf_sums = tfidf_matrix.sum(axis=1).A1
     # Get feature names (words)
-        feature_names = vectorizer.get_feature_names_out()
+    #feature_names = vectorizer.get_feature_names_out()
+        freq_values = np.array([sentence_counts[s] for s in unique_sentences], dtype=float)
+        freq_norm = (freq_values - freq_values.min()) / (freq_values.max() - freq_values.min() + 1e-9)
+        tfidf_norm = (tfidf_sums - tfidf_sums.min()) / (tfidf_sums.max() - tfidf_sums.min() + 1e-9)
+
+# 5. Combine scores with alpha weight (0 ≤ alpha ≤ 1)
+        alpha = 0.6
+        combined_scores = alpha * freq_norm + (1 - alpha) * tfidf_norm
+
+# 6. Rank sentences by combined score descending
+        ranked_indices = np.argsort(combined_scores)[::-1]
 
     # Display TF-IDF for each sentence
-        for i, sentence in enumerate(sentences):
-            print(f"\nSentence: {sentence}")
-            for col in tfidf_matrix[i].nonzero()[1]:
-                print(f"  {feature_names[col]}: {tfidf_matrix[i, col]:.4f}")
+        """ for i, sentence in enumerate(sentences):
+                print(f"\nSentence: {sentence}")
+                for col in tfidf_matrix[i].nonzero()[1]:
+                    print(f"  {feature_names[col]}: {tfidf_matrix[i, col]:.4f}")
 
             for row in rows:
-                print(row)
+                print(row)"""
+        for idx in ranked_indices:
+            print(f"{combined_scores[idx]:.4f}  {unique_sentences[idx]} (freq: {freq_values[idx]}, tfidf_sum: {tfidf_sums[idx]:.4f})")
+
 
     def on_close(self):
         if hasattr(self, 'conn') and self.conn:
