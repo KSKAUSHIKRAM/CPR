@@ -19,7 +19,22 @@ import speech_recognition as sr
 import shelve
 import time
 from kivy.properties import StringProperty
-from Control.Database_helper import  Database_helper
+from Control.Controller import  insert
+import io
+import wave
+import socket
+import subprocess
+from vosk import Model, KaldiRecognizer
+import pyaudio, json
+import requests
+import tempfile
+import audioop
+from kivy.properties import StringProperty
+from Control.Database_helper import  Database_helper      
+from kivy.config import Config
+Config.set('graphics', 'resizable', False)
+Config.set('graphics', 'width', '1024')
+Config.set('graphics', 'height', '600')
 # --- Configuration ---
 Window.size = (1024, 600)
 Window.clearcolor = (1, 1, 1, 1)
@@ -30,6 +45,7 @@ categories = [
 ]
 CACHE_DB = "cache_urls.db"
 
+           
 # --- Helper functions ---
 def get_arasaac_image_url(word):
     with shelve.open(CACHE_DB) as cache:
@@ -87,39 +103,16 @@ class ClickableImage(ButtonBehavior, BoxLayout):
         if self.callback:
             self.callback(self.label.text, self.img.source)
 
-class ImageLabelButton(ButtonBehavior, BoxLayout):
+class ImageLabelButton_2(ButtonBehavior, BoxLayout):
     image_source = StringProperty('')
     text = StringProperty('')
 
     def __init__(self, img_source, text, callback=None, **kwargs):
-        super().__init__(orientation='vertical', spacing=2, size_hint=(1, None), height=80,**kwargs)
+        super().__init__(orientation='vertical', spacing=2, size_hint=(1, None), height=50,**kwargs)
         self.image_source = img_source
         self.text = text
         self.callback = callback
 
-        # Image takes 70% height
-        img = Image(
-            source=img_source if os.path.exists(img_source) else 'View/icons/placeholder.png',
-            size_hint=(1, 0.2),
-            allow_stretch=True,
-        keep_ratio=True,
-        size_hint_y=0.6
-        )
-        #img.size_hint=(1,0.4)
-        lbl = Label(
-            text=text,
-            size_hint=(1, 0.3),
-            halign='center',
-            valign='middle',
-            color=(0, 0, 0, 1),
-            font_size='14sp',
-            size_hint_y=0.4
-        )
-        #lbl.size_hint=(1,0.6)
-        lbl.bind(size=lbl.setter('text_size'))
-
-        self.add_widget(img)
-        self.add_widget(lbl)
 
     def on_press(self):
         if self.callback:
@@ -132,10 +125,14 @@ class AACApp(App):
     def __init__(self, location_label, **kwargs):
         super().__init__(**kwargs)
         self.location_label = location_label
-        self.db_help = Database_helper()  
+        self.listening = False
+        self.r = None
+        self.record_thread = None
+        self.audio_data = None  # Store the captured audio
 
 
     def build(self):
+        self.db_help=Database_helper()
         root = FloatLayout()
         main = BoxLayout(orientation='horizontal')
         self.g=""
@@ -193,12 +190,12 @@ class AACApp(App):
 
         # --- Right panel with new order ---
         self.right = BoxLayout(orientation='vertical',
-    size_hint_x=None,
-    height=50,
-    width=120,  # enough width for icons + text
-    spacing=10,
-    padding=[5,10,5,10]
-)
+            size_hint_x=None,
+            height=50,
+            width=120,  # enough width for icons + text
+            spacing=10,
+            padding=[5,10,5,10]
+        )
         with self.right.canvas.before:
             Color(1, 0.8, 0.9, 1)
             self.right_bg = Rectangle()
@@ -206,16 +203,16 @@ class AACApp(App):
 
         buttons_info = [
             ("View/icons/grid.png", "Browse", lambda _: self.show_all_categories()),
-            ("View/icons/mic.png", "Speak", self.start_voice_thread),
+            ("View/icons/mic.png", "Speak", self.start_voice_capture),
             ("View/icons/recommend.png", "Recommend", self.recommend),
             ("View/icons/try.png", "Try Again", self.clear_all),
-            ("View/icons/display.png", "Display", self.process_text),
+            ("View/icons/display.png", "Display", self.stop_and_recognize),
             ("View/icons/speak.jpg", "Listen", self.speak_text),
             ("View/icons/exit.png", "Exit", self.exit_app)
         ]
         num_buttons=len(buttons_info)
         for icon, text, method in buttons_info:
-            btn = ImageLabelButton(icon, text, callback=method)
+            btn = ImageLabelButton_2(icon, text, callback=method)
             btn.size_hint_y=1/num_buttons
             self.right.add_widget(btn)
 
@@ -235,18 +232,31 @@ class AACApp(App):
 
     # --- Functionality ---
     def on_enter(self, instance): self.process_text(None)
-    def process_text(self, _):
-        
+    def process_text(self, text_source):
+      
+
+        # Get text safely
+        if hasattr(text_source, "text"):
+            text_value = str(text_source.text).strip()
+        else:
+            text_value = str(text_source).strip()
+
+        if not text_value:
+            print("No text to process.")
+            return
+
         tokens = self.text_input.text.lower().split()
         self.result_grid.clear_widgets()
+
         for token in tokens:
-            print(token)
             url = get_arasaac_image_url(token)
             if url:
-                widget = ClickableImage(token, url, bg_color=(1,1,0.8,1))
-                self.g+=token+" "
+                widget = ClickableImage(token, url, bg_color=(1, 1, 0.8, 1))
                 widget.callback = lambda *_: self.result_grid.remove_widget(widget)
                 self.result_grid.add_widget(widget)
+
+        insert(tokens, self.location_label)
+
 
     def load_categories(self):
         for cat in categories:
@@ -278,25 +288,152 @@ class AACApp(App):
         widget.callback = lambda *_: self.result_grid.remove_widget(widget)
         self.result_grid.add_widget(widget)
     def recommend(self, _):
-           self.db_help.recommend(self.location_label)
-    def start_voice_thread(self, _): threading.Thread(target=self.capture_voice, daemon=True).start()
-    def capture_voice(self):
-        r = sr.Recognizer()
-        with sr.Microphone() as src:
-            audio = r.listen(src)
-        try:
-            text = r.recognize_google(audio)
-            Clock.schedule_once(lambda dt: setattr(self.text_input, 'text', text))
-        except Exception as e:
-            print(f"Voice error: {e}")
-    def speak_text(self, _):
-        temp_text=self.g
-        text = self.g.strip()
-        tmp = "tmp.mp3"
-        if text:
+        # built-in for resampling
+        self.db_help.recommend(self.location_label)
+    def start_voice_capture(self, _=None):
+        """Continuously record audio until Display is clicked."""
+        if self.listening:
+            print("Already listening...")
+            return
+
+        self.r = sr.Recognizer()
+        self.listening = True
+        self.audio_buffer = bytearray()
+        self.mic_rate = None  # store actual mic rate
+
+        # Try to find USB mic
+        mic_index = None
+        mics = sr.Microphone.list_microphone_names()
+        for i, name in enumerate(mics):
+            if "USB" in name.upper():
+                mic_index = i
+        print(f"Detected mics: {mics}")
+        print(f"Using mic index: {mic_index if mic_index is not None else 'default'}")
+
+        def record():
             try:
-                # Try converting text to speech
+                with sr.Microphone(device_index=mic_index) as src:
+                    self.mic_rate = src.SAMPLE_RATE  # actual hardware rate
+                    self.r.adjust_for_ambient_noise(src, duration=1)
+                    print(f"Recording at {self.mic_rate} Hz... press Display to stop.")
+                    while self.listening:
+                        audio_chunk = self.r.record(src, duration=1)
+                        self.audio_buffer.extend(audio_chunk.get_raw_data())
+            except Exception as e:
+                print(f"Recording error: {e}")
+            finally:
+                print("Recording thread ended.")
+
+        self.record_thread = threading.Thread(target=record, daemon=True)
+        self.record_thread.start()
+
+    def stop_and_recognize(self, _=None):
+        """Stop capture and recognize speech."""
+        if not self.listening:
+            print("Not recording.")
+            return
+
+        print("Stopping recording...")
+        self.listening = False
+        if self.record_thread and self.record_thread.is_alive():
+            self.record_thread.join()
+
+        if not self.audio_buffer:
+            print("No audio captured.")
+            return
+
+        # Resample to 16 kHz if necessary
+        raw_audio = bytes(self.audio_buffer)
+        target_rate = 16000
+        if self.mic_rate and self.mic_rate != target_rate:
+            raw_audio, _ = audioop.ratecv(raw_audio, 2, 1, self.mic_rate, target_rate, None)
+
+        audio_data = sr.AudioData(raw_audio, sample_rate=target_rate, sample_width=2)
+
+        def is_internet_available():
+            try:
+                requests.get("http://www.google.com", timeout=3)
+                return True
+            except requests.RequestException:
+                return False
+
+        try:
+            if is_internet_available():
+                print("✅ Internet available → Using Google Speech Recognition")
+                text = self.r.recognize_google(audio_data, language="en-IN")
+                
+            else:
+                print("⚠️ No internet → Using Vosk offline recognition")
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp_wav:
+                    with wave.open(tmp_wav.name, "wb") as wf:
+                        wf.setnchannels(1)
+                        wf.setsampwidth(2)
+                        wf.setframerate(target_rate)
+                        wf.writeframes(raw_audio)
+                    wav_path = tmp_wav.name
+
+                model_path = "vosk-model-small-en-us-0.15"
+                if not os.path.exists(model_path):
+                    print(f"Vosk model not found at {model_path}")
+                    return
+
+                model = Model(model_path)
+                rec = KaldiRecognizer(model, target_rate)
+                with wave.open(wav_path, "rb") as wf:
+                    while True:
+                        data = wf.readframes(4000)
+                        if len(data) == 0:
+                            break
+                        if rec.AcceptWaveform(data):
+                            result = json.loads(rec.Result())
+                            text = result.get("text", "")
+
+                os.remove(wav_path)
+
+            print(f"Recognized: {text}")
+            Clock.schedule_once(lambda dt: setattr(self.text_input, 'text', text))
+            self.text_input.text=str(text)
+            self.process_text(str(text))
+
+        except sr.UnknownValueError:
+            print("Could not understand audio.")
+        except sr.RequestError as e:
+            print(f"API error: {e}")
+        except Exception as e:
+            print(f"Speech recognition error: {e}")
+
+
+
+          
+    def is_internet_available(host="8.8.8.8", port=53, timeout=3):
+        """Check if internet is available by trying to connect to a DNS server."""
+        try:
+            socket.setdefaulttimeout(timeout)
+            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
+            return True
+        except socket.error:
+            return False
+
+    def speak_text(self, _):
+        
+        def is_internet_available(host="8.8.8.8", port=53, timeout=3):
+            """Check internet connectivity by trying to reach a DNS server."""
+            try:
+                socket.setdefaulttimeout(timeout)
+                socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
+                return True
+            except socket.error:
+                return False
+
+        text = self.text_input.text.strip()
+        if not text:
+            return
+
+        try:
+            if is_internet_available():
+                print("Internet detected → Using gTTS")
                 tts = gTTS(text=text, lang='en', slow=False)
+                tmp = "tmp.mp3"
                 tts.save(tmp)
                 pygame.mixer.init()
                 pygame.mixer.music.load(tmp)
@@ -304,18 +441,23 @@ class AACApp(App):
                 while pygame.mixer.music.get_busy():
                     pygame.time.Clock().tick(10)
                 pygame.mixer.quit()
-            except Exception as e:
-                # If network fails or any TTS error occurs, just log it
-                print(f"TTS error: {e}")
-
-            finally:
-                # Insert only if there is still a prompt
-                if self.g.strip():
-                    temp_text=temp_text.rstrip()
-                    self.db_help.insert(temp_text, self.location_label)
+                os.remove(tmp)
+            else:
+                print("No internet → Using eSpeak NG")
+                tmp_wav = "tmp.wav"
+                subprocess.run(["espeak-ng", "-v", "en+f3", "-s", "140", "-p", "70", "-w", tmp_wav, text])
+                subprocess.run(["aplay", tmp_wav])
+                os.remove(tmp_wav)
+        except Exception as e:
+            print(f"TTS error: {e}")
+        
+        finally:
+            # Insert only if there is still a prompt
+            if self.g.strip():
+                temp_text=temp_text.rstrip()
+                self.db_help.insert(temp_text, self.location_label)
                 self.g = ""  # clear after saving
                 os.remove(tmp)
-
 
     def clear_all(self, _):
         self.text_input.text = ""

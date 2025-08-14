@@ -5,6 +5,8 @@ Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '1024')
 Config.set('graphics', 'height', '600')
 
+
+
 from kivy.core.window import Window
 from Control.Controller import Execute
 #set window size
