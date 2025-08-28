@@ -1,75 +1,126 @@
+# =========================================================
+# Imports
+# =========================================================
 from kivy.app import App
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
-from kivy.uix.image import AsyncImage, Image
+from kivy.uix.image import AsyncImage
 from kivy.uix.button import ButtonBehavior, Button
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.label import Label
 from kivy.clock import Clock
-from kivy.graphics import Color, RoundedRectangle, Rectangle
+from kivy.graphics import Color, Rectangle
 from kivy.core.window import Window
-import threading
-import os
-import pygame
-from gtts import gTTS
-import requests
-import speech_recognition as sr
-import shelve
-import time
-from kivy.properties import StringProperty
-from Control.Controller import  insert
-import io
-import wave
-import socket
-import subprocess
-from vosk import Model, KaldiRecognizer
-import pyaudio, json
-import requests
-import tempfile
-import audioop
-from kivy.properties import StringProperty
-from Control.Database_helper import  Database_helper      
+from kivy.uix.screenmanager import Screen
 from kivy.config import Config
+from kivy.properties import StringProperty
+from kivy.metrics import dp
+
+import os, re, io, time, json, wave, socket, shelve, pygame, requests, tempfile, subprocess, threading, audioop
+import speech_recognition as sr
+from gtts import gTTS
+import spacy
+
+# Project imports
+from Control.Database_helper import Database_helper
+from View.input_norm import get_suggestions
+
+# =========================================================
+# Window / Global Config
+# =========================================================
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '1024')
 Config.set('graphics', 'height', '600')
-# --- Configuration ---
 Window.size = (1024, 600)
 Window.clearcolor = (1, 1, 1, 1)
 
+CACHE_DB = "cache_urls.db"
 categories = [
     "food", "animals", "clothes", "emotions", "body", "sports", "school", "family",
     "nature", "transport", "weather", "home", "health", "jobs", "colors", "toys"
 ]
-CACHE_DB = "cache_urls.db"
 
-           
-# --- Helper functions ---
+nlp = spacy.load("en_core_web_sm")
+
+# =========================================================
+# NLP / Normalization Helpers
+# =========================================================
+def is_grammatically_valid(sent):
+    doc = nlp(sent)
+    tokens = [t.text.lower() for t in doc]
+    tags   = [t.tag_ for t in doc]
+
+    # ❌ "was" + VB
+    for i, t in enumerate(tokens):
+        if t == "was" and i+1 < len(tokens) and tags[i+1] == "VB":
+            return False
+
+    # ✅ allow "want + NOUN" or "want + VB"
+    for i, t in enumerate(tokens):
+        if t == "want" and i+1 < len(tokens):
+            if tags[i+1] not in {"VB", "NN", "NNS"}:
+                return False
+
+    return True
+
+
+WORD_RE = re.compile(r"[A-Za-z']+")
+
+def all_tokens(sentence: str):
+    return WORD_RE.findall(sentence.lower())
+
+def normalize_input(text: str) -> str:
+    """Lightweight spelling fixes/expansions for AAC inputs."""
+    replacements = {
+        "wa": ["want","was"], "wan": ["want"], "hav": ["have"], "giv": ["give"], 
+        "tak": ["take"], "gat": ["get"], "goe": ["go"], "cum": ["come"], "plz": ["please"],
+        "wat": ["water"], "mil": ["milk"], "ju": ["juice"], "jus": ["juice"], 
+        "bred": ["bread"], "brd": ["bread"], "ric": ["rice"], "frut": ["fruit"], "snak": ["snack"],
+        "clo": ["clothes"], "shoo": ["shoe"], "skul": ["school"], "hous": ["house"], "hom": ["home"],
+        "hpy": ["happy"], "sadn": ["sad"], "angri": ["angry"], "luv": ["love"],
+    }
+    return " ".join([replacements.get(tok, [tok])[0] for tok in text.lower().split()])
+
+FUNCTION_WORDS = {
+    "i","to","the","a","please","me","can","have","is","am","are","on","in","at","for",
+    "of","and","or","it","you","he","she","they","we","this","that","these","those",
+    "with","my","your","his","her","their","our","want","need","go","give","get",
+    "drink","eat","like","let","let's"
+}
+def content_tokens(sentence: str):
+    return [t for t in WORD_RE.findall(sentence.lower()) if t not in FUNCTION_WORDS]
+
+# =========================================================
+# ARASAAC Helpers
+# =========================================================
 def get_arasaac_image_url(word):
+    """Fetch pictogram for a token (with caching)."""
+    key = (word or "").strip().lower()
+    if not key:
+        return ""
     with shelve.open(CACHE_DB) as cache:
-        if word in cache:
-            return cache[word]
-        url = f"https://api.arasaac.org/api/pictograms/en/search/{word}"
+        if key in cache:
+            return cache[key]
         try:
-            response = requests.get(url, timeout=5)
-            data = response.json()
-            if data and isinstance(data, list):
+            resp = requests.get(f"https://api.arasaac.org/api/pictograms/en/search/{key}", timeout=5)
+            data = resp.json()
+            if data:
                 pic_id = data[0]["_id"]
                 img_url = f"https://static.arasaac.org/pictograms/{pic_id}/{pic_id}_500.png"
-                cache[word] = img_url
+                cache[key] = img_url
                 return img_url
         except Exception as e:
             print(f"API error: {e}")
     return ""
 
 def fetch_pictograms(category):
-    url = f"https://api.arasaac.org/api/pictograms/en/search/{category}"
+    """Get pictograms for a category (first 16)."""
     pictos = []
     try:
-        response = requests.get(url, timeout=5)
-        data = response.json()
+        resp = requests.get(f"https://api.arasaac.org/api/pictograms/en/search/{category}", timeout=5)
+        data = resp.json()
         for item in data[:16]:
             label = item.get("keywords", [{}])[0].get("keyword", category)
             pic_id = item["_id"]
@@ -79,13 +130,90 @@ def fetch_pictograms(category):
         print(f"Fetch pictograms failed: {e}")
     return pictos
 
-# --- Custom Widgets ---
+# =========================================================
+# UI Components
+# =========================================================
+class SuggestionRow(BoxLayout):
+    """Row: [horizontal pictos for ALL tokens]  sentence text    [OK]"""
+    def __init__(self, sentence: str, ok_callback, **kwargs):
+        super().__init__(orientation="horizontal", size_hint=(1, None), height=96, spacing=8, padding=(6, 6), **kwargs)
+        self.sentence = sentence
+
+        # Left: horizontal scroller of thumbnails (unlimited)
+        self.pic_scroll = ScrollView(size_hint=(None, 1), width=dp(420),
+                                     do_scroll_x=True, do_scroll_y=False, bar_width=dp(6))
+        self.pic_strip  = BoxLayout(orientation="horizontal", size_hint=(None, 1), spacing=4, padding=(0,0))
+        self.pic_strip.bind(minimum_width=self.pic_strip.setter("width"))
+        self.pic_scroll.add_widget(self.pic_strip)
+        self.add_widget(self.pic_scroll)
+
+        # Middle: sentence text
+        lbl = Label(text=sentence, color=(0,0,0,1), halign="left", valign="middle", size_hint=(1,1))
+        lbl.bind(size=lambda *_: setattr(lbl, "text_size", lbl.size))
+        self.add_widget(lbl)
+
+        # Right: OK
+        ok_btn = Button(text="OK", size_hint=(None, 1), width=dp(80),
+                        background_color=(0, 0.6, 0, 1), color=(1,1,1,1))
+        ok_btn.bind(on_press=lambda *_: ok_callback(sentence))
+        self.add_widget(ok_btn)
+
+    def set_pictos(self, items):
+        """
+        items = list[(label, url_or_empty)] for EVERY token (order preserved).
+        If url is "", render a neutral text chip so the token is still visible.
+        """
+        self.pic_strip.clear_widgets()
+        for label, url in items:
+            if url:
+                if url:
+                    cell = BoxLayout(
+                        orientation="vertical",
+                        size_hint=(None, None),  # ❌ remove stretch
+                        size=(dp(56), self.height - 12),  # ✅ fixed height = row height - padding
+                        padding=0,
+                        spacing=2
+                    )
+
+                    thumb = AsyncImage(
+                        source=url,
+                        allow_stretch=True,
+                        keep_ratio=True,
+                        size_hint=(1, 0.75)
+                    )
+
+                    lbl = Label(
+                        text=label.capitalize(),
+                        color=(0,0,0,1),
+                        size_hint=(1, 0.25),
+                        font_size=dp(14),
+                        halign="center", valign="middle"
+                    )
+                    lbl.bind(size=lambda *_: setattr(lbl, "text_size", lbl.size))
+
+                    cell.add_widget(thumb)
+                    cell.add_widget(lbl)
+
+
+            else:
+                # fallback text chip when ARASAAC has no pictogram
+                chip = BoxLayout(orientation="vertical", size_hint=(None, 1),
+                                 width=dp(56), padding=2, spacing=0)
+                with chip.canvas.before:
+                    Color(0.9, 0.9, 0.9, 1)
+                    rect = Rectangle(size=chip.size, pos=chip.pos)
+                chip.bind(size=lambda *_: setattr(rect, "size", chip.size),
+                          pos=lambda *_: setattr(rect, "pos", chip.pos))
+                txt = Label(text=label.capitalize(), color=(0,0,0,1),
+                            halign="center", valign="middle")
+                txt.bind(size=lambda *_: setattr(txt, "text_size", txt.size))
+                chip.add_widget(txt)
+                cell = chip
+            self.pic_strip.add_widget(cell)
+
 class ClickableImage(ButtonBehavior, BoxLayout):
-    def __init__(self, label_text, img_url, callback=None, bg_color=(0.8,1,0.8,1), **kwargs):
+    def __init__(self, label_text, img_url, callback=None, **kwargs):
         super().__init__(orientation='vertical', size_hint=(None, None), size=(100, 100), **kwargs)
-        with self.canvas.before:
-            Color(*bg_color)
-            self.bg = RoundedRectangle(size=self.size, pos=self.pos, radius=[10])
         self.img = AsyncImage(source=img_url, allow_stretch=True, keep_ratio=True, size_hint=(1, 0.8))
         self.label = Label(text=label_text.capitalize(), size_hint=(1, 0.2),
                            color=(0,0,0,1), halign='center')
@@ -93,11 +221,6 @@ class ClickableImage(ButtonBehavior, BoxLayout):
         self.add_widget(self.img)
         self.add_widget(self.label)
         self.callback = callback
-        self.bind(pos=self._update_bg, size=self._update_bg)
-
-    def _update_bg(self, *args):
-        self.bg.size = self.size
-        self.bg.pos = self.pos
 
     def on_press(self):
         if self.callback:
@@ -108,247 +231,429 @@ class ImageLabelButton_2(ButtonBehavior, BoxLayout):
     text = StringProperty('')
 
     def __init__(self, img_source, text, callback=None, **kwargs):
-        super().__init__(orientation='vertical', spacing=2, size_hint=(1, None), height=50,**kwargs)
+        super().__init__(orientation='vertical', spacing=2, size_hint=(1, None), height=60, **kwargs)
         self.image_source = img_source
         self.text = text
         self.callback = callback
 
-
     def on_press(self):
         if self.callback:
             self.callback(None)
+# =========================================================
+# Main AAC Screen
+# =========================================================
+class AACScreen(Screen):
+    """Main AAC interface: categories, suggestions, voice capture, TTS."""
 
-
-
-# --- Main App ---
-class AACApp(App):
-    def __init__(self, location_label, **kwargs):
+    def __init__(self, location_label="Default", **kwargs):
         super().__init__(**kwargs)
         self.location_label = location_label
+        self._built = False
+        Clock.schedule_once(lambda dt: self.build_ui())  
+
+    # -----------------------------------------------------
+    # UI BUILDING
+    # -----------------------------------------------------
+    def build_ui(self):
+        if self._built:
+            return
+        self._built = True
+
         self.listening = False
         self.r = None
         self.record_thread = None
-        self.audio_data = None  # Store the captured audio
+        self.audio_buffer = None
+        self.db_help = Database_helper()
+        self.g = ""
 
-
-    def build(self):
-        self.db_help=Database_helper()
+        # --- Root Layout ---
         root = FloatLayout()
         main = BoxLayout(orientation='horizontal')
-        self.g=""
-        # --- Left panel ---
-        self.left = BoxLayout(orientation='vertical', spacing=0, padding=0)
-        with self.left.canvas.before:
-            Color(0.95, 0.95, 0.95, 1)
-            self.left_bg = Rectangle()
-        self.left.bind(pos=self.update_left_bg, size=self.update_left_bg)
+        root.add_widget(main)
+        self.add_widget(root)
 
-        self.text_input = TextInput(hint_text="Type...", multiline=False, size_hint=(1,None), height=60)
-        self.text_input.bind(on_text_validate=self.on_enter)
+        # --- Panels ---
+        right_panel = BoxLayout(orientation='vertical', size_hint=(0.1, 1), spacing=5, padding=5)
+        left_panel  = BoxLayout(orientation='vertical', size_hint=(0.9, 1))
 
-        scroll = ScrollView(size_hint=(1,None), height=100)
-        self.result_grid = GridLayout(rows=1, spacing=1, size_hint_x=None, height=150)
+        main.add_widget(left_panel)
+        main.add_widget(right_panel)
+
+        # --- Top Input Bar (Yellow) ---
+        top_bar = BoxLayout(size_hint=(1, None), height=60, padding=5, spacing=5)
+        with top_bar.canvas.before:
+            Color(1, 1, 0.7, 1)
+            self.rect_top = Rectangle(size=top_bar.size, pos=top_bar.pos)
+        top_bar.bind(size=lambda _, val: setattr(self.rect_top, 'size', val),
+                     pos=lambda _, val: setattr(self.rect_top, 'pos', val))
+
+        self.text_input = TextInput(hint_text="Type...", multiline=False, size_hint=(0.85, 1))
+        go_btn = Button(text="Go", size_hint=(0.15, 1))
+        go_btn.bind(on_press=lambda x: self.on_go_clicked())
+
+        top_bar.add_widget(self.text_input)
+        top_bar.add_widget(go_btn)
+        left_panel.add_widget(top_bar)
+
+        # --- Result Grid (Light) ---
+        scroll = ScrollView(size_hint=(1, None), height=100)
+        with scroll.canvas.before:
+            Color(1, 1, 0.9, 1)  # light cream
+            self.rect_scroll = Rectangle(size=scroll.size, pos=scroll.pos)
+        scroll.bind(size=lambda _, val: setattr(self.rect_scroll, 'size', val),
+                    pos=lambda _, val: setattr(self.rect_scroll, 'pos', val))
+
+        self.result_grid = GridLayout(rows=1, spacing=5, size_hint_x=None, height=100)
         self.result_grid.bind(minimum_width=self.result_grid.setter('width'))
         scroll.add_widget(self.result_grid)
-        with scroll.canvas.before:
-            Color(1, 1, 0.8, 1)
-            self.display_bg = RoundedRectangle(radius=[10])
-        scroll.bind(pos=self.update_display_bg, size=self.update_display_bg)
+        left_panel.add_widget(scroll)
 
-        self.image_grid = GridLayout(cols=8, spacing=[10,15], size_hint=(1,1), padding=[10,25,10,0])
+        # --- Content Area (switches between Categories and Suggestions) ---
+        self.content_area = BoxLayout(orientation='vertical', size_hint=(1, 1))
+        with self.content_area.canvas.before:
+            Color(0.8, 1, 0.8, 1)  # keep green always
+            self.rect_content = Rectangle(size=self.content_area.size, pos=self.content_area.pos)
+        self.content_area.bind(size=lambda _, v: setattr(self.rect_content, 'size', v),
+                               pos=lambda _, v: setattr(self.rect_content, 'pos', v))
+        left_panel.add_widget(self.content_area)
+
+        # Category view (green): ScrollView holding image_grid
+        self.image_grid = GridLayout(cols=8, spacing=10, padding=10, size_hint_y=None)
+        self.image_grid.bind(minimum_height=self.image_grid.setter('height'))
         with self.image_grid.canvas.before:
-            Color(0.8, 1, 0.8, 1)
-            self.category_bg = RoundedRectangle(radius=[10])
-        self.image_grid.bind(pos=self.update_category_bg, size=self.update_category_bg)
+            Color(0.8, 1, 0.8, 1)  # green
+            self.rect_grid = Rectangle(size=self.image_grid.size, pos=self.image_grid.pos)
+        self.image_grid.bind(size=lambda _, val: setattr(self.rect_grid, 'size', val),
+                             pos=lambda _, val: setattr(self.rect_grid, 'pos', val))
 
-        self.left.add_widget(self.text_input)
-        self.left.add_widget(scroll)
-        self.left.add_widget(self.image_grid)
+        self.category_scroll = ScrollView(size_hint=(1, 1), do_scroll_x=False, do_scroll_y=True)
+        self.category_scroll.add_widget(self.image_grid)
 
-        # --- Taskbar ---
-        self.taskbar = BoxLayout(orientation='horizontal', size_hint=(1,None), height=30, padding=5, spacing=5)
+        # Suggestions view (also green): ScrollView holding sug_list
+        self.sug_scroll = ScrollView(size_hint=(1, 1), do_scroll_x=False, do_scroll_y=True)
+        with self.sug_scroll.canvas.before:
+            Color(0.8, 1, 0.8, 1)   # green
+            self.rect_sug = Rectangle(size=self.sug_scroll.size, pos=self.sug_scroll.pos)
+        self.sug_scroll.bind(size=lambda _, val: setattr(self.rect_sug, 'size', val),
+                             pos=lambda _, val: setattr(self.rect_sug, 'pos', val))
+
+        self.sug_list = BoxLayout(orientation="vertical", spacing=6, padding=6, size_hint_y=None)
+        self.sug_list.bind(minimum_height=self.sug_list.setter("height"))
+        self.sug_scroll.add_widget(self.sug_list)
+
+        # Initially show categories
+        self.content_area.add_widget(self.category_scroll)
+
+        # --- Bottom Taskbar (Black) ---
+        self.taskbar = BoxLayout(orientation='horizontal', size_hint=(1, None), height=30)
         with self.taskbar.canvas.before:
-            Color(0.2,0.2,0.2,1)
-            self.taskbar_bg = Rectangle()
-        self.taskbar.bind(pos=self.update_taskbar_bg, size=self.update_taskbar_bg)
+            Color(0, 0, 0, 1)
+            self.rect_task = Rectangle(size=self.taskbar.size, pos=self.taskbar.pos)
+        self.taskbar.bind(size=lambda _, val: setattr(self.rect_task, 'size', val),
+                          pos=lambda _, val: setattr(self.rect_task, 'pos', val))
 
-        self.back_button = Button(
-            text='Back', size_hint=(None,1), width=60, background_normal='', background_color=(1,0,0,1),
-            color=(1,1,1,1)
+        # Back button (hidden initially)
+        self.back_btn = Button(
+            text="Back",
+            size_hint=(None, 1),
+            width=80,
+            background_normal='',        # 🔑 removes dark default image
+            background_down='',          # 🔑 remove pressed image too
+            background_color=(1, 0, 0, 1),  # bright pure red
+            color=(1, 1, 1, 1)           # white text
         )
-        self.back_button.bind(on_press=self.go_back)
-        self.back_button.opacity = 0
-        self.back_button.disabled = True
 
-        self.task_label = Label(text=f"Location: {self.location_label} | Time: {time.strftime('%H:%M:%S')}",
-                                color=(1,1,1,1), halign='center')
+        self.back_btn.opacity = 0
+        self.back_btn.disabled = True
+        self.back_btn.bind(on_press=lambda x: self.show_all_categories())
+
+        # Task label (clickable to go home)
+        self.task_label = Button(
+            text=f"Location: {self.location_label} | Time: {time.strftime('%H:%M:%S')}",
+            size_hint=(1, 1),
+            background_color=(0, 0, 0, 1),
+            color=(1, 1, 1, 1),
+            halign="left",
+            valign="middle"
+        )
+        self.task_label.bind(on_press=self.go_to_firstscreen)
+
         Clock.schedule_interval(self.update_time, 1)
 
-        self.taskbar.add_widget(self.back_button)
+        self.taskbar.add_widget(self.back_btn)
         self.taskbar.add_widget(self.task_label)
-        self.left.add_widget(self.taskbar)
+        left_panel.add_widget(self.taskbar)
 
-        # --- Right panel with new order ---
-        self.right = BoxLayout(orientation='vertical',
-            size_hint_x=None,
-            height=50,
-            width=120,  # enough width for icons + text
-            spacing=10,
-            padding=[5,10,5,10]
-        )
-        with self.right.canvas.before:
-            Color(1, 0.8, 0.9, 1)
-            self.right_bg = Rectangle()
-        self.right.bind(pos=self.update_right_bg, size=self.update_right_bg)
-
+        # --- Right Buttons ---
         buttons_info = [
             ("View/icons/grid.png", "Browse", lambda _: self.show_all_categories()),
-            ("View/icons/mic.png", "Speak", self.start_voice_capture),
             ("View/icons/recommend.png", "Recommend", self.recommend),
-            ("View/icons/try.png", "Try Again", self.clear_all),
+            ("View/icons/mic.png", "Speak", self.start_voice_capture),
             ("View/icons/display.png", "Display", self.stop_and_recognize),
             ("View/icons/speak.jpg", "Listen", self.speak_text),
+            ("View/icons/try.png", "Try Again", self.clear_all),
             ("View/icons/exit.png", "Exit", self.exit_app)
         ]
-        num_buttons=len(buttons_info)
         for icon, text, method in buttons_info:
             btn = ImageLabelButton_2(icon, text, callback=method)
-            btn.size_hint_y=1/num_buttons
-            self.right.add_widget(btn)
+            right_panel.add_widget(btn)
 
-        main.add_widget(self.left)
-        main.add_widget(self.right)
-        root.add_widget(main)
+        # Initial categories load
+        Clock.schedule_once(lambda dt: self.load_categories())
 
-        threading.Thread(target=self.load_categories, daemon=True).start()
-        return root
-
-    # --- Background updates ---
-    def update_left_bg(self, *args): self.left_bg.pos = self.left.pos; self.left_bg.size = self.left.size
-    def update_display_bg(self, *args): self.display_bg.pos = self.result_grid.parent.pos; self.display_bg.size = self.result_grid.parent.size
-    def update_category_bg(self, *args): self.category_bg.pos = self.image_grid.pos; self.category_bg.size = self.image_grid.size
-    def update_right_bg(self, *args): self.right_bg.pos = self.right.pos; self.right_bg.size = self.right.size
-    def update_taskbar_bg(self, *args): self.taskbar_bg.pos = self.taskbar.pos; self.taskbar_bg.size = self.taskbar.size
-
-    # --- Functionality ---
-    def on_enter(self, instance): self.process_text(None)
-    def process_text(self, text_source):
-      
-
-        # Get text safely
-        if hasattr(text_source, "text"):
-            text_value = str(text_source.text).strip()
-        else:
-            text_value = str(text_source).strip()
-
-        if not text_value:
-            print("No text to process.")
-            return
-
-        tokens = self.text_input.text.lower().split()
+    def on_pre_enter(self, *args):
+        if not self._built:
+            self.build_ui()
+        self.task_label.text = f"Location: {self.location_label} | Time: {time.strftime('%H:%M:%S')}"
+        self.text_input.text = ""
         self.result_grid.clear_widgets()
+        self.image_grid.clear_widgets()
+        # Do NOT spawn a thread here that calls load_categories (it already spawns worker)
+        self.load_categories()
 
+
+    # -----------------------------------------------------
+    # CATEGORY HANDLING
+    # -----------------------------------------------------
+    def load_categories(self):
+        """Start async fetch of category icons; render on UI thread."""
+        def _worker():
+            items = []
+            for cat in categories:
+                url = get_arasaac_image_url(cat)  # network/IO
+                items.append((cat, url))
+            Clock.schedule_once(lambda dt: self._render_categories(items), 0)
+        threading.Thread(target=_worker, daemon=True).start()
+
+    def _render_categories(self, items):
+        """UI-thread: actually build/add widgets."""
+        self.image_grid.clear_widgets()
+        for cat, url in items:
+            self.image_grid.add_widget(ClickableImage(cat, url, self.show_category))
+        # ensure category view visible
+        self.content_area.clear_widgets()
+        self.content_area.add_widget(self.category_scroll)
+        # back hidden in category root
+        self.back_btn.opacity = 1
+        self.back_btn.disabled = True
+
+    def show_category(self, category, _):
+        def _worker():
+            pictos = fetch_pictograms(category)
+            Clock.schedule_once(lambda dt: self._render_category(category, pictos), 0)
+        threading.Thread(target=_worker, daemon=True).start()
+
+    def _render_category(self, category, pictos):
+        self.image_grid.clear_widgets()
+        for label, url in pictos:
+            self.image_grid.add_widget(ClickableImage(label, url, self.add_to_result))
+        # show category view (already in content_area)
+        self.content_area.clear_widgets()
+        self.content_area.add_widget(self.category_scroll)
+        self.back_btn.opacity = 1
+        self.back_btn.disabled = False
+
+    def show_all_categories(self, _=None):
+        self.load_categories()
+        self.content_area.clear_widgets()
+        self.content_area.add_widget(self.category_scroll)
+        self.back_btn.opacity = 1
+        self.back_btn.disabled = True
+
+    def add_to_result(self, label, url):
+        widget = ClickableImage(label, url)
+        widget.callback = lambda *_: self.result_grid.remove_widget(widget)
+        self.result_grid.add_widget(widget)
+
+    def process_text(self, text_source):
+        if not text_source:
+            return
+        tokens = str(text_source).lower().split()
+        self.result_grid.clear_widgets()
         for token in tokens:
             url = get_arasaac_image_url(token)
             if url:
-                widget = ClickableImage(token, url, bg_color=(1, 1, 0.8, 1))
+                widget = ClickableImage(token, url)
                 widget.callback = lambda *_: self.result_grid.remove_widget(widget)
                 self.result_grid.add_widget(widget)
 
-        insert(tokens, self.location_label)
+    # -----------------------------------------------------
+    # SUGGESTION FLOW
+    # -----------------------------------------------------
+    def on_go_clicked(self):
+        text = self.text_input.text.strip()
+        if not text:
+            return
+        self.sug_list.clear_widgets()
+        threading.Thread(target=self._build_suggestions_async, args=(text,), daemon=True).start()
 
 
-    def load_categories(self):
-        for cat in categories:
-            Clock.schedule_once(lambda dt, cat=cat: self.add_placeholder(cat))
-        for idx, cat in enumerate(categories):
-            url = get_arasaac_image_url(cat)
-            Clock.schedule_once(lambda dt, idx=idx, url=url: self.update_icon(idx, url))
-    def add_placeholder(self, cat):
-        self.image_grid.add_widget(ClickableImage(cat, "", self.show_category, bg_color=(0.8,1,0.8,1)))
-    def update_icon(self, idx, url):
-        widget = self.image_grid.children[::-1][idx]
-        widget.img.source = url
-    def show_category(self, category, _):
-        pictos = fetch_pictograms(category)
-        self.image_grid.clear_widgets()
-        for label, url in pictos:
-            self.image_grid.add_widget(ClickableImage(label, url, self.add_to_result, bg_color=(0.8,1,0.8,1)))
-        self.back_button.opacity = 1
-        self.back_button.disabled = False
-    def show_all_categories(self, _=None):
-        self.go_back(None)
-    def go_back(self, instance):
-        self.image_grid.clear_widgets()
-        threading.Thread(target=self.load_categories, daemon=True).start()
-        self.back_button.opacity = 0
-        self.back_button.disabled = True
-    def add_to_result(self, label, url):
-        widget = ClickableImage(label, url, bg_color=(1,1,0.8,1))
-        widget.callback = lambda *_: self.result_grid.remove_widget(widget)
-        self.result_grid.add_widget(widget)
-    def recommend(self, _):
-        # built-in for resampling
-        self.db_help.recommend(self.location_label)
+    def _build_suggestions_async(self, text: str):
+        try:
+            # ✅ Normalize input before suggestion
+            norm_text = normalize_input(text)
+            sentences = get_suggestions(norm_text, top_k=12) or []
+        except Exception as e:
+            print(f"suggester error: {e}")
+            sentences = []
+    
+        # 🔽 Rule-based filter here
+        # Rule + grammar cleanup
+        valid_sentences = []
+        for s in sentences:
+            if len(all_tokens(s)) < 2:
+                continue
+            if re.search(r"\b(was|is|are)\b$", s):
+                continue
+            if "was milk" in s or "is milk" in s:
+                continue
+            if not is_grammatically_valid(s):  # ✅ grammar filter
+                continue
+            valid_sentences.append(s)
+
+        sentences = valid_sentences
+
+
+        def is_valid_sentence(s):
+            doc = nlp(s)
+            # must have subject
+            if not any(t.dep_ == "nsubj" for t in doc):
+                return False
+            # must not end with bare AUX/VERB
+            if doc[-1].pos_ in {"AUX", "VERB"}:
+                return False
+            return True
+
+        rows = []
+        #print("Sentences:",sentences)
+        for s in sentences:
+            toks = all_tokens(s)  # ALL tokens
+            pic_items = []
+            for t in toks:
+                url = get_arasaac_image_url(t)
+                pic_items.append((t, url))   # keep order; no cap
+            rows.append((s, pic_items))
+            #print("rows:",rows)
+        Clock.schedule_once(lambda dt: self._render_suggestion_rows(rows), 0)
+
+    def _render_suggestion_rows(self, rows):
+        self.sug_list.clear_widgets()
+        for sentence, items in rows:
+            row = SuggestionRow(sentence, ok_callback=self._accept_sentence)
+            row.set_pictos(items)
+            self.sug_list.add_widget(row)
+
+        # switch to suggestions view
+        self.content_area.clear_widgets()
+        self.content_area.add_widget(self.sug_scroll)
+        self.back_btn.opacity = 1
+        self.back_btn.disabled = False
+
+    def _accept_sentence(self, sentence: str):
+        self.result_grid.clear_widgets()
+        toks = all_tokens(sentence)  # ALL tokens
+        for t in toks:
+            url = get_arasaac_image_url(t)
+            if url:
+                widget = ClickableImage(t, url)
+            else:
+                # fallback text-only tile if no icon
+                widget = ClickableImage(t, "")
+                widget.img.source = ""
+                with widget.canvas.before:
+                    Color(0.9, 0.9, 0.9, 1)
+                    bg = Rectangle(size=widget.size, pos=widget.pos)
+                widget.bind(size=lambda *_: setattr(bg, "size", widget.size),
+                            pos=lambda *_: setattr(bg, "pos", widget.pos))
+            widget.callback = lambda *_: self.result_grid.remove_widget(widget)
+            self.result_grid.add_widget(widget)
+        self.text_input.text = sentence
+
+    def go_to_firstscreen(self, *_):
+        app = App.get_running_app()
+        app.sm.current = "splash"
+
+    # -----------------------------------------------------
+    # VOICE CAPTURE / SPEECH RECOGNITION
+    # -----------------------------------------------------
     def start_voice_capture(self, _=None):
-        """Continuously record audio until Display is clicked."""
+        """Capture audio when Speak is pressed, store it for recognition later."""
         if self.listening:
             print("Already listening...")
             return
 
         self.r = sr.Recognizer()
         self.listening = True
-        self.audio_buffer = bytearray()
-        self.mic_rate = None  # store actual mic rate
 
-        # Try to find USB mic
-        mic_index = None
-        mics = sr.Microphone.list_microphone_names()
-        for i, name in enumerate(mics):
-            if "USB" in name.upper():
-                mic_index = i
-        print(f"Detected mics: {mics}")
-        print(f"Using mic index: {mic_index if mic_index is not None else 'default'}")
+        msg = "🎤 Speak now... press Display when done."
+        print(msg)
+        self.text_input.text = msg
 
-        def record():
-            try:
-                with sr.Microphone(device_index=mic_index) as src:
-                    self.mic_rate = src.SAMPLE_RATE  # actual hardware rate
-                    self.r.adjust_for_ambient_noise(src, duration=1)
-                    print(f"Recording at {self.mic_rate} Hz... press Display to stop.")
-                    while self.listening:
-                        audio_chunk = self.r.record(src, duration=1)
-                        self.audio_buffer.extend(audio_chunk.get_raw_data())
-            except Exception as e:
-                print(f"Recording error: {e}")
-            finally:
-                print("Recording thread ended.")
+        with sr.Microphone() as source:
+            self.r.adjust_for_ambient_noise(source, duration=1)
+            print("🎤 Listening...")
+            audio = self.r.listen(source)   # record once
+            self.captured_audio = audio     # store audio for Display button
+            print("✅ Audio captured. Press Display to recognize.")
 
-        self.record_thread = threading.Thread(target=record, daemon=True)
-        self.record_thread.start()
+        self.listening = False
+
 
     def stop_and_recognize(self, _=None):
-        """Stop capture and recognize speech."""
-        if not self.listening:
-            print("Not recording.")
+        """Run recognition on the stored audio."""
+        if not hasattr(self, "captured_audio"):
+            print("⚠️ No audio recorded. Please click Speak first.")
             return
 
-        print("Stopping recording...")
-        self.listening = False
-        if self.record_thread and self.record_thread.is_alive():
-            self.record_thread.join()
+        print("Stopping... recognizing now.")
+        audio = self.captured_audio
+        text = "<gibberish>"
 
-        if not self.audio_buffer:
-            print("No audio captured.")
+        try:
+            result = self.r.recognize_google(audio, language="en-IN", show_all=True)
+
+            if isinstance(result, dict) and "alternative" in result:
+                text = result["alternative"][0].get("transcript", "").strip().lower()
+
+                # optional normalization map for fillers
+                NORMALIZATION_MAP = {
+                    "no": "nah",
+                    "na": "nah",
+                    "ya": "yeah",
+                    "yah": "yeah",
+                    "yep": "yeah",
+                    "o": "oh",
+                    "oops": "oops"
+                }
+                if text in NORMALIZATION_MAP:
+                    text = NORMALIZATION_MAP[text]
+
+                print("✅ Recognized:", text)
+                print("\n🔎 Alternatives:")
+                for alt in result["alternative"]:
+                    print(" -", alt.get("transcript", ""))
+
+            else:
+                text = "<gibberish>"
+
+        except sr.UnknownValueError:
+            text = "<gibberish>"
+        except Exception as e:
+            print(f"Speech recognition error: {e}")
+            text = "<error>"
+
+        # Update UI
+        self.text_input.text = text
+        self.process_text(text)
+
+    # -----------------------------------------------------
+    # TEXT TO SPEECH (TTS)
+    # -----------------------------------------------------
+    def speak_text(self, _):
+        text = self.text_input.text.strip()
+        if not text:
             return
-
-        # Resample to 16 kHz if necessary
-        raw_audio = bytes(self.audio_buffer)
-        target_rate = 16000
-        if self.mic_rate and self.mic_rate != target_rate:
-            raw_audio, _ = audioop.ratecv(raw_audio, 2, 1, self.mic_rate, target_rate, None)
-
-        audio_data = sr.AudioData(raw_audio, sample_rate=target_rate, sample_width=2)
+        tmp = "tmp.mp3"
 
         def is_internet_available():
             try:
@@ -359,81 +664,8 @@ class AACApp(App):
 
         try:
             if is_internet_available():
-                print("✅ Internet available → Using Google Speech Recognition")
-                text = self.r.recognize_google(audio_data, language="en-IN")
-                
-            else:
-                print("⚠️ No internet → Using Vosk offline recognition")
-                with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp_wav:
-                    with wave.open(tmp_wav.name, "wb") as wf:
-                        wf.setnchannels(1)
-                        wf.setsampwidth(2)
-                        wf.setframerate(target_rate)
-                        wf.writeframes(raw_audio)
-                    wav_path = tmp_wav.name
-
-                model_path = "vosk-model-small-en-us-0.15"
-                if not os.path.exists(model_path):
-                    print(f"Vosk model not found at {model_path}")
-                    return
-
-                model = Model(model_path)
-                rec = KaldiRecognizer(model, target_rate)
-                with wave.open(wav_path, "rb") as wf:
-                    while True:
-                        data = wf.readframes(4000)
-                        if len(data) == 0:
-                            break
-                        if rec.AcceptWaveform(data):
-                            result = json.loads(rec.Result())
-                            text = result.get("text", "")
-
-                os.remove(wav_path)
-
-            print(f"Recognized: {text}")
-            Clock.schedule_once(lambda dt: setattr(self.text_input, 'text', text))
-            self.text_input.text=str(text)
-            self.process_text(str(text))
-
-        except sr.UnknownValueError:
-            print("Could not understand audio.")
-        except sr.RequestError as e:
-            print(f"API error: {e}")
-        except Exception as e:
-            print(f"Speech recognition error: {e}")
-
-
-
-          
-    def is_internet_available(host="8.8.8.8", port=53, timeout=3):
-        """Check if internet is available by trying to connect to a DNS server."""
-        try:
-            socket.setdefaulttimeout(timeout)
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-            return True
-        except socket.error:
-            return False
-
-    def speak_text(self, _):
-        
-        def is_internet_available(host="8.8.8.8", port=53, timeout=3):
-            """Check internet connectivity by trying to reach a DNS server."""
-            try:
-                socket.setdefaulttimeout(timeout)
-                socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-                return True
-            except socket.error:
-                return False
-
-        text = self.text_input.text.strip()
-        if not text:
-            return
-
-        try:
-            if is_internet_available():
                 print("Internet detected → Using gTTS")
                 tts = gTTS(text=text, lang='en', slow=False)
-                tmp = "tmp.mp3"
                 tts.save(tmp)
                 pygame.mixer.init()
                 pygame.mixer.music.load(tmp)
@@ -444,28 +676,46 @@ class AACApp(App):
                 os.remove(tmp)
             else:
                 print("No internet → Using eSpeak NG")
-                tmp_wav = "tmp.wav"
-                subprocess.run(["espeak-ng", "-v", "en+f3", "-s", "140", "-p", "70", "-w", tmp_wav, text])
-                subprocess.run(["aplay", tmp_wav])
-                os.remove(tmp_wav)
+                subprocess.run(["espeak-ng", "-v", "en+f3", "-s", "140", "-p", "70", text])
         except Exception as e:
             print(f"TTS error: {e}")
-        
         finally:
-            # Insert only if there is still a prompt
-            if self.g.strip():
-                temp_text=temp_text.rstrip()
-                self.db_help.insert(temp_text, self.location_label)
-                self.g = ""  # clear after saving
-                os.remove(tmp)
+            self.db_help.insert(text, self.location_label)
 
-    def clear_all(self, _):
-        self.text_input.text = ""
-        self.result_grid.clear_widgets()
-    def exit_app(self, _): App.get_running_app().stop()
-    def update_time(self, dt):
+    # -----------------------------------------------------
+    # SYSTEM / APP UTILITIES
+    # -----------------------------------------------------
+    def recommend(self, _):
+        """Triggered when user clicks Recommend button."""
+        def _worker():
+            try:
+                sentences = self.db_help.recommend(self.location_label)
+            except Exception as e:
+                print(f"recommendation error: {e}")
+                sentences = []
+
+            rows = []
+            for s in sentences:
+                toks = all_tokens(s)
+                pic_items = []
+                for t in toks:
+                    url = get_arasaac_image_url(t)
+                    pic_items.append((t, url))
+                rows.append((s, pic_items))
+
+            Clock.schedule_once(lambda dt: self._render_suggestion_rows(rows), 0)
+
+        _worker()
+
+    def clear_all(self, _): 
+        self.text_input.text = ""; self.result_grid.clear_widgets(); self.content_area.clear_widgets(); self.show_all_categories();
+
+    def exit_app(self, _): 
+        App.get_running_app().stop()
+
+    def update_time(self, dt): 
         self.task_label.text = f"Location: {self.location_label} | Time: {time.strftime('%H:%M:%S')}"
 
-# --- Entry point ---
-def run_screen1(location_label):
-    AACApp(location_label).run()
+    def go_to_firstscreen(self, *_):
+        app = App.get_running_app()
+        app.sm.current = "splash"

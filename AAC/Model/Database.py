@@ -58,53 +58,59 @@ class Database:
         else:
             return "Night"
 
+    def TFIDF_recommend(self, sentences):
+        # ✅ Deduplicate first
+        unique_sentences = list(dict.fromkeys(sentences))  # preserves order
 
-    def recommend(self, location_tag):
-        current_phase=self.get_time_phase()
-        self.cursor = self.conn.cursor()
-        self.cursor.execute(
-            "SELECT text FROM Sentences WHERE location_tag = ? AND time_phase = ?",
-            (location_tag, current_phase)
-        )
-        rows = self.cursor.fetchall()
-        sentences = [row[0] for row in rows]
-        sentence_counts = Counter(sentences)
-
-# Extract unique sentences to match TF-IDF order
-        unique_sentences = list(sentence_counts.keys())
-        if not sentences:
-            print("No sentences found.")
-            return
-
-    # Calculate TF-IDF
+        # TF-IDF on unique sentences only
         vectorizer = TfidfVectorizer()
         tfidf_matrix = vectorizer.fit_transform(unique_sentences)
         tfidf_sums = tfidf_matrix.sum(axis=1).A1
-    # Get feature names (words)
-    #feature_names = vectorizer.get_feature_names_out()
+
+        # Frequency counts on unique sentences
+        sentence_counts = Counter(unique_sentences)
         freq_values = np.array([sentence_counts[s] for s in unique_sentences], dtype=float)
+
+        # Normalize
         freq_norm = (freq_values - freq_values.min()) / (freq_values.max() - freq_values.min() + 1e-9)
         tfidf_norm = (tfidf_sums - tfidf_sums.min()) / (tfidf_sums.max() - tfidf_sums.min() + 1e-9)
 
-# 5. Combine scores with alpha weight (0 ≤ alpha ≤ 1)
+        # Combine scores
         alpha = 0.6
         combined_scores = alpha * freq_norm + (1 - alpha) * tfidf_norm
 
-# 6. Rank sentences by combined score descending
+        # Sort
         ranked_indices = np.argsort(combined_scores)[::-1]
 
-    # Display TF-IDF for each sentence
-        """ for i, sentence in enumerate(sentences):
-                print(f"\nSentence: {sentence}")
-                for col in tfidf_matrix[i].nonzero()[1]:
-                    print(f"  {feature_names[col]}: {tfidf_matrix[i, col]:.4f}")
-
-            for row in rows:
-                print(row)"""
-        for idx in ranked_indices:
-            print(f"{combined_scores[idx]:.4f}  {unique_sentences[idx]} (freq: {freq_values[idx]}, tfidf_sum: {tfidf_sums[idx]:.4f})")
+        """for idx in ranked_indices:
+            print(f"{combined_scores[idx]:.4f}  {unique_sentences[idx]} "
+                f"(freq: {freq_values[idx]}, tfidf_sum: {tfidf_sums[idx]:.4f})")"""
+        return unique_sentences
 
 
+    def recommend(self, location_tag):
+        sentences = []
+        current_phase=self.get_time_phase()
+        self.cursor = self.conn.cursor()
+        self.cursor.execute(
+            "SELECT text FROM Sentences WHERE location_tag = ? AND time_phase = ? LIMIT 10",
+            (location_tag, current_phase)
+        )
+        rows = self.cursor.fetchall()
+        self.cursor.execute(
+            "SELECT text FROM Sentences WHERE time_phase = ? and location_tag <> ? LIMIT 10",
+            (current_phase,location_tag)
+        )
+        rows += self.cursor.fetchall()
+        sentences = [row[0] for row in rows]
+    
+        if not sentences:
+            print("No sentences found.")
+            return
+        else:
+            return (self.TFIDF_recommend(sentences))
+
+    
     def on_close(self):
         if hasattr(self, 'conn') and self.conn:
             self.conn.close()

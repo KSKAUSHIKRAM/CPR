@@ -50,7 +50,16 @@
         valign: 'middle'
         text_size: self.width, None
 
+
+
 <SplashScreen>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1   # Black background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
     BoxLayout:
         orientation: 'vertical'
         spacing: 10
@@ -71,7 +80,7 @@
         Label:
             text: 'Please select your current location:'
             font_size: '20sp'
-            color: 1, 1, 1, 1
+            color: 1, 1, 1, 1   # White text so it's visible on black
             size_hint: 1, None
             height: 40
 
@@ -88,15 +97,5 @@
                 size_hint: None, None
                 height: 160
                 width: self.minimum_width
-
-<MainScreen>:
-    BoxLayout:
-        orientation: 'vertical'
-        padding: 40
-
-        Label:
-            text: 'Welcome to the CPR-SAT!'
-            font_size: '24sp'
-            color: 1, 1, 1, 1
 
 

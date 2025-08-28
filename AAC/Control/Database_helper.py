@@ -5,4 +5,6 @@ class Database_helper:
     def insert(self,text,location):
         self.obj.insert(text,location)
     def recommend(self,location):
-        self.obj.recommend(location)
+        sentences=self.obj.recommend(location)
+        return sentences or []
+    
