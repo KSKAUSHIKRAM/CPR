@@ -17,26 +17,27 @@ from kivy.uix.screenmanager import Screen
 from kivy.config import Config
 from kivy.properties import StringProperty
 from kivy.metrics import dp
-
 import os, re, io, time, json, wave, socket, shelve, pygame, requests, tempfile, subprocess, threading, audioop
 import speech_recognition as sr
 from gtts import gTTS
 import spacy
-
-# Project imports
-from Control.Database_helper import Database_helper
-from View.input_norm import get_suggestions
-
-# =========================================================
-# Window / Global Config
-# =========================================================
 Config.set('graphics', 'resizable', False)
 Config.set('graphics', 'width', '1024')
 Config.set('graphics', 'height', '600')
 Window.size = (1024, 600)
 Window.clearcolor = (1, 1, 1, 1)
+# Project imports
+from Control.Database_helper import Database_helper
+from Control.Arasaac_help import Arasaac_help
+from View.input_norm import get_suggestions
+from pocketsphinx import Pocketsphinx, get_model_path
 
-CACHE_DB = "cache_urls.db"
+
+# =========================================================
+# Window / Global Config
+# =========================================================
+
+
 categories = [
     "food", "animals", "clothes", "emotions", "body", "sports", "school", "family",
     "nature", "transport", "weather", "home", "health", "jobs", "colors", "toys"
@@ -65,9 +66,7 @@ def is_grammatically_valid(sent):
 
     return True
 
-
-WORD_RE = re.compile(r"[A-Za-z']+")
-
+WORD_RE = re.compile(r"[a-zA-Z0-9]+")
 def all_tokens(sentence: str):
     return WORD_RE.findall(sentence.lower())
 
@@ -91,44 +90,6 @@ FUNCTION_WORDS = {
 }
 def content_tokens(sentence: str):
     return [t for t in WORD_RE.findall(sentence.lower()) if t not in FUNCTION_WORDS]
-
-# =========================================================
-# ARASAAC Helpers
-# =========================================================
-def get_arasaac_image_url(word):
-    """Fetch pictogram for a token (with caching)."""
-    key = (word or "").strip().lower()
-    if not key:
-        return ""
-    with shelve.open(CACHE_DB) as cache:
-        if key in cache:
-            return cache[key]
-        try:
-            resp = requests.get(f"https://api.arasaac.org/api/pictograms/en/search/{key}", timeout=5)
-            data = resp.json()
-            if data:
-                pic_id = data[0]["_id"]
-                img_url = f"https://static.arasaac.org/pictograms/{pic_id}/{pic_id}_500.png"
-                cache[key] = img_url
-                return img_url
-        except Exception as e:
-            print(f"API error: {e}")
-    return ""
-
-def fetch_pictograms(category):
-    """Get pictograms for a category (first 16)."""
-    pictos = []
-    try:
-        resp = requests.get(f"https://api.arasaac.org/api/pictograms/en/search/{category}", timeout=5)
-        data = resp.json()
-        for item in data[:16]:
-            label = item.get("keywords", [{}])[0].get("keyword", category)
-            pic_id = item["_id"]
-            img_url = f"https://static.arasaac.org/pictograms/{pic_id}/{pic_id}_500.png"
-            pictos.append((label, img_url))
-    except Exception as e:
-        print(f"Fetch pictograms failed: {e}")
-    return pictos
 
 # =========================================================
 # UI Components
@@ -166,37 +127,30 @@ class SuggestionRow(BoxLayout):
         self.pic_strip.clear_widgets()
         for label, url in items:
             if url:
-                if url:
-                    cell = BoxLayout(
-                        orientation="vertical",
-                        size_hint=(None, None),  # ❌ remove stretch
-                        size=(dp(56), self.height - 12),  # ✅ fixed height = row height - padding
-                        padding=0,
-                        spacing=2
-                    )
-
-                    thumb = AsyncImage(
-                        source=url,
-                        allow_stretch=True,
-                        keep_ratio=True,
-                        size_hint=(1, 0.75)
-                    )
-
-                    lbl = Label(
-                        text=label.capitalize(),
-                        color=(0,0,0,1),
-                        size_hint=(1, 0.25),
-                        font_size=dp(14),
-                        halign="center", valign="middle"
-                    )
-                    lbl.bind(size=lambda *_: setattr(lbl, "text_size", lbl.size))
-
-                    cell.add_widget(thumb)
-                    cell.add_widget(lbl)
-
-
+                cell = BoxLayout(
+                    orientation="vertical",
+                    size_hint=(None, None),
+                    size=(dp(56), self.height - 12),
+                    padding=0,
+                    spacing=2
+                )
+                thumb = AsyncImage(
+                    source=url,
+                    allow_stretch=True,
+                    keep_ratio=True,
+                    size_hint=(1, 0.75)
+                )
+                lbl = Label(
+                    text=label.capitalize(),
+                    color=(0,0,0,1),
+                    size_hint=(1, 0.25),
+                    font_size=dp(14),
+                    halign="center", valign="middle"
+                )
+                lbl.bind(size=lambda *_: setattr(lbl, "text_size", lbl.size))
+                cell.add_widget(thumb)
+                cell.add_widget(lbl)
             else:
-                # fallback text chip when ARASAAC has no pictogram
                 chip = BoxLayout(orientation="vertical", size_hint=(None, 1),
                                  width=dp(56), padding=2, spacing=0)
                 with chip.canvas.before:
@@ -239,6 +193,7 @@ class ImageLabelButton_2(ButtonBehavior, BoxLayout):
     def on_press(self):
         if self.callback:
             self.callback(None)
+
 # =========================================================
 # Main AAC Screen
 # =========================================================
@@ -264,6 +219,7 @@ class AACScreen(Screen):
         self.record_thread = None
         self.audio_buffer = None
         self.db_help = Database_helper()
+        self.arasaac_func = Arasaac_help()
         self.g = ""
 
         # --- Root Layout ---
@@ -357,10 +313,10 @@ class AACScreen(Screen):
             text="Back",
             size_hint=(None, 1),
             width=80,
-            background_normal='',        # 🔑 removes dark default image
-            background_down='',          # 🔑 remove pressed image too
-            background_color=(1, 0, 0, 1),  # bright pure red
-            color=(1, 1, 1, 1)           # white text
+            background_normal='',
+            background_down='',
+            background_color=(1, 0, 0, 1),
+            color=(1, 1, 1, 1)
         )
 
         self.back_btn.opacity = 0
@@ -408,9 +364,7 @@ class AACScreen(Screen):
         self.text_input.text = ""
         self.result_grid.clear_widgets()
         self.image_grid.clear_widgets()
-        # Do NOT spawn a thread here that calls load_categories (it already spawns worker)
         self.load_categories()
-
 
     # -----------------------------------------------------
     # CATEGORY HANDLING
@@ -420,26 +374,23 @@ class AACScreen(Screen):
         def _worker():
             items = []
             for cat in categories:
-                url = get_arasaac_image_url(cat)  # network/IO
+                url = self.arasaac_func.image_url(cat)
                 items.append((cat, url))
             Clock.schedule_once(lambda dt: self._render_categories(items), 0)
         threading.Thread(target=_worker, daemon=True).start()
 
     def _render_categories(self, items):
-        """UI-thread: actually build/add widgets."""
         self.image_grid.clear_widgets()
         for cat, url in items:
             self.image_grid.add_widget(ClickableImage(cat, url, self.show_category))
-        # ensure category view visible
         self.content_area.clear_widgets()
         self.content_area.add_widget(self.category_scroll)
-        # back hidden in category root
         self.back_btn.opacity = 1
         self.back_btn.disabled = True
 
     def show_category(self, category, _):
         def _worker():
-            pictos = fetch_pictograms(category)
+            pictos = self.arasaac_func.fetch_pictograms(category)
             Clock.schedule_once(lambda dt: self._render_category(category, pictos), 0)
         threading.Thread(target=_worker, daemon=True).start()
 
@@ -447,7 +398,6 @@ class AACScreen(Screen):
         self.image_grid.clear_widgets()
         for label, url in pictos:
             self.image_grid.add_widget(ClickableImage(label, url, self.add_to_result))
-        # show category view (already in content_area)
         self.content_area.clear_widgets()
         self.content_area.add_widget(self.category_scroll)
         self.back_btn.opacity = 1
@@ -471,7 +421,8 @@ class AACScreen(Screen):
         tokens = str(text_source).lower().split()
         self.result_grid.clear_widgets()
         for token in tokens:
-            url = get_arasaac_image_url(token)
+            print(f"Token: {token}")
+            url = self.arasaac_func.image_url(token)
             if url:
                 widget = ClickableImage(token, url)
                 widget.callback = lambda *_: self.result_grid.remove_widget(widget)
@@ -487,63 +438,56 @@ class AACScreen(Screen):
         self.sug_list.clear_widgets()
         threading.Thread(target=self._build_suggestions_async, args=(text,), daemon=True).start()
 
-
     def _build_suggestions_async(self, text: str):
-        try:
-            # ✅ Normalize input before suggestion
+            # 1. Normalize and tokenize the user's input
             norm_text = normalize_input(text)
-            sentences = get_suggestions(norm_text, top_k=12) or []
-        except Exception as e:
-            print(f"suggester error: {e}")
-            sentences = []
-    
-        # 🔽 Rule-based filter here
-        # Rule + grammar cleanup
-        valid_sentences = []
-        for s in sentences:
-            if len(all_tokens(s)) < 2:
-                continue
-            if re.search(r"\b(was|is|are)\b$", s):
-                continue
-            if "was milk" in s or "is milk" in s:
-                continue
-            if not is_grammatically_valid(s):  # ✅ grammar filter
-                continue
-            valid_sentences.append(s)
-
-        sentences = valid_sentences
-
-
-        def is_valid_sentence(s):
-            doc = nlp(s)
-            # must have subject
-            if not any(t.dep_ == "nsubj" for t in doc):
-                return False
-            # must not end with bare AUX/VERB
-            if doc[-1].pos_ in {"AUX", "VERB"}:
-                return False
-            return True
-
-        rows = []
-        #print("Sentences:",sentences)
-        for s in sentences:
-            toks = all_tokens(s)  # ALL tokens
+            print(f"Normalized input: {norm_text}")
+            toks = all_tokens(norm_text)
+            print(f"Tokens: {toks}")
             pic_items = []
             for t in toks:
-                url = get_arasaac_image_url(t)
-                pic_items.append((t, url))   # keep order; no cap
-            rows.append((s, pic_items))
-            #print("rows:",rows)
-        Clock.schedule_once(lambda dt: self._render_suggestion_rows(rows), 0)
+                print(f"User token: {t}")
+                url = self.arasaac_func.image_url(t)
+                pic_items.append((t, url))
+            # 2. Prepare the user's input as the first suggestion row
+            user_row = (norm_text, pic_items)
 
+            # 3. Get AI suggestions as before
+            try:
+                sentences = get_suggestions(norm_text, top_k=12) or []
+            except Exception as e:
+                print(f"suggester error: {e}")
+                sentences = []
+
+            # ...existing filtering logic...
+            valid_sentences = []
+            for s in sentences:
+                if len(all_tokens(s)) < 2:
+                    continue
+                if re.search(r"\b(was|is|are)\b$", s):
+                    continue
+                if "was milk" in s or "is milk" in s:
+                    continue
+                if not is_grammatically_valid(s):
+                    continue
+                valid_sentences.append(s)
+            sentences = valid_sentences
+
+            rows = [user_row]  # Start with the user's input at the top
+            for s in sentences:
+                toks = all_tokens(s)
+                pic_items = []
+                for t in toks:
+                    url = self.arasaac_func.image_url(t)
+                    pic_items.append((t, url))
+                rows.append((s, pic_items))
+            Clock.schedule_once(lambda dt: self._render_suggestion_rows(rows), 0)
     def _render_suggestion_rows(self, rows):
         self.sug_list.clear_widgets()
         for sentence, items in rows:
             row = SuggestionRow(sentence, ok_callback=self._accept_sentence)
             row.set_pictos(items)
             self.sug_list.add_widget(row)
-
-        # switch to suggestions view
         self.content_area.clear_widgets()
         self.content_area.add_widget(self.sug_scroll)
         self.back_btn.opacity = 1
@@ -551,13 +495,12 @@ class AACScreen(Screen):
 
     def _accept_sentence(self, sentence: str):
         self.result_grid.clear_widgets()
-        toks = all_tokens(sentence)  # ALL tokens
+        toks = all_tokens(sentence)
         for t in toks:
-            url = get_arasaac_image_url(t)
+            url = self.arasaac_func.image_url(t)
             if url:
                 widget = ClickableImage(t, url)
             else:
-                # fallback text-only tile if no icon
                 widget = ClickableImage(t, "")
                 widget.img.source = ""
                 with widget.canvas.before:
@@ -577,7 +520,6 @@ class AACScreen(Screen):
     # VOICE CAPTURE / SPEECH RECOGNITION
     # -----------------------------------------------------
     def start_voice_capture(self, _=None):
-        """Capture audio when Speak is pressed, store it for recognition later."""
         if self.listening:
             print("Already listening...")
             return
@@ -590,17 +532,22 @@ class AACScreen(Screen):
         self.text_input.text = msg
 
         with sr.Microphone() as source:
-            self.r.adjust_for_ambient_noise(source, duration=1)
-            print("🎤 Listening...")
-            audio = self.r.listen(source)   # record once
-            self.captured_audio = audio     # store audio for Display button
+            # Calibrate for background noise
+            self.r.adjust_for_ambient_noise(source, duration=0.5)
+
+            # Force thresholds (important for Raspberry Pi + gibberish)
+            self.r.energy_threshold = 250          # tune 100–300
+            self.r.dynamic_energy_threshold = False
+
+            print(f"🎤 Listening... (threshold={self.r.energy_threshold})")
+            audio = self.r.listen(source, phrase_time_limit=5)  # record up to 5s
+            self.captured_audio = audio
             print("✅ Audio captured. Press Display to recognize.")
 
         self.listening = False
 
 
     def stop_and_recognize(self, _=None):
-        """Run recognition on the stored audio."""
         if not hasattr(self, "captured_audio"):
             print("⚠️ No audio recorded. Please click Speak first.")
             return
@@ -610,25 +557,16 @@ class AACScreen(Screen):
         text = "<gibberish>"
 
         try:
+            # Try Google first
             result = self.r.recognize_google(audio, language="en-IN", show_all=True)
 
             if isinstance(result, dict) and "alternative" in result:
+                # Best guess
                 text = result["alternative"][0].get("transcript", "").strip().lower()
 
-                # optional normalization map for fillers
-                NORMALIZATION_MAP = {
-                    "no": "nah",
-                    "na": "nah",
-                    "ya": "yeah",
-                    "yah": "yeah",
-                    "yep": "yeah",
-                    "o": "oh",
-                    "oops": "oops"
-                }
-                if text in NORMALIZATION_MAP:
-                    text = NORMALIZATION_MAP[text]
+                if not text:
+                    text = "<gibberish>"
 
-                print("✅ Recognized:", text)
                 print("\n🔎 Alternatives:")
                 for alt in result["alternative"]:
                     print(" -", alt.get("transcript", ""))
@@ -637,15 +575,31 @@ class AACScreen(Screen):
                 text = "<gibberish>"
 
         except sr.UnknownValueError:
-            text = "<gibberish>"
+            print("❌ Google couldn’t understand. Falling back to phonetic gibberish...")
+
+            # --- Fallback: pocketsphinx for phonetic-like nonsense ---
+            try:
+                model_path = get_model_path()
+                ps = Pocketsphinx(
+                    hmm=model_path + "/en-us",
+                    lm=model_path + "/en-us.lm.bin",
+                    dict=model_path + "/cmudict-en-us.dict"
+                )
+                ps.decode(audio.get_wav_data())
+                phonetic_text = ps.hypothesis()
+                text = phonetic_text if phonetic_text else "<gibberish>"
+                print("🎙 Gibberish (phonetic):", text)
+            except Exception as e:
+                print("Phonetic fallback failed:", e)
+                text = "<gibberish>"
+
         except Exception as e:
             print(f"Speech recognition error: {e}")
             text = "<error>"
 
-        # Update UI
+        print("✅ Final Output:", text)
         self.text_input.text = text
         self.process_text(text)
-
     # -----------------------------------------------------
     # TEXT TO SPEECH (TTS)
     # -----------------------------------------------------
@@ -686,10 +640,18 @@ class AACScreen(Screen):
     # SYSTEM / APP UTILITIES
     # -----------------------------------------------------
     def recommend(self, _):
-        """Triggered when user clicks Recommend button."""
         def _worker():
             try:
                 sentences = self.db_help.recommend(self.location_label)
+                first_sentence = self.db_help.retrive_last_inserted(self.location_label)
+                print(f"Last inserted sentence: {first_sentence}")
+
+                if first_sentence:
+                    sentence = first_sentence[0]
+                    if sentence in sentences:
+                        sentences.remove(sentence)   # remove existing occurrence
+                    sentences.insert(0, sentence)   # add at zeroth index
+
             except Exception as e:
                 print(f"recommendation error: {e}")
                 sentences = []
@@ -699,7 +661,7 @@ class AACScreen(Screen):
                 toks = all_tokens(s)
                 pic_items = []
                 for t in toks:
-                    url = get_arasaac_image_url(t)
+                    url = self.arasaac_func.image_url(t)
                     pic_items.append((t, url))
                 rows.append((s, pic_items))
 
@@ -707,8 +669,12 @@ class AACScreen(Screen):
 
         _worker()
 
+
     def clear_all(self, _): 
-        self.text_input.text = ""; self.result_grid.clear_widgets(); self.content_area.clear_widgets(); self.show_all_categories();
+        self.text_input.text = ""
+        self.result_grid.clear_widgets()
+        self.content_area.clear_widgets()
+        self.show_all_categories()
 
     def exit_app(self, _): 
         App.get_running_app().stop()

@@ -58,9 +58,12 @@ class Database:
         else:
             return "Night"
 
-    def TFIDF_recommend(self, sentences):
-        # ✅ Deduplicate first
-        unique_sentences = list(dict.fromkeys(sentences))  # preserves order
+    def TFIDF_recommend(self, sentences, top_k=5):
+        # ✅ Deduplicate first (preserve order)
+        unique_sentences = list(dict.fromkeys(sentences))
+
+        if not unique_sentences:
+            return []
 
         # TF-IDF on unique sentences only
         vectorizer = TfidfVectorizer()
@@ -79,36 +82,53 @@ class Database:
         alpha = 0.6
         combined_scores = alpha * freq_norm + (1 - alpha) * tfidf_norm
 
-        # Sort
+        # Sort indices by score (descending)
         ranked_indices = np.argsort(combined_scores)[::-1]
 
-        """for idx in ranked_indices:
+        # Pick top_k
+        top_indices = ranked_indices[:top_k]
+        top_sentences = [unique_sentences[i] for i in top_indices]
+
+        # Debug print
+        for idx in top_indices:
             print(f"{combined_scores[idx]:.4f}  {unique_sentences[idx]} "
-                f"(freq: {freq_values[idx]}, tfidf_sum: {tfidf_sums[idx]:.4f})")"""
-        return unique_sentences
+                f"(freq: {freq_values[idx]}, tfidf_sum: {tfidf_sums[idx]:.4f})")
+
+        return top_sentences
 
 
+    def last_sentence(self,location_tag):
+        current_phase=self.get_time_phase()
+
+        #last_id = self.cursor.lastrowid
+        #print(f"Last inserted sentence ID: {last_id}")
+        self.cursor.execute("SELECT text from Sentences where location_tag = ? AND time_phase = ? ORDER BY sentence_id DESC LIMIT 1", (location_tag, current_phase))
+        last_row = self.cursor.fetchone()
+        return last_row
     def recommend(self, location_tag):
         sentences = []
         current_phase=self.get_time_phase()
         self.cursor = self.conn.cursor()
         self.cursor.execute(
-            "SELECT text FROM Sentences WHERE location_tag = ? AND time_phase = ? LIMIT 10",
+            "SELECT  text FROM Sentences WHERE location_tag = ? AND time_phase = ?",
             (location_tag, current_phase)
         )
-        rows = self.cursor.fetchall()
+        rows_1= self.cursor.fetchall()
+        sentences_loc_match= [row[0] for row in rows_1]
+        sentences_match1=self.TFIDF_recommend(sentences_loc_match)
         self.cursor.execute(
-            "SELECT text FROM Sentences WHERE time_phase = ? and location_tag <> ? LIMIT 10",
+            "SELECT text FROM Sentences WHERE time_phase = ? and location_tag <> ?",
             (current_phase,location_tag)
         )
-        rows += self.cursor.fetchall()
-        sentences = [row[0] for row in rows]
-    
+        rows_2= self.cursor.fetchall()
+        sentences_unmatch_loc= [row[0] for row in rows_2]
+        sentences_match2=self.TFIDF_recommend(sentences_unmatch_loc)
+        sentences=sentences_match1 + sentences_match2
         if not sentences:
             print("No sentences found.")
             return
         else:
-            return (self.TFIDF_recommend(sentences))
+            return sentences
 
     
     def on_close(self):

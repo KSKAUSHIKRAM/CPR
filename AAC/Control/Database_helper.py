@@ -7,4 +7,6 @@ class Database_helper:
     def recommend(self,location):
         sentences=self.obj.recommend(location)
         return sentences or []
+    def retrive_last_inserted(self,location_tag):
+        return self.obj.last_sentence(location_tag)
     

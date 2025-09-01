@@ -17,7 +17,7 @@
         id: lbl
         text: root.text
         font_size: '16sp'
-        color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
         size_hint: 1, None
         height: self.texture_size[1] + 10
         halign: 'center'
@@ -55,7 +55,7 @@
 <SplashScreen>:
     canvas.before:
         Color:
-            rgba: 0, 0, 0, 1   # Black background
+            rgba: 1, 1, 1, 1   # Black background
         Rectangle:
             pos: self.pos
             size: self.size
