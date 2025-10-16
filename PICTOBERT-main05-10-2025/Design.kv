@@ -1,0 +1,98 @@
+<ImageLabelButton>:
+    orientation: 'vertical'
+    spacing: 5
+    size_hint: None, None
+    width: 140
+    height: self.minimum_height  # Dynamically adjust to content height
+
+    Image:
+        id: img
+        source: root.image_source
+        size_hint: 1, None
+        height: 80
+        allow_stretch: True
+        keep_ratio: True
+
+    Label:
+        id: lbl
+        text: root.text
+        font_size: '16sp'
+        color: 0, 0, 0, 1
+        size_hint: 1, None
+        height: self.texture_size[1] + 10
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.width, None
+
+<ImageLabelButton_2>:
+    orientation: 'vertical'
+    spacing: 5
+    size_hint: None, None
+    width: 140
+    height: self.minimum_height  # Dynamically adjust to content height
+
+    Image:
+        id: img
+        source: root.image_source
+        size_hint: 1, None
+        height: 50
+        allow_stretch: True
+        keep_ratio: True
+
+    Label:
+        id: lbl
+        text: root.text
+        font_size: '16sp'
+        color: 0, 0, 0, 1
+        size_hint: 1, None
+        height: self.texture_size[1] + 10
+        halign: 'center'
+        valign: 'middle'
+        text_size: self.width, None
+
+
+
+<SplashScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 10
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            id: voice_row
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 50
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            size_hint: 1, None
+            height: 250
+            Image:
+                source: 'logo.png'
+                size_hint: None, None
+                width: 600
+                height: 600
+                allow_stretch: True
+        Label:
+            text: 'Please select your current location:'
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            size_hint: 1, None
+            height: 40
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            size_hint: 1, None
+            height: 170
+            BoxLayout:
+                id: location_row
+                orientation: 'horizontal'
+                spacing: 10
+                size_hint: None, None
+                height: 160

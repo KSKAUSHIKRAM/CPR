@@ -1,0 +1,211 @@
+word,category,ColorName,Kivy_RGBA,ARASAAC_URL
+all done-finished,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/28429/28429_500.png
+all gone-gone,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",
+not-don't,negation,Crimson,"(0.8627450980392157, 0.0784313725490196, 0.23529411764705882, 1.0)",https://static.arasaac.org/pictograms/34021/34021_500.png
+I-(name),pronoun,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/27349/27349_500.png
+you-your,pronoun,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/27349/27349_500.png
+ready,time-adverb,Gold,"(1.0, 0.8431372549019608, 0.0, 1.0)",https://static.arasaac.org/pictograms/17000/17000_500.png
+do-does-did,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/9834/9834_500.png
+look-see,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/36259/36259_500.png
+give,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/28431/28431_500.png
+sick,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/7040/7040_500.png
+silly,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/15483/15483_500.png
+trouble,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",
+me-myself,pronoun,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/30642/30642_500.png
+my-mine,pronoun,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/27869/27869_500.png
+hear-listen,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/39157/39157_500.png
+say-tell,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/10175/10175_500.png
+take,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/10148/10148_500.png
+afraid-scary,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/38258/38258_500.png
+clean,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/26172/26172_500.png
+cold,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4652/4652_500.png
+dirty,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4750/4750_500.png
+hot,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2300/2300_500.png
+be careful,interjection,Hot Pink,"(1.0, 0.4117647058823529, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/25618/25618_500.png
+how much-much,interrogative+adverb,Light Sea Green,"(0.12549019607843137, 0.6980392156862745, 0.6666666666666666, 1.0)",https://static.arasaac.org/pictograms/7073/7073_500.png
+late-later,time-adjective,Orange,"(1.0, 0.6470588235294118, 0.0, 1.0)",https://static.arasaac.org/pictograms/5896/5896_500.png
+am-is-are be,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/8115/8115_500.png
+open-close,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/36912/36912_500.png
+sit,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6611/6611_500.png
+stand,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/13370/13370_500.png
+wait,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/36914/36914_500.png
+watch,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6564/6564_500.png
+empty-full,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/36980/36980_500.png
+hungry,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4962/4962_500.png
+thirsty,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4963/4963_500.png
+tired,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/35537/35537_500.png
+wet-dry,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/6149/6149_500.png
+wrong,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/22198/22198_500.png
+idea,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/6019/6019_500.png
+place,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/32757/32757_500.png
+problem,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/5556/5556_500.png
+stuff,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/16883/16883_500.png
+fun-funny,noun-adjective,Medium Purple,"(0.5764705882352941, 0.4392156862745098, 0.8588235294117647, 1.0)",https://static.arasaac.org/pictograms/11645/11645_500.png
+aide-(name),person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/27349/27349_500.png
+boy-man,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/38269/38269_500.png
+child-chidren,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/2484/2484_500.png
+father,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/2497/2497_500.png
+girl-woman,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/26599/26599_500.png
+mother,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/2458/2458_500.png
+teacher-(name),person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/36261/36261_500.png
+over,place-preposition,Brown,"(0.6470588235294118, 0.16470588235294117, 0.16470588235294117, 1.0)",https://static.arasaac.org/pictograms/7814/7814_500.png
+he-him-his,pronoun,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/10274/10274_500.png
+she-her-hers,pronoun,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/33128/33128_500.png
+they-people,pronoun-person,Sea Green,"(0.1803921568627451, 0.5450980392156862, 0.3411764705882353, 1.0)",https://static.arasaac.org/pictograms/8115/8115_500.png
+we-friend,pronoun-person,Sea Green,"(0.1803921568627451, 0.5450980392156862, 0.3411764705882353, 1.0)",https://static.arasaac.org/pictograms/7079/7079_500.png
+have-has-had,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/28206/28206_500.png
+know,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/16885/16885_500.png
+sing,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6960/6960_500.png
+sleep,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6479/6479_500.png
+talk-call,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/32101/32101_500.png
+try,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/8148/8148_500.png
+win-lose,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/7218/7218_500.png
+busy,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",
+confused,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2352/2352_500.png
+dumb-smart,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4702/4702_500.png
+easy-hard,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/7132/7132_500.png
+favorite,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/30012/30012_500.png
+hard,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4637/4637_500.png
+hurt,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/5484/5484_500.png
+long-short,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/28809/28809_500.png
+loud-quiet,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/37312/37312_500.png
+mad,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/37420/37420_500.png
+mean,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/10351/10351_500.png
+medium,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4693/4693_500.png
+nice,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/7251/7251_500.png
+right,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/5397/5397_500.png
+soft,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4578/4578_500.png
+because,conjunction,Dark Turquoise,"(0.0, 0.807843137254902, 0.8196078431372549, 1.0)",https://static.arasaac.org/pictograms/11348/11348_500.png
+adjective+er,morphology,Slate Gray,"(0.4392156862745098, 0.5019607843137255, 0.5647058823529412, 1.0)",https://static.arasaac.org/pictograms/12266/12266_500.png
+adjective+est,morphology,Slate Gray,"(0.4392156862745098, 0.5019607843137255, 0.5647058823529412, 1.0)",https://static.arasaac.org/pictograms/12266/12266_500.png
+noun+s,morphology,Slate Gray,"(0.4392156862745098, 0.5019607843137255, 0.5647058823529412, 1.0)",https://static.arasaac.org/pictograms/25544/25544_500.png
+verb+ed,morphology,Slate Gray,"(0.4392156862745098, 0.5019607843137255, 0.5647058823529412, 1.0)",https://static.arasaac.org/pictograms/2271/2271_500.png
+verb+ing,morphology,Slate Gray,"(0.4392156862745098, 0.5019607843137255, 0.5647058823529412, 1.0)",https://static.arasaac.org/pictograms/2271/2271_500.png
+verb+s,morphology,Slate Gray,"(0.4392156862745098, 0.5019607843137255, 0.5647058823529412, 1.0)",https://static.arasaac.org/pictograms/2271/2271_500.png
+verb+to,morphology,Slate Gray,"(0.4392156862745098, 0.5019607843137255, 0.5647058823529412, 1.0)",https://static.arasaac.org/pictograms/2271/2271_500.png
+don't,negation,Crimson,"(0.8627450980392157, 0.0784313725490196, 0.23529411764705882, 1.0)",https://static.arasaac.org/pictograms/34021/34021_500.png
+not,negation,Crimson,"(0.8627450980392157, 0.0784313725490196, 0.23529411764705882, 1.0)",https://static.arasaac.org/pictograms/32308/32308_500.png
+home,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/6964/6964_500.png
+question,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/9847/9847_500.png
+school,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/32446/32446_500.png
+thing,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/35993/35993_500.png
+time,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/22631/22631_500.png
+town,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/2823/2823_500.png
+way,noun,Blue Violet,"(0.5411764705882353, 0.16862745098039217, 0.8862745098039215, 1.0)",https://static.arasaac.org/pictograms/6968/6968_500.png
+name,noun-person,Slate Blue,"(0.41568627450980394, 0.35294117647058826, 0.803921568627451, 1.0)",https://static.arasaac.org/pictograms/27357/27357_500.png
+baby,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/6060/6060_500.png
+body,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/6473/6473_500.png
+brother,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/2423/2423_500.png
+bus driver,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/38086/38086_500.png
+class,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/35401/35401_500.png
+family,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/38351/38351_500.png
+grandfather,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/23718/23718_500.png
+grandmother,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/23710/23710_500.png
+pet-(name),person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/2934/2934_500.png
+sister,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",https://static.arasaac.org/pictograms/2422/2422_500.png
+SLP,person,Royal Blue,"(0.2549019607843137, 0.4117647058823529, 0.8823529411764706, 1.0)",
+bottom,place-preposition,Brown,"(0.6470588235294118, 0.16470588235294117, 0.16470588235294117, 1.0)",https://static.arasaac.org/pictograms/32818/32818_500.png
+top,place-preposition,Brown,"(0.6470588235294118, 0.16470588235294117, 0.16470588235294117, 1.0)",https://static.arasaac.org/pictograms/16601/16601_500.png
+today,time-adverb,Gold,"(1.0, 0.8431372549019608, 0.0, 1.0)",https://static.arasaac.org/pictograms/7131/7131_500.png
+tomorrow,time-adverb,Gold,"(1.0, 0.8431372549019608, 0.0, 1.0)",https://static.arasaac.org/pictograms/38278/38278_500.png
+yesterday,time-adverb,Gold,"(1.0, 0.8431372549019608, 0.0, 1.0)",https://static.arasaac.org/pictograms/38279/38279_500.png
+afternoon,time-noun,Firebrick,"(0.6980392156862745, 0.13333333333333333, 0.13333333333333333, 1.0)",https://static.arasaac.org/pictograms/7268/7268_500.png
+morning,time-noun,Firebrick,"(0.6980392156862745, 0.13333333333333333, 0.13333333333333333, 1.0)",https://static.arasaac.org/pictograms/25704/25704_500.png
+night,time-noun,Firebrick,"(0.6980392156862745, 0.13333333333333333, 0.13333333333333333, 1.0)",https://static.arasaac.org/pictograms/26997/26997_500.png
+after,time-preposition,Forest Green,"(0.13333333333333333, 0.5450980392156862, 0.13333333333333333, 1.0)",https://static.arasaac.org/pictograms/32749/32749_500.png
+before,time-preposition,Forest Green,"(0.13333333333333333, 0.5450980392156862, 0.13333333333333333, 1.0)",https://static.arasaac.org/pictograms/32745/32745_500.png
+hurry,time-verb,Indian Red,"(0.803921568627451, 0.3607843137254902, 0.3607843137254902, 1.0)",
+ask,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/25062/25062_500.png
+break,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6604/6604_500.png
+buy,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/8986/8986_500.png
+count,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/2714/2714_500.png
+dress,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6627/6627_500.png
+hold,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/32761/32761_500.png
+let,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/2675/2675_500.png
+live,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/11605/11605_500.png
+love,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/37721/37721_500.png
+ride,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6045/6045_500.png
+share,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/38900/38900_500.png
+think,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/38796/38796_500.png
+walk,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/29951/29951_500.png
+wash,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/34826/34826_500.png
+was-were,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",
+write,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/2380/2380_500.png
+opposite of,word strategy,Saddle Brown,"(0.5450980392156862, 0.27058823529411763, 0.07450980392156863, 1.0)",https://static.arasaac.org/pictograms/39109/39109_500.png
+same as,word strategy,Saddle Brown,"(0.5450980392156862, 0.27058823529411763, 0.07450980392156863, 1.0)",https://static.arasaac.org/pictograms/39109/39109_500.png
+starts with,word strategy,Saddle Brown,"(0.5450980392156862, 0.27058823529411763, 0.07450980392156863, 1.0)",
+A-Z,academic,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/3173/3173_500.png
+numbers 0-9,academic,Steel Blue,"(0.27450980392156865, 0.5098039215686274, 0.7058823529411765, 1.0)",https://static.arasaac.org/pictograms/29518/29518_500.png
+black,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2886/2886_500.png
+brown,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2923/2923_500.png
+calm,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/31310/31310_500.png
+dark,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/26993/26993_500.png
+early,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/38680/38680_500.png
+expensive-cheap,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4589/4589_500.png
+fat-skinny,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/25048/25048_500.png
+gray,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/3340/3340_500.png
+green,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4887/4887_500.png
+heavy-light,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4936/4936_500.png
+late,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/37780/37780_500.png
+light,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/8619/8619_500.png
+messy,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4627/4627_500.png
+neat,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/5355/5355_500.png
+orange,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2888/2888_500.png
+pink,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2807/2807_500.png
+purple,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2907/2907_500.png
+rich-poor,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/2248/2248_500.png
+slippery,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",
+smooth-rough,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4685/4685_500.png
+sticky,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/25307/25307_500.png
+straight-crooked,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/32270/32270_500.png
+strong-weak,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/4620/4620_500.png
+tall-short,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/10193/10193_500.png
+ugly,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/26090/26090_500.png
+warm-cool,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/27644/27644_500.png
+white,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/8043/8043_500.png
+wild,adjective,Coral,"(1.0, 0.4980392156862745, 0.3137254901960784, 1.0)",https://static.arasaac.org/pictograms/7237/7237_500.png
+sorry,polite-adjective,Light Pink,"(1.0, 0.7137254901960784, 0.7568627450980392, 1.0)",https://static.arasaac.org/pictograms/11625/11625_500.png
+goodbye,polite-adverb,Lavender,"(0.9019607843137255, 0.9019607843137255, 0.9803921568627451, 1.0)",https://static.arasaac.org/pictograms/6028/6028_500.png
+hello,polite-adverb,Lavender,"(0.9019607843137255, 0.9019607843137255, 0.9803921568627451, 1.0)",https://static.arasaac.org/pictograms/6522/6522_500.png
+maybe,polite-adverb,Lavender,"(0.9019607843137255, 0.9019607843137255, 0.9803921568627451, 1.0)",
+excuse me,polite-interjection,Pale Violet Red,"(0.8588235294117647, 0.4392156862745098, 0.5764705882352941, 1.0)",
+you're welcome,polite-interjection,Pale Violet Red,"(0.8588235294117647, 0.4392156862745098, 0.5764705882352941, 1.0)",https://static.arasaac.org/pictograms/39109/39109_500.png
+o'clock,time-adverb,Gold,"(1.0, 0.8431372549019608, 0.0, 1.0)",https://static.arasaac.org/pictograms/36749/36749_500.png
+change position,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/9003/9003_500.png
+cut,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/5975/5975_500.png
+draw,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/8088/8088_500.png
+fix,verb,Lime Green,"(0.19607843137254902, 0.803921568627451, 0.19607843137254902, 1.0)",https://static.arasaac.org/pictograms/6910/6910_500.png
+hi / hello,Interjection,Tomato,"(1.0, 0.38823529411764707, 0.2784313725490196, 1.0)",
+good-bye,Interjection,Tomato,"(1.0, 0.38823529411764707, 0.2784313725490196, 1.0)",https://static.arasaac.org/pictograms/6942/6942_500.png
+I,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/6632/6632_500.png
+me,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/6632/6632_500.png
+my,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/12264/12264_500.png
+mine,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/12264/12264_500.png
+you,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/6625/6625_500.png
+he,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/6480/6480_500.png
+she,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/7028/7028_500.png
+we,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/7185/7185_500.png
+they,Pronoun,Dodger Blue,"(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)",https://static.arasaac.org/pictograms/7032/7032_500.png
+be,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/36480/36480_500.png
+is,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/8115/8115_500.png
+am,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/32308/32308_500.png
+are,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/7800/7800_500.png
+was,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/2442/2442_500.png
+were,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/5931/5931_500.png
+do,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/32751/32751_500.png
+did,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/15345/15345_500.png
+have,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/32761/32761_500.png
+will,Preverb,Turquoise,"(0.25098039215686274, 0.8784313725490196, 0.8156862745098039, 1.0)",https://static.arasaac.org/pictograms/35629/35629_500.png
+look,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",https://static.arasaac.org/pictograms/6564/6564_500.png
+see,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",https://static.arasaac.org/pictograms/6564/6564_500.png
+open,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",https://static.arasaac.org/pictograms/24825/24825_500.png
+close,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",https://static.arasaac.org/pictograms/30383/30383_500.png
+say,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",https://static.arasaac.org/pictograms/9693/9693_500.png
+tell,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",https://static.arasaac.org/pictograms/9693/9693_500.png
+let's,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",https://static.arasaac.org/pictograms/25544/25544_500.png
+finished / all done,Verb,Spring Green,"(0.0, 1.0, 0.4980392156862745, 1.0)",
+to,Preposition,Goldenrod,"(0.8549019607843137, 0.6470588235294118, 0.12549019607843137, 1.0)",https://static.arasaac.org/pictograms/7041/7041_500.png
+for,Preposition,Goldenrod,"(0.8549019607843137, 0.6470588235294118, 0.12549019607843137, 1.0)",https://static.arasaac.org/pictograms/7081/7081_500.png
+with,Preposition,Goldenrod,"(0.8549019607843137, 0.6470588235294118, 0.12549019607843137, 1.0)",https://static.arasaac.org/pictograms/7064/7064_500.png
+but,Conjunction,Orange Red,"(1.0, 0.27058823529411763, 0.0, 1.0)",https://static.arasaac.org/pictograms/11377/11377_500.png
+not / don't,Adverb,Dark Orchid,"(0.6, 0.19607843137254902, 0.8, 1.0)",
