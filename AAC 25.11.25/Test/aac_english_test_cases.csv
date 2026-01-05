@@ -1,0 +1,6 @@
+raw_input,normalized,category,pictogram,generated,reference
+i wnt watr,I want water,Drink,water.png,I want water,I need water
+giv me food,give me food,Food,food.png,I want food,I need food
+turn on ligth,turn on light,Object,light.png,turn on the light,switch on light
+i am hapy,I am happy,Emotion,happy.png,I am happy,I'm happy
+it is rainin,It is raining,Weather,rain.png,It is raining,It's raining

@@ -1,0 +1,2231 @@
+input,normalized,detected_label,detected_category,method,score,gt_label,gt_category,correct_label,correct_category
+i want to bathe,i want to bathe,bathing,action,tfidf,1.0000000000000002,bathing,action,1,1
+i wan to bathe,i want to bathe,bathing,action,tfidf,1.0000000000000002,bathing,action,1,1
+ want to bathe,want to bathe,bathing,action,tfidf,1.0000000000000002,bathing,action,1,1
+i have a bed time routine,i have a bed time routine,bed time routine,action,tfidf,1.0000000000000002,bed time routine,action,1,1
+i hav a bed time routine,i hav a bed time routine,bed time routine,action,direct,1.0,bed time routine,action,1,1
+i have a bed time routine,i have a bed time routine,bed time routine,action,tfidf,1.0000000000000002,bed time routine,action,1,1
+i hv a bed time routine,i hv a bed time routine,bed time routine,action,direct,1.0,bed time routine,action,1,1
+tell me a story,tell me a story,bed time story book,action,fuzzy,1.0,bed time story book,action,1,1
+tell me  story,tell me story,bed time story book,action,tfidf,1.0,bed time story book,action,1,1
+tell me a stor,tell me a stor,bed time story book,action,fuzzy,0.9655172413793104,bed time story book,action,1,1
+tell me a story,tell me a story,bed time story book,action,fuzzy,1.0,bed time story book,action,1,1
+i want to go to bed,i want to go to bed,bed,action,tfidf,1.0000000000000002,bed,action,1,1
+i want to go to ebd,i want to go to ebd,bed,action,fuzzy,0.9473684210526315,bed,action,1,1
+i want to go to bed,i want to go to bed,bed,action,tfidf,1.0000000000000002,bed,action,1,1
+i want to ride bicycle,i want to ride bicycle,bicycle,action,direct,1.0,bicycle,action,1,1
+i want t ride bicycle,i want t ride bicycle,bicycle,action,direct,1.0,bicycle,action,1,1
+i wan to ride bicycle,i want to ride bicycle,bicycle,action,direct,1.0,bicycle,action,1,1
+i wnt to ride bicycle,i wnt to ride bicycle,bicycle,action,direct,1.0,bicycle,action,1,1
+i want to go in bike,i want to go in bike,bike,action,direct,1.0,bike,action,1,1
+i want to go n bike,i want to go n bike,bike,action,direct,1.0,bike,action,1,1
+i wantto go in bike,i wantto go in bike,bike,action,direct,1.0,bike,action,1,1
+i want to go inbike,i want to go inbike,bike,action,fuzzy,0.9743589743589743,bike,action,1,1
+cover me with blankets,cover me with blankets,blanket,action,tfidf,1.0000000000000002,blanket,action,1,1
+cvr me with blankets,cvr me with blankets,blanket,action,fuzzy,0.9523809523809523,blanket,action,1,1
+cover me wiht blankets,cover me wiht blankets,blanket,action,fuzzy,0.9545454545454546,blanket,action,1,1
+shall we go in car,shall we go in car,car,action,direct,1.0,car,action,1,1
+shall we go in cr,shall we go in cr,car,action,fuzzy,0.9714285714285714,car,action,1,1
+shall we go in car,shall we go in car,car,action,direct,1.0,car,action,1,1
+crumble it,crumble it,crumble,action,tfidf,1.0000000000000002,crumble,action,1,1
+crumble it,crumble it,crumble,action,tfidf,1.0000000000000002,crumble,action,1,1
+crumbleit,crumbleit,crumble,action,fuzzy,0.9473684210526315,crumble,action,1,1
+crumble t,crumble t,crumble,action,direct,1.0,crumble,action,1,1
+its in my cupboard,its in my cupboard,cupboard,action,direct,1.0,cupboard,action,1,1
+tis in my cupboard,tis in my cupboard,cupboard,action,direct,1.0,cupboard,action,1,1
+its in my cupboard,its in my cupboard,cupboard,action,direct,1.0,cupboard,action,1,1
+i want to dance,i want to dance,dance,action,direct,1.0,dance,action,1,1
+i want to danc,i want to danc,dance,action,fuzzy,0.9655172413793104,dance,action,1,1
+i want t dance,i want t dance,dance,action,direct,1.0,dance,action,1,1
+its on the desk,its on the desk,desk,action,direct,1.0,desk,action,1,1
+it on the desk,it on the desk,desk,action,direct,1.0,desk,action,1,1
+its on the desk,its on the desk,desk,action,direct,1.0,desk,action,1,1
+tis on the desk,tis on the desk,desk,action,direct,1.0,desk,action,1,1
+open the door,open the door,door,action,direct,1.0,door,action,1,1
+ope the door,ope the door,door,action,direct,1.0,door,action,1,1
+open th door,open th door,door,action,direct,1.0,door,action,1,1
+good drama,good drama,drama,action,tfidf,1.0000000000000002,drama,action,1,1
+gooddrama,gooddrama,drama,action,fuzzy,0.9473684210526315,drama,action,1,1
+good darma,good darma,drama,action,fuzzy,0.9,drama,action,1,1
+goo drama,goo drama,drama,action,direct,1.0,drama,action,1,1
+i am done eating,i am done eating,eating,action,direct,1.0,eating,action,1,1
+i am doneeating,i am doneeating,eating,action,fuzzy,0.967741935483871,eating,action,1,1
+i am done eatign,i am done eatign,eating,action,fuzzy,0.9375,eating,action,1,1
+i am done aeting,i am done aeting,eating,action,fuzzy,0.9375,eating,action,1,1
+lets go in escalator,lets go in escalator,escalator,action,tfidf,1.0000000000000002,escalator,action,1,1
+lest go in escalator,lest go in escalator,escalator,action,direct,1.0,escalator,action,1,1
+let go in escalator,let go in escalator,escalator,action,direct,1.0,escalator,action,1,1
+lets go n escalator,lets go n escalator,escalator,action,direct,1.0,escalator,action,1,1
+i want to do some exercise,i want to do some exercise,exercises,action,tfidf,1.0000000000000002,exercises,action,1,1
+i want to d some exercise,i want to d some exercise,exercises,action,fuzzy,0.9803921568627451,exercises,action,1,1
+i want to do some exercise,i want to do some exercise,exercises,action,tfidf,1.0000000000000002,exercises,action,1,1
+i wan to do some exercise,i want to do some exercise,exercises,action,tfidf,1.0000000000000002,exercises,action,1,1
+switch on the fan,switch on the fan,fan,action,direct,1.0,fan,action,1,1
+switch on the fn,switch on the fn,fan,action,fuzzy,0.9696969696969697,fan,action,1,1
+switch onthe fan,switch onthe fan,fan,action,direct,1.0,fan,action,1,1
+switch on the fna,switch on the fna,fan,action,fuzzy,0.9411764705882353,fan,action,1,1
+its inside the fridge,its inside the fridge,fridge,action,tfidf,1.0000000000000002,fridge,action,1,1
+it inside the fridge,it inside the fridge,fridge,action,direct,1.0,fridge,action,1,1
+its inside the fridg,its inside the fridg,fridge,action,fuzzy,0.975609756097561,fridge,action,1,1
+its insidethe fridge,its insidethe fridge,fridge,action,direct,1.0,fridge,action,1,1
+there are some garbage in the bin,there are some garbage in the bin,garbage in the bin,action,direct,1.0,garbage in the bin,action,1,1
+htere are some garbage in the bin,htere are some garbage in the bin,garbage in the bin,action,direct,1.0,garbage in the bin,action,1,1
+ther are some garbage in the bin,ther are some garbage in the bin,garbage in the bin,action,direct,1.0,garbage in the bin,action,1,1
+there are some garbage in the ibn,there are some garbage in the ibn,garbage in the bin,action,fuzzy,0.9696969696969697,garbage in the bin,action,1,1
+i am getting ready,i am getting ready,getting ready,action,direct,1.0,getting ready,action,1,1
+i am getting ready,i am getting ready,getting ready,action,direct,1.0,getting ready,action,1,1
+i am getting read,i am getting read,read,help,direct,1.0,getting ready,action,0,0
+i amgetting ready,i amgetting ready,getting ready,action,fuzzy,0.9714285714285714,getting ready,action,1,1
+its so golden,its so golden,golden,action,tfidf,1.0000000000000002,golden,action,1,1
+itsso golden,itsso golden,golden,action,direct,1.0,golden,action,1,1
+its s golden,its s golden,golden,action,direct,1.0,golden,action,1,1
+its so golde,its so golde,golden,action,fuzzy,0.96,golden,action,1,1
+it’s the green light,it’s the green light,green light- go,action,tfidf,1.0000000000000002,green light- go,action,1,1
+it’s the greenlight,it’s the greenlight,green light- go,action,fuzzy,0.9743589743589743,green light- go,action,1,1
+it’s th green light,it’s th green light,light,action,direct,1.0,green light- go,action,0,1
+it’s teh green light,it’s teh green light,light,action,direct,1.0,green light- go,action,0,1
+grind it,grind it,grinder,action,tfidf,1.0000000000000002,grinder,action,1,1
+grin it,grin it,grinder,action,fuzzy,0.9333333333333333,grinder,action,1,1
+grind it,grind it,grinder,action,tfidf,1.0000000000000002,grinder,action,1,1
+grindit,grindit,grinder,action,fuzzy,0.9333333333333333,grinder,action,1,1
+its my habit,its my habit,habits,action,tfidf,1.0000000000000002,habits,action,1,1
+tis my habit,tis my habit,habits,action,fuzzy,0.9166666666666666,habits,action,1,1
+its m habit,its m habit,habits,action,fuzzy,0.9565217391304348,habits,action,1,1
+its my habit,its my habit,habits,action,tfidf,1.0000000000000002,habits,action,1,1
+i am happy,i am happy,happy,action,direct,1.0,happy,action,1,1
+i am happy,i am happy,happy,action,direct,1.0,happy,action,1,1
+i amhappy,i amhappy,happy,action,fuzzy,0.9473684210526315,happy,action,1,1
+its very hazards,its very hazards,hazards,action,direct,1.0,hazards,action,1,1
+its very hazard,its very hazard,hazards,action,fuzzy,0.967741935483871,hazards,action,1,1
+its ver hazards,its ver hazards,hazards,action,direct,1.0,hazards,action,1,1
+its very hzrds,its very hzrds,hazards,action,fuzzy,0.9333333333333333,hazards,action,1,1
+switch on the heater,switch on the heater,heater,action,direct,1.0,heater,action,1,1
+switc on the heater,switc on the heater,heater,action,direct,1.0,heater,action,1,1
+switch on the htr,switch on the htr,heater,action,fuzzy,0.918918918918919,heater,action,1,1
+switch on the heate,switch on the heate,heater,action,fuzzy,0.9743589743589743,heater,action,1,1
+can you take me for hiking,can you take me for hiking,hiking,action,direct,1.0,hiking,action,1,1
+canyou take me for hiking,canyou take me for hiking,hiking,action,direct,1.0,hiking,action,1,1
+can youtake me for hiking,can youtake me for hiking,hiking,action,direct,1.0,hiking,action,1,1
+can y take me for hiking,can y take me for hiking,hiking,action,direct,1.0,hiking,action,1,1
+its so hot,its so hot,hot,action,direct,1.0,hot,action,1,1
+its so ht,its so ht,hot,action,fuzzy,0.9473684210526315,hot,action,1,1
+its so ho,its so ho,hot,action,fuzzy,0.9473684210526315,hot,action,1,1
+how long,how long,how long,action,direct,1.0,how long,action,1,1
+hw long,hw long,how long,action,fuzzy,0.9333333333333333,how long,action,1,1
+how lng,how lng,how,action,direct,1.0,how long,action,0,1
+ho long,ho long,how long,action,fuzzy,0.9333333333333333,how long,action,1,1
+how many,how many,how many,action,direct,1.0,how many,action,1,1
+howmany,howmany,how many,action,fuzzy,0.9333333333333333,how many,action,1,1
+how man,how man,how,action,direct,1.0,how many,action,0,1
+how mnay,how mnay,how,action,direct,1.0,how many,action,0,1
+how much is it,how much is it,how much,action,direct,1.0,how much,action,1,1
+ho much is it,ho much is it,how much,action,fuzzy,0.9629629629629629,how much,action,1,1
+how mch is it,how mch is it,how,action,direct,1.0,how much,action,0,1
+how much s it,how much s it,how much,action,direct,1.0,how much,action,1,1
+how,how,how,action,direct,1.0,how,action,1,1
+ho,ho,how,action,fuzzy,0.8,how,action,1,1
+ohw,ohw,how,action,fuzzy,0.6666666666666666,how,action,1,1
+i am all done,i am all done,i am all done,action,direct,1.0,i am all done,action,1,1
+i am al done,i am al done,i am all done,action,fuzzy,0.96,i am all done,action,1,1
+i am alldone,i am alldone,i am all done,action,fuzzy,0.96,i am all done,action,1,1
+i am ll done,i am ll done,i am all done,action,fuzzy,0.96,i am all done,action,1,1
+can you keep distance while talking,can you keep distance while talking,keep distance while talking,action,tfidf,1.0000000000000002,keep distance while talking,action,1,1
+cna you keep distance while talking,cna you keep distance while talking,keep distance while talking,action,direct,1.0,keep distance while talking,action,1,1
+can y keep distance while talking,can y keep distance while talking,keep distance while talking,action,direct,1.0,keep distance while talking,action,1,1
+can you keep distance whl talking,can you keep distance whl talking,keep distance while talking,action,fuzzy,0.9705882352941176,keep distance while talking,action,1,1
+i am doing leg exercise,i am doing leg exercise,leg exercises,action,fuzzy,1.0,leg exercises,action,1,1
+i am doing leg exercies,i am doing leg exercies,leg exercises,action,fuzzy,0.9565217391304348,leg exercises,action,1,1
+i am doing leg exercise,i am doing leg exercise,leg exercises,action,fuzzy,1.0,leg exercises,action,1,1
+i am doing legexercise,i am doing legexercise,leg exercises,action,fuzzy,0.9777777777777777,leg exercises,action,1,1
+come lets dance,come lets dance,lets dance,action,tfidf,1.0000000000000002,lets dance,action,1,1
+com lets dance,com lets dance,dance,action,direct,1.0,lets dance,action,0,1
+come lets danec,come lets danec,lets dance,action,fuzzy,0.9333333333333333,lets dance,action,1,1
+ocme lets dance,ocme lets dance,dance,action,direct,1.0,lets dance,action,0,1
+switch on the light,switch on the light,light,action,tfidf,1.0000000000000002,light,action,1,1
+switch on thelight,switch on thelight,light,action,fuzzy,0.972972972972973,light,action,1,1
+switch on teh light,switch on teh light,light,action,direct,1.0,light,action,1,1
+siwtch on the light,siwtch on the light,light,action,direct,1.0,light,action,1,1
+make some music,make some music,make music,action,tfidf,1.0000000000000002,make music,action,1,1
+make some msuic,make some msuic,make music,action,fuzzy,0.9333333333333333,make music,action,1,1
+make somemusic,make somemusic,make music,action,fuzzy,0.9655172413793104,make music,action,1,1
+make sm music,make sm music,make music,action,fuzzy,0.9285714285714286,make music,action,1,1
+menu pls,menu pls,menu,action,tfidf,1.0000000000000002,menu,action,1,1
+meun pls,meun pls,menu,action,fuzzy,0.875,menu,action,1,1
+menu pl,menu pl,menu,action,direct,1.0,menu,action,1,1
+menupls,menupls,menu,action,fuzzy,0.9333333333333333,menu,action,1,1
+there is some money,there is some money,money,action,direct,1.0,money,action,1,1
+there s some money,there s some money,money,action,direct,1.0,money,action,1,1
+there is some mny,there is some mny,money,action,fuzzy,0.9444444444444444,money,action,1,1
+thr is some money,thr is some money,money,action,direct,1.0,money,action,1,1
+i have my mourning routine,i have my mourning routine,morning routine,action,fuzzy,1.0,morning routine,action,1,1
+i have my mrnng routine,i have my mrnng routine,morning routine,action,fuzzy,0.9387755102040817,morning routine,action,1,1
+i have my mourning routine,i have my mourning routine,morning routine,action,fuzzy,1.0,morning routine,action,1,1
+i have my mourning rtn,i have my mourning rtn,morning routine,action,fuzzy,0.9166666666666666,morning routine,action,1,1
+i want to play with friend,i want to play with friend,play with friend,action,direct,1.0,play with friend,action,1,1
+i want to pla with friend,i want to pla with friend,play with friend,action,fuzzy,0.9803921568627451,play with friend,action,1,1
+i want to play iwth friend,i want to play iwth friend,play with friend,action,fuzzy,0.9615384615384616,play with friend,action,1,1
+i want to play with friend,i want to play with friend,play with friend,action,direct,1.0,play with friend,action,1,1
+its in red light please stop,its in red light please stop,light,action,direct,1.0,red light- wait,action,0,1
+its in red light pls stop,its in red light pls stop,light,action,direct,1.0,red light- wait,action,0,1
+its in red lght please stop,its in red lght please stop,red,color,direct,1.0,red light- wait,action,0,0
+run,run,run,action,direct,1.0,run,action,1,1
+rn,rn,run,action,fuzzy,0.8,run,action,1,1
+ru,ru,run,action,fuzzy,0.8,run,action,1,1
+go back,go back,back,action,direct,1.0,back,action,1,1
+go bac,go bac,back,action,fuzzy,0.9230769230769231,back,action,1,1
+go back,go back,back,action,direct,1.0,back,action,1,1
+add some butter,add some butter,butter,add-ons,direct,1.0,butter,add-ons,1,1
+add sm butter,add sm butter,butter,add-ons,direct,1.0,butter,add-ons,1,1
+add som butter,add som butter,butter,add-ons,direct,1.0,butter,add-ons,1,1
+addsome butter,addsome butter,butter,add-ons,direct,1.0,butter,add-ons,1,1
+add some chilli flakes,add some chilli flakes,chilli flakes,add-ons,direct,1.0,chilli flakes,add-ons,1,1
+add some chilliflakes,add some chilliflakes,chilli flakes,add-ons,fuzzy,0.9767441860465116,chilli flakes,add-ons,1,1
+ad some chilli flakes,ad some chilli flakes,chilli flakes,add-ons,direct,1.0,chilli flakes,add-ons,1,1
+dd some chilli flakes,dd some chilli flakes,chilli flakes,add-ons,direct,1.0,chilli flakes,add-ons,1,1
+add some chilli,add some chilli,chilli,add-ons,direct,1.0,chilli,add-ons,1,1
+add somechilli,add somechilli,chilli,add-ons,fuzzy,0.9655172413793104,chilli,add-ons,1,1
+add some cihlli,add some cihlli,chilli,add-ons,fuzzy,0.9333333333333333,chilli,add-ons,1,1
+dad some chilli,dad some chilli,chilli,add-ons,direct,1.0,chilli,add-ons,1,1
+give me some dips,give me some dips,dips,add-ons,direct,1.0,dips,add-ons,1,1
+give m some dips,give m some dips,dips,add-ons,direct,1.0,dips,add-ons,1,1
+give me some dips,give me some dips,dips,add-ons,direct,1.0,dips,add-ons,1,1
+give me some dpis,give me some dpis,dips,add-ons,fuzzy,0.9411764705882353,dips,add-ons,1,1
+give me eclairs,give me eclairs,eclairs,add-ons,tfidf,1.0000000000000002,eclairs,add-ons,1,1
+give me celairs,give me celairs,eclairs,add-ons,fuzzy,0.9333333333333333,eclairs,add-ons,1,1
+giveme eclairs,giveme eclairs,eclairs,add-ons,direct,1.0,eclairs,add-ons,1,1
+give meeclairs,give meeclairs,eclairs,add-ons,fuzzy,0.9655172413793104,eclairs,add-ons,1,1
+give me some jam,give me some jam,jam,add-ons,direct,1.0,jam,add-ons,1,1
+give me som jam,give me som jam,jam,add-ons,direct,1.0,jam,add-ons,1,1
+give me sm jam,give me sm jam,jam,add-ons,direct,1.0,jam,add-ons,1,1
+give some ketchup,give some ketchup,ketchup,add-ons,tfidf,1.0000000000000002,ketchup,add-ons,1,1
+give someketchup,give someketchup,ketchup,add-ons,fuzzy,0.9696969696969697,ketchup,add-ons,1,1
+give some ktchp,give some ktchp,ketchup,add-ons,fuzzy,0.9375,ketchup,add-ons,1,1
+gv some ketchup,gv some ketchup,ketchup,add-ons,direct,1.0,ketchup,add-ons,1,1
+add some maple syrup,add some maple syrup,maple syrup,add-ons,tfidf,1.0000000000000002,maple syrup,add-ons,1,1
+add some mapel syrup,add some mapel syrup,maple syrup,add-ons,fuzzy,0.95,maple syrup,add-ons,1,1
+dad some maple syrup,dad some maple syrup,maple syrup,add-ons,direct,1.0,maple syrup,add-ons,1,1
+add some mpale syrup,add some mpale syrup,maple syrup,add-ons,fuzzy,0.95,maple syrup,add-ons,1,1
+add some masala,add some masala,masala,add-ons,tfidf,1.0000000000000002,masala,add-ons,1,1
+ad some masala,ad some masala,masala,add-ons,direct,1.0,masala,add-ons,1,1
+addsome masala,addsome masala,masala,add-ons,direct,1.0,masala,add-ons,1,1
+add some mustard,add some mustard,mustard,add-ons,tfidf,1.0000000000000002,mustard,add-ons,1,1
+add some mustar,add some mustar,mustard,add-ons,fuzzy,0.967741935483871,mustard,add-ons,1,1
+ad some mustard,ad some mustard,mustard,add-ons,direct,1.0,mustard,add-ons,1,1
+add som mustard,add som mustard,mustard,add-ons,direct,1.0,mustard,add-ons,1,1
+give me peanut butter,give me peanut butter,peanut butter,add-ons,tfidf,1.0000000000000002,peanut butter,add-ons,1,1
+give me pnt butter,give me pnt butter,butter,add-ons,direct,1.0,peanut butter,add-ons,0,1
+give me peanut ubtter,give me peanut ubtter,peanut butter,add-ons,fuzzy,0.9523809523809523,peanut butter,add-ons,1,1
+give me paenut butter,give me paenut butter,butter,add-ons,direct,1.0,peanut butter,add-ons,0,1
+add some pepper,add some pepper,pepper,add-ons,tfidf,1.0000000000000002,pepper,add-ons,1,1
+addsome pepper,addsome pepper,pepper,add-ons,direct,1.0,pepper,add-ons,1,1
+add somepepper,add somepepper,pepper,add-ons,fuzzy,0.9655172413793104,pepper,add-ons,1,1
+add some pppr,add some pppr,pepper,add-ons,fuzzy,0.9285714285714286,pepper,add-ons,1,1
+give some pickle,give some pickle,pickle,add-ons,tfidf,1.0000000000000002,pickle,add-ons,1,1
+gv some pickle,gv some pickle,pickle,add-ons,direct,1.0,pickle,add-ons,1,1
+give som pickle,give som pickle,pickle,add-ons,direct,1.0,pickle,add-ons,1,1
+give some piclke,give some piclke,pickle,add-ons,fuzzy,0.9375,pickle,add-ons,1,1
+i want some raita,i want some raita,raita,add-ons,tfidf,1.0000000000000002,raita,add-ons,1,1
+i want some arita,i want some arita,raita,add-ons,fuzzy,0.9411764705882353,raita,add-ons,1,1
+i wnt some raita,i wnt some raita,raita,add-ons,direct,1.0,raita,add-ons,1,1
+i want someraita,i want someraita,raita,add-ons,fuzzy,0.9696969696969697,raita,add-ons,1,1
+sabzi is nice,sabzi is nice,sabzi,add-ons,direct,1.0,sabzi,add-ons,1,1
+sabzi s nice,sabzi s nice,sabzi,add-ons,direct,1.0,sabzi,add-ons,1,1
+sabzi is nice,sabzi is nice,sabzi,add-ons,direct,1.0,sabzi,add-ons,1,1
+do some salad dressing,do some salad dressing,salad dressing,add-ons,direct,1.0,salad dressing,add-ons,1,1
+dosome salad dressing,dosome salad dressing,salad dressing,add-ons,direct,1.0,salad dressing,add-ons,1,1
+do somesalad dressing,do somesalad dressing,salad dressing,add-ons,fuzzy,0.9767441860465116,salad dressing,add-ons,1,1
+add some salt,add some salt,salt,add-ons,tfidf,1.0000000000000002,salt,add-ons,1,1
+add some sal,add some sal,salt,add-ons,fuzzy,0.96,salt,add-ons,1,1
+add some slt,add some slt,salt,add-ons,fuzzy,0.96,salt,add-ons,1,1
+add somesalt,add somesalt,salt,add-ons,fuzzy,0.96,salt,add-ons,1,1
+add more sause,add more sause,sauce,add-ons,fuzzy,1.0,sauce,add-ons,1,1
+dd more sause,dd more sause,sauce,add-ons,fuzzy,0.9629629629629629,sauce,add-ons,1,1
+add more sause,add more sause,sauce,add-ons,fuzzy,1.0,sauce,add-ons,1,1
+addmore sause,addmore sause,sauce,add-ons,fuzzy,0.9629629629629629,sauce,add-ons,1,1
+there is an ant,there is an ant,ant,animals,tfidf,1.0000000000000002,ant,animals,1,1
+there is n ant,there is n ant,ant,animals,direct,1.0,ant,animals,1,1
+there is anant,there is anant,ant,animals,fuzzy,0.9655172413793104,ant,animals,1,1
+there is a bee,there is a bee,bee,animals,direct,1.0,bee,animals,1,1
+thr is a bee,thr is a bee,bee,animals,direct,1.0,bee,animals,1,1
+theer is a bee,theer is a bee,bee,animals,direct,1.0,bee,animals,1,1
+there is a b,there is a b,bee,animals,fuzzy,0.9230769230769231,bee,animals,1,1
+there is a bison,there is a bison,bison,animals,direct,1.0,bison,animals,1,1
+tehre is a bison,tehre is a bison,bison,animals,direct,1.0,bison,animals,1,1
+thereis a bison,thereis a bison,bison,animals,direct,1.0,bison,animals,1,1
+there is a biso,there is a biso,bison,animals,fuzzy,0.967741935483871,bison,animals,1,1
+it’s a buffalo,it’s a buffalo,buffalo,animals,tfidf,1.0000000000000002,buffalo,animals,1,1
+it’ a buffalo,it’ a buffalo,buffalo,animals,tfidf,1.0000000000000002,buffalo,animals,1,1
+it’s a buffal,it’s a buffal,buffalo,animals,fuzzy,0.9629629629629629,buffalo,animals,1,1
+it’sa buffalo,it’sa buffalo,buffalo,animals,tfidf,1.0000000000000002,buffalo,animals,1,1
+it’s a cat,it’s a cat,cat,animals,tfidf,1.0000000000000002,cat,animals,1,1
+its’ a cat,its’ a cat,cat,animals,direct,1.0,cat,animals,1,1
+t’s a cat,t’s a cat,cat,animals,direct,1.0,cat,animals,1,1
+it’sa cat,it’sa cat,cat,animals,tfidf,1.0000000000000002,cat,animals,1,1
+it’s a cockroach,it’s a cockroach,cockroach,animals,tfidf,1.0000000000000002,cockroach,animals,1,1
+it’s  cockroach,it’s cockroach,cockroach,animals,tfidf,1.0000000000000002,cockroach,animals,1,1
+it’s a cockroac,it’s a cockroac,cockroach,animals,fuzzy,0.967741935483871,cockroach,animals,1,1
+it’s a cckrch,it’s a cckrch,cockroach,animals,fuzzy,0.896551724137931,cockroach,animals,1,1
+i see the cow,i see the cow,cow,animals,direct,1.0,cow,animals,1,1
+i see the co,i see the co,cow,animals,fuzzy,0.96,cow,animals,1,1
+i see the cwo,i see the cwo,cow,animals,fuzzy,0.9230769230769231,cow,animals,1,1
+ see the cow,see the cow,cow,animals,direct,1.0,cow,animals,1,1
+i see a crocodile,i see a crocodile,crocodile,animals,tfidf,1.0000000000000002,crocodile,animals,1,1
+ see a crocodile,see a crocodile,crocodile,animals,tfidf,1.0000000000000002,crocodile,animals,1,1
+isee a crocodile,isee a crocodile,crocodile,animals,direct,1.0,crocodile,animals,1,1
+i see a crocodile,i see a crocodile,crocodile,animals,tfidf,1.0000000000000002,crocodile,animals,1,1
+there is a dog,there is a dog,dog,animals,direct,1.0,dog,animals,1,1
+there is a do,there is a do,dog,animals,fuzzy,0.9629629629629629,dog,animals,1,1
+ther is a dog,ther is a dog,dog,animals,direct,1.0,dog,animals,1,1
+there is adog,there is adog,dog,animals,fuzzy,0.9629629629629629,dog,animals,1,1
+it’s the dolphin,it’s the dolphin,dolphin,animals,tfidf,1.0000000000000002,dolphin,animals,1,1
+it’s th dolphin,it’s th dolphin,dolphin,animals,direct,1.0,dolphin,animals,1,1
+it’s the dlphn,it’s the dlphn,dolphin,animals,fuzzy,0.9333333333333333,dolphin,animals,1,1
+its’ the dolphin,its’ the dolphin,dolphin,animals,direct,1.0,dolphin,animals,1,1
+it’s the donkey,it’s the donkey,donkey,animals,tfidf,1.0000000000000002,donkey,animals,1,1
+it’s th donkey,it’s th donkey,donkey,animals,direct,1.0,donkey,animals,1,1
+it’s thedonkey,it’s thedonkey,donkey,animals,fuzzy,0.9655172413793104,donkey,animals,1,1
+it’ the donkey,it’ the donkey,donkey,animals,tfidf,1.0000000000000002,donkey,animals,1,1
+it’s the elephant,it’s the elephant,elephant,animals,tfidf,1.0000000000000002,elephant,animals,1,1
+it’s the lphnt,it’s the lphnt,elephant,animals,fuzzy,0.9032258064516129,elephant,animals,1,1
+it’sthe elephant,it’sthe elephant,elephant,animals,direct,1.0,elephant,animals,1,1
+it’ the elephant,it’ the elephant,elephant,animals,tfidf,1.0000000000000002,elephant,animals,1,1
+there is the fox,there is the fox,fox,animals,direct,1.0,fox,animals,1,1
+there is hte fox,there is hte fox,fox,animals,direct,1.0,fox,animals,1,1
+ther is the fox,ther is the fox,fox,animals,direct,1.0,fox,animals,1,1
+there is thefox,there is thefox,fox,animals,fuzzy,0.967741935483871,fox,animals,1,1
+there is the giraffe,there is the giraffe,giraffe,animals,direct,1.0,giraffe,animals,1,1
+there isthe giraffe,there isthe giraffe,giraffe,animals,direct,1.0,giraffe,animals,1,1
+htere is the giraffe,htere is the giraffe,giraffe,animals,direct,1.0,giraffe,animals,1,1
+there is the goat,there is the goat,goat,animals,direct,1.0,goat,animals,1,1
+there i the goat,there i the goat,goat,animals,direct,1.0,goat,animals,1,1
+there isthe goat,there isthe goat,goat,animals,direct,1.0,goat,animals,1,1
+there is thegoat,there is thegoat,goat,animals,fuzzy,0.9696969696969697,goat,animals,1,1
+there is the hippopotamus,there is the hippopotamus,hippopotamus,animals,direct,1.0,hippopotamus,animals,1,1
+there is thehippopotamus,there is thehippopotamus,hippopotamus,animals,fuzzy,0.9795918367346939,hippopotamus,animals,1,1
+ther is the hippopotamus,ther is the hippopotamus,hippopotamus,animals,direct,1.0,hippopotamus,animals,1,1
+there is th hippopotamus,there is th hippopotamus,hippopotamus,animals,direct,1.0,hippopotamus,animals,1,1
+there is the horse,there is the horse,horse,animals,direct,1.0,horse,animals,1,1
+ther is the horse,ther is the horse,horse,animals,direct,1.0,horse,animals,1,1
+there i the horse,there i the horse,horse,animals,direct,1.0,horse,animals,1,1
+thereis the horse,thereis the horse,horse,animals,direct,1.0,horse,animals,1,1
+it’s the kangaroo,it’s the kangaroo,kangaroo,animals,tfidf,1.0000000000000002,kangaroo,animals,1,1
+it’s the kangaro,it’s the kangaro,kangaroo,animals,fuzzy,0.9696969696969697,kangaroo,animals,1,1
+it’s th kangaroo,it’s th kangaroo,kangaroo,animals,direct,1.0,kangaroo,animals,1,1
+t’s the kangaroo,t’s the kangaroo,kangaroo,animals,direct,1.0,kangaroo,animals,1,1
+there is a lion,there is a lion,lion,animals,direct,1.0,lion,animals,1,1
+thereis a lion,thereis a lion,lion,animals,direct,1.0,lion,animals,1,1
+there is a lion,there is a lion,lion,animals,direct,1.0,lion,animals,1,1
+there is a monkey,there is a monkey,monkey,animals,direct,1.0,monkey,animals,1,1
+three is a monkey,three is a monkey,monkey,animals,direct,1.0,monkey,animals,1,1
+there is a monke,there is a monke,monkey,animals,fuzzy,0.9696969696969697,monkey,animals,1,1
+there s a monkey,there s a monkey,monkey,animals,direct,1.0,monkey,animals,1,1
+mosquito bites,mosquito bites,mosquito,animals,tfidf,1.0000000000000002,mosquito,animals,1,1
+mosquito bts,mosquito bts,mosquito,animals,direct,1.0,mosquito,animals,1,1
+mosquito biets,mosquito biets,mosquito,animals,direct,1.0,mosquito,animals,1,1
+mosquitobites,mosquitobites,mosquito,animals,fuzzy,0.9629629629629629,mosquito,animals,1,1
+there is a mouse,there is a mouse,mouse,animals,direct,1.0,mouse,animals,1,1
+thr is a mouse,thr is a mouse,mouse,animals,direct,1.0,mouse,animals,1,1
+there is a muose,there is a muose,mouse,animals,fuzzy,0.9375,mouse,animals,1,1
+ther is a mouse,ther is a mouse,mouse,animals,direct,1.0,mouse,animals,1,1
+there is panda,there is panda,panda,animals,direct,1.0,panda,animals,1,1
+there i panda,there i panda,panda,animals,direct,1.0,panda,animals,1,1
+there is pand,there is pand,panda,animals,fuzzy,0.9629629629629629,panda,animals,1,1
+tehre is panda,tehre is panda,panda,animals,direct,1.0,panda,animals,1,1
+there's the penguin,there's the penguin,penguin,animals,tfidf,1.0000000000000002,penguin,animals,1,1
+there's th penguin,there's th penguin,penguin,animals,direct,1.0,penguin,animals,1,1
+there's thepenguin,there's thepenguin,penguin,animals,fuzzy,0.972972972972973,penguin,animals,1,1
+thr's the penguin,thr's the penguin,penguin,animals,direct,1.0,penguin,animals,1,1
+there is the pig,there is the pig,pig,animals,direct,1.0,pig,animals,1,1
+there is th pig,there is th pig,pig,animals,direct,1.0,pig,animals,1,1
+there is the pi,there is the pi,pig,animals,fuzzy,0.967741935483871,pig,animals,1,1
+there is the pgi,there is the pgi,pig,animals,fuzzy,0.9375,pig,animals,1,1
+it’s a rabbit,it’s a rabbit,rabbit,animals,tfidf,1.0000000000000002,rabbit,animals,1,1
+it’sa rabbit,it’sa rabbit,rabbit,animals,tfidf,1.0000000000000002,rabbit,animals,1,1
+it’s a rbbt,it’s a rbbt,rabbit,animals,fuzzy,0.9166666666666666,rabbit,animals,1,1
+it’s a rabbit,it’s a rabbit,rabbit,animals,tfidf,1.0000000000000002,rabbit,animals,1,1
+there is the shark,there is the shark,shark,animals,direct,1.0,shark,animals,1,1
+ther is the shark,ther is the shark,shark,animals,direct,1.0,shark,animals,1,1
+thereis the shark,thereis the shark,shark,animals,direct,1.0,shark,animals,1,1
+there is hte shark,there is hte shark,shark,animals,direct,1.0,shark,animals,1,1
+there is the sheep,there is the sheep,sheep,animals,direct,1.0,sheep,animals,1,1
+thr is the sheep,thr is the sheep,sheep,animals,direct,1.0,sheep,animals,1,1
+there is the sheep,there is the sheep,sheep,animals,direct,1.0,sheep,animals,1,1
+there is thesheep,there is thesheep,sheep,animals,fuzzy,0.9714285714285714,sheep,animals,1,1
+there is the skunk,there is the skunk,skunk,animals,direct,1.0,skunk,animals,1,1
+there is theskunk,there is theskunk,skunk,animals,fuzzy,0.9714285714285714,skunk,animals,1,1
+there is th skunk,there is th skunk,skunk,animals,direct,1.0,skunk,animals,1,1
+its a snake,its a snake,snake,animals,direct,1.0,snake,animals,1,1
+its a nsake,its a nsake,snake,animals,fuzzy,0.9090909090909091,snake,animals,1,1
+its a snake,its a snake,snake,animals,direct,1.0,snake,animals,1,1
+it’s bat,it’s bat,bat,birds,direct,1.0,bat,birds,1,1
+i’ts bat,i’ts bat,bat,birds,direct,1.0,bat,birds,1,1
+it’ bat,it’ bat,bat,birds,direct,1.0,bat,birds,1,1
+it’s abt,it’s abt,bat,birds,fuzzy,0.875,bat,birds,1,1
+i see birds,i see birds,birds,birds,tfidf,1.0000000000000002,birds,birds,1,1
+isee birds,isee birds,birds,birds,direct,1.0,birds,birds,1,1
+i seebirds,i seebirds,birds,birds,fuzzy,0.9523809523809523,birds,birds,1,1
+ see birds,see birds,birds,birds,tfidf,1.0000000000000002,birds,birds,1,1
+it’s a crow,it’s a crow,crow,birds,tfidf,1.0000000000000002,crow,birds,1,1
+it’s a cro,it’s a cro,crow,birds,fuzzy,0.9523809523809523,crow,birds,1,1
+it’s a rcow,it’s a rcow,crow,birds,fuzzy,0.9090909090909091,crow,birds,1,1
+it’ a crow,it’ a crow,crow,birds,tfidf,1.0000000000000002,crow,birds,1,1
+it’s a cuckoo,it’s a cuckoo,cuckoo,birds,tfidf,1.0000000000000002,cuckoo,birds,1,1
+it’s a cuckoo,it’s a cuckoo,cuckoo,birds,tfidf,1.0000000000000002,cuckoo,birds,1,1
+it’s a cck,it’s a cck,cuckoo,birds,fuzzy,0.8695652173913043,cuckoo,birds,1,1
+there is the dove,there is the dove,dove,birds,direct,1.0,dove,birds,1,1
+ther is the dove,ther is the dove,dove,birds,direct,1.0,dove,birds,1,1
+three is the dove,three is the dove,dove,birds,direct,1.0,dove,birds,1,1
+there is th dove,there is th dove,dove,birds,direct,1.0,dove,birds,1,1
+there is a duck,there is a duck,duck,birds,direct,1.0,duck,birds,1,1
+there is a dck,there is a dck,duck,birds,fuzzy,0.9655172413793104,duck,birds,1,1
+there is a duck,there is a duck,duck,birds,direct,1.0,duck,birds,1,1
+thereis a duck,thereis a duck,duck,birds,direct,1.0,duck,birds,1,1
+there is the eagle,there is the eagle,eagle,birds,direct,1.0,eagle,birds,1,1
+thr is the eagle,thr is the eagle,eagle,birds,direct,1.0,eagle,birds,1,1
+there is teh eagle,there is teh eagle,eagle,birds,direct,1.0,eagle,birds,1,1
+thereis the eagle,thereis the eagle,eagle,birds,direct,1.0,eagle,birds,1,1
+there is kingfisher,there is kingfisher,kingfisher,birds,direct,1.0,kingfisher,birds,1,1
+there is kingfishe,there is kingfishe,kingfisher,birds,fuzzy,0.972972972972973,kingfisher,birds,1,1
+ther is kingfisher,ther is kingfisher,kingfisher,birds,direct,1.0,kingfisher,birds,1,1
+its an owl,its an owl,owl,birds,direct,1.0,owl,birds,1,1
+its an wl,its an wl,owl,birds,fuzzy,0.9473684210526315,owl,birds,1,1
+its a owl,its a owl,owl,birds,direct,1.0,owl,birds,1,1
+its an ow,its an ow,owl,birds,fuzzy,0.9473684210526315,owl,birds,1,1
+there is a parrot,there is a parrot,parrot,birds,direct,1.0,parrot,birds,1,1
+there s a parrot,there s a parrot,parrot,birds,direct,1.0,parrot,birds,1,1
+there isa parrot,there isa parrot,parrot,birds,direct,1.0,parrot,birds,1,1
+there is aparrot,there is aparrot,parrot,birds,fuzzy,0.9696969696969697,parrot,birds,1,1
+where is the pelican,where is the pelican,pelican,birds,tfidf,1.0000000000000002,pelican,birds,1,1
+where is the pelica,where is the pelica,pelican,birds,fuzzy,0.9743589743589743,pelican,birds,1,1
+wheer is the pelican,wheer is the pelican,pelican,birds,direct,1.0,pelican,birds,1,1
+there is the pegion,there is the pegion,pigeon,birds,fuzzy,1.0,pigeon,birds,1,1
+there is the pegoin,there is the pegoin,pigeon,birds,fuzzy,0.9473684210526315,pigeon,birds,1,1
+there is the pegion,there is the pegion,pigeon,birds,fuzzy,1.0,pigeon,birds,1,1
+there is thepegion,there is thepegion,pigeon,birds,fuzzy,0.972972972972973,pigeon,birds,1,1
+its a sparrow,its a sparrow,sparrow,birds,tfidf,1.0000000000000002,sparrow,birds,1,1
+itsa sparrow,itsa sparrow,sparrow,birds,direct,1.0,sparrow,birds,1,1
+its a sprrw,its a sprrw,sparrow,birds,fuzzy,0.9166666666666666,sparrow,birds,1,1
+its asparrow,its asparrow,sparrow,birds,fuzzy,0.96,sparrow,birds,1,1
+blow my nose,blow my nose,blow nose,body,tfidf,1.0000000000000002,blow nose,body,1,1
+blo my nose,blo my nose,nose,body,tfidf,1.0000000000000002,blow nose,body,0,1
+bolw my nose,bolw my nose,nose,body,tfidf,1.0000000000000002,blow nose,body,0,1
+blow my ns,blow my ns,blow nose,body,fuzzy,0.9090909090909091,blow nose,body,1,1
+put my body vest,put my body vest,body,body,direct,1.0,body vests,body,0,1
+put my bdoy vest,put my bdoy vest,body vests,body,fuzzy,0.9375,body vests,body,1,1
+pt my body vest,pt my body vest,body,body,direct,1.0,body vests,body,0,1
+put my bod vest,put my bod vest,body vests,body,fuzzy,0.967741935483871,body vests,body,1,1
+its my body,its my body,body,body,tfidf,1.0000000000000002,body,body,1,1
+its mybody,its mybody,body,body,fuzzy,0.9523809523809523,body,body,1,1
+its my bod,its my bod,body,body,fuzzy,0.9523809523809523,body,body,1,1
+its m body,its m body,body,body,direct,1.0,body,body,1,1
+i want to brush my teeth,i want to brush my teeth,brush teeth,body,fuzzy,1.0,brush teeth,body,1,1
+i want to brush my teet,i want to brush my teet,brush teeth,body,fuzzy,0.9787234042553191,brush teeth,body,1,1
+i want to brush my teeht,i want to brush my teeht,brush teeth,body,fuzzy,0.9583333333333334,brush teeth,body,1,1
+i want t brush my teeth,i want t brush my teeth,brush teeth,body,fuzzy,0.9787234042553191,brush teeth,body,1,1
+my ear,my ear,ears,body,fuzzy,1.0,ears,body,1,1
+myear,myear,ears,body,fuzzy,0.9090909090909091,ears,body,1,1
+my ear,my ear,ears,body,fuzzy,1.0,ears,body,1,1
+my elbow,my elbow,elbow,body,direct,1.0,elbow,body,1,1
+my lbw,my lbw,elbow,body,fuzzy,0.8571428571428571,elbow,body,1,1
+myelbow,myelbow,elbow,body,fuzzy,0.9333333333333333,elbow,body,1,1
+my eyes,my eyes,eyes,body,direct,1.0,eyes,body,1,1
+my eyes,my eyes,eyes,body,direct,1.0,eyes,body,1,1
+myeyes,myeyes,eyes,body,fuzzy,0.9230769230769231,eyes,body,1,1
+my eye,my eye,eyes,body,fuzzy,0.9230769230769231,eyes,body,1,1
+my fingers,my fingers,fingers,body,direct,1.0,fingers,body,1,1
+my fingers,my fingers,fingers,body,direct,1.0,fingers,body,1,1
+my finger,my finger,fingers,body,fuzzy,0.9473684210526315,fingers,body,1,1
+my hair,my hair,hair,body,direct,1.0,hair,body,1,1
+my hair,my hair,hair,body,direct,1.0,hair,body,1,1
+my hiar,my hiar,hair,body,fuzzy,0.8571428571428571,hair,body,1,1
+my hands,my hands,hands,body,direct,1.0,hands,body,1,1
+my hands,my hands,hands,body,direct,1.0,hands,body,1,1
+myhands,myhands,hands,body,fuzzy,0.9333333333333333,hands,body,1,1
+my hand,my hand,hands,body,fuzzy,0.9333333333333333,hands,body,1,1
+my head,my head,head,body,direct,1.0,head,body,1,1
+my heda,my heda,head,body,fuzzy,0.8571428571428571,head,body,1,1
+myhead,myhead,head,body,fuzzy,0.9230769230769231,head,body,1,1
+m head,m head,head,body,direct,1.0,head,body,1,1
+my heart,my heart,heart,body,direct,1.0,heart,body,1,1
+myheart,myheart,heart,body,fuzzy,0.9333333333333333,heart,body,1,1
+my heart,my heart,heart,body,direct,1.0,heart,body,1,1
+my hip,my hip,hip,body,direct,1.0,hip,body,1,1
+myhip,myhip,hip,body,fuzzy,0.9090909090909091,hip,body,1,1
+my hip,my hip,hip,body,direct,1.0,hip,body,1,1
+my knee,my knee,knee,body,direct,1.0,knee,body,1,1
+my kne,my kne,knee,body,fuzzy,0.9230769230769231,knee,body,1,1
+my knee,my knee,knee,body,direct,1.0,knee,body,1,1
+my legs,my legs,legs,body,direct,1.0,legs,body,1,1
+my lgs,my lgs,legs,body,fuzzy,0.9230769230769231,legs,body,1,1
+mylegs,mylegs,legs,body,fuzzy,0.9230769230769231,legs,body,1,1
+my mouth,my mouth,mouth,body,direct,1.0,mouth,body,1,1
+mymouth,mymouth,mouth,body,fuzzy,0.9333333333333333,mouth,body,1,1
+my mouth,my mouth,mouth,body,direct,1.0,mouth,body,1,1
+my neck,my neck,neck,body,direct,1.0,neck,body,1,1
+m neck,m neck,neck,body,direct,1.0,neck,body,1,1
+myneck,myneck,neck,body,fuzzy,0.9230769230769231,neck,body,1,1
+my neck,my neck,neck,body,direct,1.0,neck,body,1,1
+my nose,my nose,nose,body,tfidf,1.0000000000000002,nose,body,1,1
+my ns,my ns,nose,body,fuzzy,0.8333333333333334,nose,body,1,1
+my nose,my nose,nose,body,tfidf,1.0000000000000002,nose,body,1,1
+it is black,it is black,black,color,tfidf,1.0000000000000002,black,color,1,1
+it isblack,it isblack,black,color,fuzzy,0.9523809523809523,black,color,1,1
+itis black,itis black,black,color,direct,1.0,black,color,1,1
+it is blck,it is blck,black,color,fuzzy,0.9523809523809523,black,color,1,1
+it is blue,it is blue,blue,color,tfidf,1.0000000000000002,blue,color,1,1
+it is bl,it is bl,blue,color,fuzzy,0.8888888888888888,blue,color,1,1
+it isblue,it isblue,blue,color,fuzzy,0.9473684210526315,blue,color,1,1
+this is brown,this is brown,brown,color,tfidf,1.0000000000000002,brown,color,1,1
+this i brown,this i brown,brown,color,direct,1.0,brown,color,1,1
+this is brow,this is brow,brown,color,fuzzy,0.96,brown,color,1,1
+thisis brown,thisis brown,brown,color,direct,1.0,brown,color,1,1
+beautiful colors,beautiful colors,colors,color,tfidf,1.0000000000000002,colors,color,1,1
+btfl colors,btfl colors,colors,color,direct,1.0,colors,color,1,1
+beautiful clrs,beautiful clrs,colors,color,fuzzy,0.9333333333333333,colors,color,1,1
+beautifu colors,beautifu colors,colors,color,direct,1.0,colors,color,1,1
+its gray,its gray,gray,color,tfidf,1.0000000000000002,gray,color,1,1
+its gry,its gry,gray,color,fuzzy,0.9333333333333333,gray,color,1,1
+it gray,it gray,gray,color,direct,1.0,gray,color,1,1
+ist gray,ist gray,gray,color,direct,1.0,gray,color,1,1
+its green,its green,green,color,direct,1.0,green,color,1,1
+tis green,tis green,green,color,direct,1.0,green,color,1,1
+its gree,its gree,green,color,fuzzy,0.9411764705882353,green,color,1,1
+itsgreen,itsgreen,green,color,fuzzy,0.9411764705882353,green,color,1,1
+its pink,its pink,pink,color,tfidf,1.0000000000000002,pink,color,1,1
+it pink,it pink,pink,color,direct,1.0,pink,color,1,1
+its pikn,its pikn,pink,color,fuzzy,0.875,pink,color,1,1
+its pnik,its pnik,pink,color,fuzzy,0.875,pink,color,1,1
+its purple,its purple,purple,color,tfidf,1.0000000000000002,purple,color,1,1
+ts purple,ts purple,purple,color,direct,1.0,purple,color,1,1
+its prpl,its prpl,purple,color,fuzzy,0.8888888888888888,purple,color,1,1
+ist purple,ist purple,purple,color,direct,1.0,purple,color,1,1
+its red,its red,red,color,direct,1.0,red,color,1,1
+ts red,ts red,red,color,direct,1.0,red,color,1,1
+its re,its re,red,color,fuzzy,0.9230769230769231,red,color,1,1
+it red,it red,red,color,direct,1.0,red,color,1,1
+its silver,its silver,silver,color,tfidf,1.0000000000000002,silver,color,1,1
+its silevr,its silevr,silver,color,fuzzy,0.9,silver,color,1,1
+it silver,it silver,silver,color,direct,1.0,silver,color,1,1
+i want bournvita,i want bournvita,bournvita,drinks,direct,1.0,bournvita,drinks,1,1
+i wantbournvita,i wantbournvita,bournvita,drinks,fuzzy,0.967741935483871,bournvita,drinks,1,1
+i wan bournvita,i want bournvita,bournvita,drinks,direct,1.0,bournvita,drinks,1,1
+i watn bournvita,i watn bournvita,bournvita,drinks,direct,1.0,bournvita,drinks,1,1
+i want coca-cola,i want coca-cola,coca-cola,drinks,tfidf,1.0000000000000002,coca-cola,drinks,1,1
+i wnt coca-cola,i wnt coca-cola,coca-cola,drinks,direct,1.0,coca-cola,drinks,1,1
+iwant coca-cola,iwant coca-cola,coca-cola,drinks,direct,1.0,coca-cola,drinks,1,1
+i watn coca-cola,i watn coca-cola,coca-cola,drinks,direct,1.0,coca-cola,drinks,1,1
+i want coffee,i want coffee,coffee,drinks,direct,1.0,coffee,drinks,1,1
+iwant coffee,iwant coffee,coffee,drinks,direct,1.0,coffee,drinks,1,1
+i awnt coffee,i awnt coffee,coffee,drinks,direct,1.0,coffee,drinks,1,1
+i wan coffee,i want coffee,coffee,drinks,direct,1.0,coffee,drinks,1,1
+i want cold coffee,i want cold coffee,coffee,drinks,direct,1.0,cold coffee,drinks,0,1
+ want cold coffee,want cold coffee,coffee,drinks,direct,1.0,cold coffee,drinks,0,1
+i wantcold coffee,i wantcold coffee,coffee,drinks,direct,1.0,cold coffee,drinks,0,1
+i want coldcoffee,i want coldcoffee,cold coffee,drinks,fuzzy,0.9714285714285714,cold coffee,drinks,1,1
+i need cold drinks,i need cold drinks,cold drinks,drinks,direct,1.0,cold drinks,drinks,1,1
+i need colddrinks,i need colddrinks,cold drinks,drinks,fuzzy,0.9714285714285714,cold drinks,drinks,1,1
+i need col drinks,i need col drinks,drinks,drinks,direct,1.0,cold drinks,drinks,0,1
+i need cold drinks,i need cold drinks,cold drinks,drinks,direct,1.0,cold drinks,drinks,1,1
+give me something to drink,give me something to drink,drinks,drinks,fuzzy,1.0,drinks,drinks,1,1
+give me somethin to drink,give me somethin to drink,drinks,drinks,fuzzy,0.9803921568627451,drinks,drinks,1,1
+giveme something to drink,giveme something to drink,drinks,drinks,fuzzy,0.9803921568627451,drinks,drinks,1,1
+give mesomething to drink,give mesomething to drink,drinks,drinks,fuzzy,0.9803921568627451,drinks,drinks,1,1
+give me energy drink,give me energy drink,energy drink,drinks,tfidf,1.0000000000000002,energy drink,drinks,1,1
+give meenergy drink,give meenergy drink,energy drink,drinks,fuzzy,0.9743589743589743,energy drink,drinks,1,1
+gv me energy drink,gv me energy drink,energy drink,drinks,direct,1.0,energy drink,drinks,1,1
+give me energ drink,give me energ drink,energy drink,drinks,fuzzy,0.9743589743589743,energy drink,drinks,1,1
+give me some fanta,give me some fanta,fanta,drinks,direct,1.0,fanta,drinks,1,1
+give me osme fanta,give me osme fanta,fanta,drinks,direct,1.0,fanta,drinks,1,1
+give me som fanta,give me som fanta,fanta,drinks,direct,1.0,fanta,drinks,1,1
+give me flavoured milk,give me flavoured milk,flavoured milk,drinks,direct,1.0,flavoured milk,drinks,1,1
+give me flavoured milk,give me flavoured milk,flavoured milk,drinks,direct,1.0,flavoured milk,drinks,1,1
+give m flavoured milk,give m flavoured milk,flavoured milk,drinks,direct,1.0,flavoured milk,drinks,1,1
+give me flavouredmilk,give me flavouredmilk,flavoured milk,drinks,fuzzy,0.9767441860465116,flavoured milk,drinks,1,1
+i want ginger ale,i want ginger ale,ginger ale,drinks,tfidf,1.0000000000000002,ginger ale,drinks,1,1
+i awnt ginger ale,i awnt ginger ale,ginger ale,drinks,direct,1.0,ginger ale,drinks,1,1
+ want ginger ale,want ginger ale,ginger ale,drinks,tfidf,1.0000000000000002,ginger ale,drinks,1,1
+i want gingerale,i want gingerale,ginger ale,drinks,fuzzy,0.9696969696969697,ginger ale,drinks,1,1
+give me maaza,give me maaza,maaza,drinks,tfidf,1.0000000000000002,maaza,drinks,1,1
+give m maaza,give m maaza,maaza,drinks,direct,1.0,maaza,drinks,1,1
+giv me maaza,give me maaza,maaza,drinks,tfidf,1.0000000000000002,maaza,drinks,1,1
+gv me maaza,gv me maaza,maaza,drinks,direct,1.0,maaza,drinks,1,1
+give me some milk,give me some milk,milk,drinks,direct,1.0,milk,drinks,1,1
+giveme some milk,giveme some milk,milk,drinks,direct,1.0,milk,drinks,1,1
+give m some milk,give m some milk,milk,drinks,direct,1.0,milk,drinks,1,1
+give me some mil,give me some milk,milk,drinks,direct,1.0,milk,drinks,1,1
+give e milkshake,give e milkshake,milkshake,drinks,direct,1.0,milkshake,drinks,1,1
+giv e milkshake,give e milkshake,milkshake,drinks,direct,1.0,milkshake,drinks,1,1
+givee milkshake,givee milkshake,milkshake,drinks,direct,1.0,milkshake,drinks,1,1
+give emilkshake,give emilkshake,milkshake,drinks,fuzzy,0.967741935483871,milkshake,drinks,1,1
+i want miranda,i want miranda,mirinda,drinks,fuzzy,1.0,mirinda,drinks,1,1
+i want miarnda,i want miarnda,mirinda,drinks,fuzzy,0.9285714285714286,mirinda,drinks,1,1
+i wantmiranda,i wantmiranda,mirinda,drinks,fuzzy,0.9629629629629629,mirinda,drinks,1,1
+i want miranda,i want miranda,mirinda,drinks,fuzzy,1.0,mirinda,drinks,1,1
+buy me a mountain dew,buy me a mountain dew,mountain dew,drinks,tfidf,1.0000000000000004,mountain dew,drinks,1,1
+buy me a mountai dew,buy me a mountai dew,mountain dew,drinks,fuzzy,0.975609756097561,mountain dew,drinks,1,1
+buy me a mountain de,buy me a mountain de,mountain dew,drinks,fuzzy,0.975609756097561,mountain dew,drinks,1,1
+buy me a mountaindew,buy me a mountaindew,mountain dew,drinks,fuzzy,0.975609756097561,mountain dew,drinks,1,1
+give me pepsi,give me pepsi,pepsi,drinks,tfidf,1.0000000000000002,pepsi,drinks,1,1
+giveme pepsi,giveme pepsi,pepsi,drinks,direct,1.0,pepsi,drinks,1,1
+give mepepsi,give mepepsi,pepsi,drinks,fuzzy,0.96,pepsi,drinks,1,1
+make me a protien shake,make me a protien shake,protien shake,drinks,tfidf,1.0000000000000002,protien shake,drinks,1,1
+make mea protien shake,make mea protien shake,protien shake,drinks,direct,1.0,protien shake,drinks,1,1
+make me a prtn shake,make me a prtn shake,protien shake,drinks,fuzzy,0.9302325581395349,protien shake,drinks,1,1
+i want smoothie,i want smoothie,smoothie,drinks,direct,1.0,smoothie,drinks,1,1
+ want smoothie,want smoothie,smoothie,drinks,direct,1.0,smoothie,drinks,1,1
+i want smoothi,i want smoothi,smoothie,drinks,fuzzy,0.9655172413793104,smoothie,drinks,1,1
+i want smoothie,i want smoothie,smoothie,drinks,direct,1.0,smoothie,drinks,1,1
+i want soda,i want soda,soda,drinks,direct,1.0,soda,drinks,1,1
+i wnt soda,i wnt soda,soda,drinks,direct,1.0,soda,drinks,1,1
+i watn soda,i watn soda,soda,drinks,direct,1.0,soda,drinks,1,1
+iwant soda,iwant soda,soda,drinks,direct,1.0,soda,drinks,1,1
+i want some soup,i want some soup,soup,drinks,tfidf,1.0000000000000002,soup,drinks,1,1
+i want some osup,i want some osup,soup,drinks,fuzzy,0.9375,soup,drinks,1,1
+i awnt some soup,i awnt some soup,soup,drinks,direct,1.0,soup,drinks,1,1
+i want soem soup,i want soem soup,soup,drinks,direct,1.0,soup,drinks,1,1
+i want strawberry milkshake,i want strawberry milkshake,milkshake,drinks,direct,1.0,strawberry milkshake,drinks,0,1
+i want strawberry milkshaek,i want strawberry milkshaek,strawberry,fruits,direct,1.0,strawberry milkshake,drinks,0,0
+i want strawberr milkshake,i want strawberr milkshake,milkshake,drinks,direct,1.0,strawberry milkshake,drinks,0,1
+i want strawberry milkshak,i want strawberry milkshak,strawberry,fruits,direct,1.0,strawberry milkshake,drinks,0,0
+i am afraid,i am afraid,afraid,emotions,tfidf,1.0000000000000002,afraid,emotions,1,1
+i m afraid,i m afraid,afraid,emotions,direct,1.0,afraid,emotions,1,1
+i amafraid,i amafraid,afraid,emotions,fuzzy,0.9523809523809523,afraid,emotions,1,1
+i am afraid,i am afraid,afraid,emotions,tfidf,1.0000000000000002,afraid,emotions,1,1
+i am amazed,i am amazed,amazed,emotions,tfidf,1.0000000000000002,amazed,emotions,1,1
+i am maazed,i am maazed,amazed,emotions,fuzzy,0.9090909090909091,amazed,emotions,1,1
+i am amzaed,i am amzaed,amazed,emotions,fuzzy,0.9090909090909091,amazed,emotions,1,1
+i am mzd,i am mzd,amazed,emotions,fuzzy,0.8421052631578947,amazed,emotions,1,1
+i am angry,i am angry,angry,emotions,tfidf,1.0000000000000002,angry,emotions,1,1
+ am angry,am angry,angry,emotions,tfidf,1.0000000000000002,angry,emotions,1,1
+i amangry,i amangry,angry,emotions,fuzzy,0.9473684210526315,angry,emotions,1,1
+i am feeling ashmed,i am feeling ashmed,ashamed,emotions,tfidf,1.0000000000000002,ashamed,emotions,1,1
+i am feleing ashmed,i am feleing ashmed,ashamed,emotions,fuzzy,0.9473684210526315,ashamed,emotions,1,1
+i m feeling ashmed,i m feeling ashmed,ashamed,emotions,fuzzy,0.972972972972973,ashamed,emotions,1,1
+i am feelin ashmed,i am feelin ashmed,ashamed,emotions,fuzzy,0.972972972972973,ashamed,emotions,1,1
+its awesome,its awesome,awesome!,emotions,tfidf,1.0000000000000002,awesome!,emotions,1,1
+it awesome,it awesome,awesome!,emotions,fuzzy,0.9523809523809523,awesome!,emotions,1,1
+ts awesome,ts awesome,awesome!,emotions,fuzzy,0.9523809523809523,awesome!,emotions,1,1
+its awesom,its awesom,awesome!,emotions,fuzzy,0.9523809523809523,awesome!,emotions,1,1
+i am bored,i am bored,bored,emotions,tfidf,1.0000000000000002,bored,emotions,1,1
+ am bored,am bored,bored,emotions,tfidf,1.0000000000000002,bored,emotions,1,1
+iam bored,iam bored,bored,emotions,direct,1.0,bored,emotions,1,1
+i m bored,i m bored,bored,emotions,direct,1.0,bored,emotions,1,1
+its too cold,its too cold,cold,emotions,tfidf,1.0000000000000002,cold,emotions,1,1
+its toocold,its toocold,cold,emotions,fuzzy,0.9565217391304348,cold,emotions,1,1
+i am confused,i am confused,confused,emotions,tfidf,1.0000000000000002,confused,emotions,1,1
+i m confused,i m confused,confused,emotions,direct,1.0,confused,emotions,1,1
+i a confused,i a confused,confused,emotions,direct,1.0,confused,emotions,1,1
+i am in danger,i am in danger,danger,emotions,direct,1.0,danger,emotions,1,1
+i am in danger,i am in danger,danger,emotions,direct,1.0,danger,emotions,1,1
+i amin danger,i amin danger,danger,emotions,direct,1.0,danger,emotions,1,1
+i am n danger,i am n danger,danger,emotions,direct,1.0,danger,emotions,1,1
+i am disappointed,i am disappointed,disappointed,emotions,tfidf,1.0000000000000002,disappointed,emotions,1,1
+i amdisappointed,i amdisappointed,disappointed,emotions,fuzzy,0.9696969696969697,disappointed,emotions,1,1
+i am disappointe,i am disappointe,disappointed,emotions,fuzzy,0.9696969696969697,disappointed,emotions,1,1
+excuse me pls,excuse me pls,excuse me,emotions,direct,1.0,excuse me,emotions,1,1
+xcs me pls,xcs me pls,excuse me,emotions,fuzzy,0.8695652173913043,excuse me,emotions,1,1
+excuse m pls,excuse m pls,excuse me,emotions,fuzzy,0.96,excuse me,emotions,1,1
+i am feeling cold,i am feeling cold,feeling cold,emotions,tfidf,1.0000000000000002,feeling cold,emotions,1,1
+i am feelingcold,i am feelingcold,feeling cold,emotions,fuzzy,0.9696969696969697,feeling cold,emotions,1,1
+i am feeling cold,i am feeling cold,feeling cold,emotions,tfidf,1.0000000000000002,feeling cold,emotions,1,1
+i am feeling warm,i am feeling warm,feeling warm,emotions,tfidf,1.0000000000000002,feeling warm,emotions,1,1
+i a feeling warm,i a feeling warm,feeling warm,emotions,direct,1.0,feeling warm,emotions,1,1
+iam feeling warm,iam feeling warm,feeling warm,emotions,direct,1.0,feeling warm,emotions,1,1
+i have feelings,i have feelings,feelings,emotions,tfidf,1.0000000000000002,feelings,emotions,1,1
+ihave feelings,ihave feelings,feelings,emotions,direct,1.0,feelings,emotions,1,1
+i havefeelings,i havefeelings,feelings,emotions,fuzzy,0.9655172413793104,feelings,emotions,1,1
+i haev feelings,i haev feelings,feelings,emotions,direct,1.0,feelings,emotions,1,1
+its fun,its fun,fun,emotions,direct,1.0,fun,emotions,1,1
+itsfun,itsfun,fun,emotions,fuzzy,0.9230769230769231,fun,emotions,1,1
+its fu,its fu,fun,emotions,fuzzy,0.9230769230769231,fun,emotions,1,1
+this hurts,this hurts,hurt,emotions,fuzzy,1.0,hurt,emotions,1,1
+this uhrts,this uhrts,hurt,emotions,fuzzy,0.9,hurt,emotions,1,1
+thishurts,thishurts,hurt,emotions,fuzzy,0.9473684210526315,hurt,emotions,1,1
+i am hurt,i am hurt,i am hurt,emotions,tfidf,1.0000000000000002,i am hurt,emotions,1,1
+i m hurt,i m hurt,hurt,emotions,direct,1.0,i am hurt,emotions,0,1
+i am hutr,i am hutr,i am hurt,emotions,fuzzy,0.8888888888888888,i am hurt,emotions,1,1
+i am in pain,i am in pain,i am in pain,emotions,direct,1.0,i am in pain,emotions,1,1
+i a in pain,i a in pain,i am in pain,emotions,fuzzy,0.9565217391304348,i am in pain,emotions,1,1
+i amin pain,i amin pain,i am in pain,emotions,fuzzy,0.9565217391304348,i am in pain,emotions,1,1
+i am sorry,i am sorry,i am sorry,emotions,tfidf,1.0000000000000002,i am sorry,emotions,1,1
+i a sorry,i a sorry,i am sorry,emotions,fuzzy,0.9473684210526315,i am sorry,emotions,1,1
+i am sorry,i am sorry,i am sorry,emotions,tfidf,1.0000000000000002,i am sorry,emotions,1,1
+i don't understand,i don't understand,i don't understand,emotions,tfidf,1.0000000000000002,i don't understand,emotions,1,1
+idon't understand,idon't understand,i don't understand,emotions,fuzzy,0.9714285714285714,i don't understand,emotions,1,1
+i don't understand,i don't understand,i don't understand,emotions,tfidf,1.0000000000000002,i don't understand,emotions,1,1
+i don't understan,i don't understan,i don't understand,emotions,fuzzy,0.9714285714285714,i don't understand,emotions,1,1
+i feel sick,i feel sick,i feel sick,emotions,tfidf,1.0000000000000002,i feel sick,emotions,1,1
+ifeel sick,ifeel sick,sick,health,direct,1.0,i feel sick,emotions,0,0
+i feel sic,i feel sic,i feel sick,emotions,fuzzy,0.9523809523809523,i feel sick,emotions,1,1
+i feel tired,i feel tired,i feel tired,emotions,tfidf,1.0000000000000002,i feel tired,emotions,1,1
+i feel tired,i feel tired,i feel tired,emotions,tfidf,1.0000000000000002,i feel tired,emotions,1,1
+i fee tired,i fee tired,i feel tired,emotions,fuzzy,0.9565217391304348,i feel tired,emotions,1,1
+ifeel tired,ifeel tired,i feel tired,emotions,fuzzy,0.9565217391304348,i feel tired,emotions,1,1
+i need a break,i need a break,i need a break,emotions,direct,1.0,i need a break,emotions,1,1
+i need  break,i need break,i need a break,emotions,tfidf,1.0,i need a break,emotions,1,1
+i need abreak,i need abreak,i need a break,emotions,fuzzy,0.9629629629629629,i need a break,emotions,1,1
+i need more time,i need more time,i need more time,emotions,tfidf,1.0000000000000002,i need more time,emotions,1,1
+ineed more time,ineed more time,i need more time,emotions,fuzzy,0.967741935483871,i need more time,emotions,1,1
+i ened more time,i ened more time,i need more time,emotions,fuzzy,0.9375,i need more time,emotions,1,1
+i need more tmie,i need more tmie,i need more time,emotions,fuzzy,0.9375,i need more time,emotions,1,1
+i want to be alone,i want to be alone,i want to be alone,emotions,tfidf,1.0000000000000002,i want to be alone,emotions,1,1
+i want to be ln,i want to be ln,i want to be alone,emotions,fuzzy,0.9090909090909091,i want to be alone,emotions,1,1
+i want to be alone,i want to be alone,i want to be alone,emotions,tfidf,1.0000000000000002,i want to be alone,emotions,1,1
+i want to bealone,i want to bealone,i want to be alone,emotions,fuzzy,0.9714285714285714,i want to be alone,emotions,1,1
+i was hit,i was hit,i was hit,emotions,direct,1.0,i was hit,emotions,1,1
+i wa hit,i want hit,i was hit,emotions,fuzzy,0.8421052631578947,i was hit,emotions,1,1
+i washit,i washit,i was hit,emotions,fuzzy,0.9411764705882353,i was hit,emotions,1,1
+i was made fun of,i was made fun of,fun,emotions,direct,1.0,i was made fun of,emotions,0,1
+ was made fun of,was made fun of,fun,emotions,direct,1.0,i was made fun of,emotions,0,1
+iwas made fun of,iwas made fun of,fun,emotions,direct,1.0,i was made fun of,emotions,0,1
+i was md fun of,i was md fun of,fun,emotions,direct,1.0,i was made fun of,emotions,0,1
+i was pinched,i was pinched,i was pinched,emotions,direct,1.0,i was pinched,emotions,1,1
+ was pinched,was pinched,i was pinched,emotions,tfidf,1.0,i was pinched,emotions,1,1
+i waspinched,i waspinched,i was pinched,emotions,fuzzy,0.96,i was pinched,emotions,1,1
+i ws pinched,i ws pinched,i was pinched,emotions,fuzzy,0.96,i was pinched,emotions,1,1
+i was pushed,i was pushed,i was pushed,emotions,direct,1.0,i was pushed,emotions,1,1
+i wa pushed,i want pushed,i was pushed,emotions,fuzzy,0.88,i was pushed,emotions,1,1
+i was pushed,i was pushed,i was pushed,emotions,direct,1.0,i was pushed,emotions,1,1
+i was scolded,i was scolded,i was scolded,emotions,direct,1.0,i was scolded,emotions,1,1
+i wsa scolded,i wsa scolded,i was scolded,emotions,fuzzy,0.9230769230769231,i was scolded,emotions,1,1
+i was scolded,i was scolded,i was scolded,emotions,direct,1.0,i was scolded,emotions,1,1
+iwas scolded,iwas scolded,i was scolded,emotions,fuzzy,0.96,i was scolded,emotions,1,1
+i was touched inappropriately,i was touched inappropriately,i was touched inappropriately,emotions,tfidf,1.0000000000000002,i was touched inappropriately,emotions,1,1
+i was touched inappropriately,i was touched inappropriately,i was touched inappropriately,emotions,tfidf,1.0000000000000002,i was touched inappropriately,emotions,1,1
+i was touched npprprtly,i was touched npprprtly,i was touched inappropriately,emotions,fuzzy,0.8846153846153846,i was touched inappropriately,emotions,1,1
+its my birthday,its my birthday,my birthday,emotions,direct,1.0,my birthday,emotions,1,1
+itsmy birthday,itsmy birthday,my birthday,emotions,fuzzy,0.9655172413793104,my birthday,emotions,1,1
+it my birthday,it my birthday,my birthday,emotions,direct,1.0,my birthday,emotions,1,1
+its m birthday,its m birthday,my birthday,emotions,fuzzy,0.9655172413793104,my birthday,emotions,1,1
+quiet please,quiet please,quiet please!,emotions,tfidf,1.0000000000000002,quiet please!,emotions,1,1
+quietplease,quietplease,quiet please!,emotions,fuzzy,0.9565217391304348,quiet please!,emotions,1,1
+quie please,quie please,please,help,direct,1.0,quiet please!,emotions,0,0
+quiet plesae,quiet plesae,quiet please!,emotions,fuzzy,0.9166666666666666,quiet please!,emotions,1,1
+it’s a rainy day,it’s a rainy day,rainy,emotions,direct,1.0,rainy,emotions,1,1
+it’s a rainy day,it’s a rainy day,rainy,emotions,direct,1.0,rainy,emotions,1,1
+it’s a ariny day,it’s a ariny day,day,wishes,direct,1.0,rainy,emotions,0,0
+it’s a rainy dy,it’s a rainy dy,rainy,emotions,direct,1.0,rainy,emotions,1,1
+i am sad,i am sad,sad,emotions,tfidf,1.0000000000000002,sad,emotions,1,1
+iam sad,iam sad,sad,emotions,direct,1.0,sad,emotions,1,1
+i am sd,i am sd,sad,emotions,fuzzy,0.9333333333333333,sad,emotions,1,1
+i am sa,i am sa,sad,emotions,fuzzy,0.9333333333333333,sad,emotions,1,1
+be safety,be safety,safety,emotions,tfidf,1.0000000000000002,safety,emotions,1,1
+be safety,be safety,safety,emotions,tfidf,1.0000000000000002,safety,emotions,1,1
+b safety,b safety,safety,emotions,direct,1.0,safety,emotions,1,1
+i want to sleep,i want to sleep,sleep,emotions,tfidf,1.0000000000000002,sleep,emotions,1,1
+i want to sleep,i want to sleep,sleep,emotions,tfidf,1.0000000000000002,sleep,emotions,1,1
+i wnat to sleep,i wnat to sleep,sleep,emotions,direct,1.0,sleep,emotions,1,1
+i wnt to sleep,i wnt to sleep,sleep,emotions,direct,1.0,sleep,emotions,1,1
+its a star,its a star,star,emotions,tfidf,1.0000000000000002,star,emotions,1,1
+ts a star,ts a star,star,emotions,direct,1.0,star,emotions,1,1
+it a star,it a star,star,emotions,direct,1.0,star,emotions,1,1
+itsa star,itsa star,star,emotions,direct,1.0,star,emotions,1,1
+i am stressed out,i am stressed out,stressed,emotions,direct,1.0,stressed,emotions,1,1
+i am stressed out,i am stressed out,stressed,emotions,direct,1.0,stressed,emotions,1,1
+i am strssd out,i am strssd out,stressed,emotions,fuzzy,0.9375,stressed,emotions,1,1
+"hello, aunty","hello, aunty",aunt,family,tfidf,1.0000000000000002,aunt,family,1,1
+"ehllo, aunty","ehllo, aunty",aunt,family,fuzzy,0.9166666666666666,aunt,family,1,1
+"hll, aunty","hll, aunty",aunt,family,fuzzy,0.9090909090909091,aunt,family,1,1
+"hello, aunt","hello, aunt",aunt,family,direct,1.0,aunt,family,1,1
+this is my brother,this is my brother,brother,family,direct,1.0,brother,family,1,1
+this ismy brother,this ismy brother,brother,family,direct,1.0,brother,family,1,1
+this is my brthr,this is my brthr,brother,family,fuzzy,0.9411764705882353,brother,family,1,1
+this is my brother,this is my brother,brother,family,direct,1.0,brother,family,1,1
+this is my caregiver,this is my caregiver,caregiver,family,direct,1.0,caregiver,family,1,1
+this ismy caregiver,this ismy caregiver,caregiver,family,direct,1.0,caregiver,family,1,1
+this is m caregiver,this is m caregiver,caregiver,family,direct,1.0,caregiver,family,1,1
+this s my caregiver,this s my caregiver,caregiver,family,direct,1.0,caregiver,family,1,1
+this is my cousin,this is my cousin,cousin,family,direct,1.0,cousin,family,1,1
+htis is my cousin,htis is my cousin,cousin,family,direct,1.0,cousin,family,1,1
+this is my cousin,this is my cousin,cousin,family,direct,1.0,cousin,family,1,1
+this is my father,this is my father,father,family,direct,1.0,father,family,1,1
+ths is my father,ths is my father,father,family,direct,1.0,father,family,1,1
+this is my father,this is my father,father,family,direct,1.0,father,family,1,1
+this is my fthr,this is my fthr,father,family,fuzzy,0.9375,father,family,1,1
+take me to friends house,take me to friends house,friends,family,direct,1.0,friend's house,family,0,1
+take me to frnds house,take me to frnds house,friend's house,family,fuzzy,0.9565217391304348,friend's house,family,1,1
+take m to friends house,take m to friends house,friends,family,direct,1.0,friend's house,family,0,1
+take meto friends house,take meto friends house,friends,family,direct,1.0,friend's house,family,0,1
+they are my friends,they are my friends,friends,family,direct,1.0,friends,family,1,1
+they are my friends,they are my friends,friends,family,direct,1.0,friends,family,1,1
+they are myfriends,they are myfriends,friends,family,fuzzy,0.972972972972973,friends,family,1,1
+take me to relatives house,take me to relatives house,relative's house,family,fuzzy,1.0,relative's house,family,1,1
+take meto relatives house,take meto relatives house,relative's house,family,fuzzy,0.9803921568627451,relative's house,family,1,1
+take me t relatives house,take me t relatives house,relative's house,family,fuzzy,0.9803921568627451,relative's house,family,1,1
+take me to relative house,take me to relative house,relative's house,family,fuzzy,0.9803921568627451,relative's house,family,1,1
+where is the baby,where is the baby,baby,family,tfidf,1.0000000000000002,baby,family,1,1
+where is thebaby,where is thebaby,baby,family,fuzzy,0.9696969696969697,baby,family,1,1
+this is my sister,this is my sister,sister,family,direct,1.0,sister,family,1,1
+this is my sister,this is my sister,sister,family,direct,1.0,sister,family,1,1
+this is m sister,this is m sister,sister,family,direct,1.0,sister,family,1,1
+i want aaloo poori,i want aaloo poori,aaloo poori,food,tfidf,1.0000000000000002,aaloo poori,food,1,1
+i want aaloopoori,i want aaloopoori,aaloo poori,food,fuzzy,0.9714285714285714,aaloo poori,food,1,1
+i want alaoo poori,i want alaoo poori,aaloo poori,food,fuzzy,0.9444444444444444,aaloo poori,food,1,1
+i want l poori,i want l poori,aaloo poori,food,fuzzy,0.875,aaloo poori,food,1,1
+i like barfi,i like barfi,barfi,food,tfidf,1.0000000000000002,barfi,food,1,1
+i like brf,i like brf,barfi,food,fuzzy,0.9090909090909091,barfi,food,1,1
+i likebarfi,i likebarfi,barfi,food,fuzzy,0.9565217391304348,barfi,food,1,1
+i want some beans on toast,i want some beans on toast,beans on toast,food,direct,1.0,beans on toast,food,1,1
+ want some beans on toast,want some beans on toast,beans on toast,food,direct,1.0,beans on toast,food,1,1
+i want some beans on toast,i want some beans on toast,beans on toast,food,direct,1.0,beans on toast,food,1,1
+i want somebeans on toast,i want somebeans on toast,beans on toast,food,fuzzy,0.9803921568627451,beans on toast,food,1,1
+i want bhakri,i want bhakri,bhakri,food,direct,1.0,bhakri,food,1,1
+i want bhakri,i want bhakri,bhakri,food,direct,1.0,bhakri,food,1,1
+i want bhakr,i want bhakr,bhakri,food,fuzzy,0.96,bhakri,food,1,1
+ want bhakri,want bhakri,bhakri,food,direct,1.0,bhakri,food,1,1
+give me some biscuit,give me some biscuit,biscuits,food,fuzzy,1.0,biscuits,food,1,1
+give mesome biscuit,give mesome biscuit,biscuits,food,fuzzy,0.9743589743589743,biscuits,food,1,1
+give me sm biscuit,give me sm biscuit,biscuits,food,fuzzy,0.9473684210526315,biscuits,food,1,1
+gv me some biscuit,gv me some biscuit,biscuits,food,fuzzy,0.9473684210526315,biscuits,food,1,1
+give me bread,give me bread,bread,food,tfidf,1.0000000000000002,bread,food,1,1
+give m bread,give m bread,bread,food,direct,1.0,bread,food,1,1
+give me brd,give me brd,bread,food,fuzzy,0.9166666666666666,bread,food,1,1
+giveme bread,giveme bread,bread,food,direct,1.0,bread,food,1,1
+i want breakfast,i want breakfast,breakfast,food,direct,1.0,breakfast,food,1,1
+i want brkfst,i want brkfst,breakfast,food,fuzzy,0.896551724137931,breakfast,food,1,1
+i wantbreakfast,i wantbreakfast,breakfast,food,fuzzy,0.967741935483871,breakfast,food,1,1
+i wan breakfast,i want breakfast,breakfast,food,direct,1.0,breakfast,food,1,1
+i want brownie,i want brownie,brownie,food,direct,1.0,brownie,food,1,1
+i want brwn,i want brwn,brownie,food,fuzzy,0.88,brownie,food,1,1
+iwant brownie,iwant brownie,brownie,food,direct,1.0,brownie,food,1,1
+i wnt brownie,i wnt brownie,brownie,food,direct,1.0,brownie,food,1,1
+i want burger,i want burger,burger,food,direct,1.0,burger,food,1,1
+iwant burger,iwant burger,burger,food,direct,1.0,burger,food,1,1
+i awnt burger,i awnt burger,burger,food,direct,1.0,burger,food,1,1
+i wantburger,i wantburger,burger,food,fuzzy,0.96,burger,food,1,1
+give me a cake slice,give me a cake slice,cake slice,food,tfidf,1.0000000000000002,cake slice,food,1,1
+giv me a cake slice,give me a cake slice,cake slice,food,tfidf,1.0000000000000002,cake slice,food,1,1
+gv me a cake slice,gv me a cake slice,cake slice,food,direct,1.0,cake slice,food,1,1
+i like cake,i like cake,cake,food,tfidf,1.0000000000000002,cake,food,1,1
+i ilke cake,i ilke cake,cake,food,direct,1.0,cake,food,1,1
+i like cake,i like cake,cake,food,tfidf,1.0000000000000002,cake,food,1,1
+i love chaat,i love chaat,chaat,food,tfidf,1.0000000000000002,chaat,food,1,1
+ love chaat,love chaat,chaat,food,tfidf,1.0000000000000002,chaat,food,1,1
+i love chaat,i love chaat,chaat,food,tfidf,1.0000000000000002,chaat,food,1,1
+i loev chaat,i loev chaat,chaat,food,direct,1.0,chaat,food,1,1
+i like cheese pudding,i like cheese pudding,cheese pudding,food,direct,1.0,cheese pudding,food,1,1
+ like cheese pudding,like cheese pudding,cheese pudding,food,direct,1.0,cheese pudding,food,1,1
+i lik cheese pudding,i lik cheese pudding,cheese pudding,food,direct,1.0,cheese pudding,food,1,1
+i love cheese sticks,i love cheese sticks,cheese sticks,food,direct,1.0,cheese sticks,food,1,1
+i love cheese stick,i love cheese stick,cheese,food,direct,1.0,cheese sticks,food,0,1
+i lov cheese sticks,i lov cheese sticks,cheese sticks,food,direct,1.0,cheese sticks,food,1,1
+i like cheese,i like cheese,cheese,food,direct,1.0,cheese,food,1,1
+i like chs,i like chs,cheese,food,fuzzy,0.8695652173913043,cheese,food,1,1
+i likecheese,i likecheese,cheese,food,fuzzy,0.96,cheese,food,1,1
+ like cheese,like cheese,cheese,food,direct,1.0,cheese,food,1,1
+i like chicken wings,i like chicken wings,chicken wings,food,direct,1.0,chicken wings,food,1,1
+i like chicken wings,i like chicken wings,chicken wings,food,direct,1.0,chicken wings,food,1,1
+i like chicken wngs,i like chicken wngs,chicken,food,direct,1.0,chicken wings,food,0,1
+i love chicken,i love chicken,chicken,food,direct,1.0,chicken,food,1,1
+ love chicken,love chicken,chicken,food,direct,1.0,chicken,food,1,1
+i lovechicken,i lovechicken,chicken,food,fuzzy,0.9629629629629629,chicken,food,1,1
+i want chocolate cookie,i want chocolate cookie,chocolate cookies,food,tfidf,1.0000000000000002,chocolate cookies,food,1,1
+i want chocolate cooike,i want chocolate cooike,chocolate,food,direct,1.0,chocolate cookies,food,0,1
+iwant chocolate cookie,iwant chocolate cookie,chocolate,food,direct,1.0,chocolate cookies,food,0,1
+i want chocolate cookie,i want chocolate cookie,chocolate cookies,food,tfidf,1.0000000000000002,chocolate cookies,food,1,1
+give me some chocolates,give me some chocolates,chocolate,food,fuzzy,1.0,chocolate,food,1,1
+give me somechocolates,give me somechocolates,chocolate,food,fuzzy,0.9777777777777777,chocolate,food,1,1
+give me some chocoaltes,give me some chocoaltes,chocolate,food,fuzzy,0.9565217391304348,chocolate,food,1,1
+give me some chocoltaes,give me some chocoltaes,chocolate,food,fuzzy,0.9565217391304348,chocolate,food,1,1
+give me some chutney,give me some chutney,chutney,food,direct,1.0,chutney,food,1,1
+giveme some chutney,giveme some chutney,chutney,food,direct,1.0,chutney,food,1,1
+give me som chutney,give me som chutney,chutney,food,direct,1.0,chutney,food,1,1
+give me somechutney,give me somechutney,chutney,food,fuzzy,0.9743589743589743,chutney,food,1,1
+give me cookie,give me cookie,cookie,food,tfidf,1.0000000000000002,cookie,food,1,1
+give mecookie,give mecookie,cookie,food,fuzzy,0.9629629629629629,cookie,food,1,1
+gv me cookie,gv me cookie,cookie,food,direct,1.0,cookie,food,1,1
+give me cornflakes,give me cornflakes,cornflakes,food,tfidf,1.0000000000000002,cornflakes,food,1,1
+give m cornflakes,give m cornflakes,cornflakes,food,direct,1.0,cornflakes,food,1,1
+give mecornflakes,give mecornflakes,cornflakes,food,fuzzy,0.9714285714285714,cornflakes,food,1,1
+give me cornflake,give me cornflake,cornflakes,food,fuzzy,0.9714285714285714,cornflakes,food,1,1
+i want croissant,i want croissant,croissant,food,direct,1.0,croissant,food,1,1
+i want croisasnt,i want croisasnt,croissant,food,fuzzy,0.9375,croissant,food,1,1
+i want croissan,i want croissan,croissant,food,fuzzy,0.967741935483871,croissant,food,1,1
+i wnt croissant,i wnt croissant,croissant,food,direct,1.0,croissant,food,1,1
+i want cuppa noodles,i want cuppa noodles,cuppa noodles,food,direct,1.0,cuppa noodles,food,1,1
+i want cupp noodles,i want cupp noodles,noodles,food,direct,1.0,cuppa noodles,food,0,1
+i want cuppa noodlse,i want cuppa noodlse,cuppa noodles,food,fuzzy,0.95,cuppa noodles,food,1,1
+i wan cuppa noodles,i want cuppa noodles,cuppa noodles,food,direct,1.0,cuppa noodles,food,1,1
+give me some curd,give me some curd,curd,food,direct,1.0,curd,food,1,1
+giveme some curd,giveme some curd,curd,food,direct,1.0,curd,food,1,1
+give me som curd,give me som curd,curd,food,direct,1.0,curd,food,1,1
+give m some curd,give m some curd,curd,food,direct,1.0,curd,food,1,1
+give me custard,give me custard,custard,food,tfidf,1.0000000000000002,custard,food,1,1
+give m custard,give m custard,custard,food,direct,1.0,custard,food,1,1
+giv me custard,give me custard,custard,food,tfidf,1.0000000000000002,custard,food,1,1
+give mecustard,give mecustard,custard,food,fuzzy,0.9655172413793104,custard,food,1,1
+i want dal khichidi,i want dal khichidi,dal,food,direct,1.0,dal khichdi,food,0,1
+i want dal khichidi,i want dal khichidi,dal,food,direct,1.0,dal khichdi,food,0,1
+i want dla khichidi,i want dla khichidi,dal khichdi,food,fuzzy,0.9473684210526315,dal khichdi,food,1,1
+i want dalkhichidi,i want dalkhichidi,dal khichdi,food,fuzzy,0.972972972972973,dal khichdi,food,1,1
+i want dal,i want dal,dal,food,direct,1.0,dal,food,1,1
+i want dl,i want dl,dal,food,fuzzy,0.9473684210526315,dal,food,1,1
+ want dal,want dal,dal,food,direct,1.0,dal,food,1,1
+i want donut,i want donut,donut,food,direct,1.0,donut,food,1,1
+i wantdonut,i wantdonut,donut,food,fuzzy,0.9565217391304348,donut,food,1,1
+i want dnt,i want dnt,donut,food,fuzzy,0.9090909090909091,donut,food,1,1
+iwant donut,iwant donut,donut,food,direct,1.0,donut,food,1,1
+i want dosa,i want dosa,dosa,food,direct,1.0,dosa,food,1,1
+i wantdosa,i wantdosa,dosa,food,fuzzy,0.9523809523809523,dosa,food,1,1
+iwant dosa,iwant dosa,dosa,food,direct,1.0,dosa,food,1,1
+i wnt dosa,i wnt dosa,dosa,food,direct,1.0,dosa,food,1,1
+i want to eat with small bites,i want to eat with small bites,eat with small bites,food,direct,1.0,eat with small bites,food,1,1
+i want to eat with smallbites,i want to eat with smallbites,eat with small bites,food,fuzzy,0.9830508474576272,eat with small bites,food,1,1
+i want to eat with small biets,i want to eat with small biets,eat with small bites,food,fuzzy,0.9666666666666667,eat with small bites,food,1,1
+i want to eat wit small bites,i want to eat wit small bites,eat with small bites,food,fuzzy,0.9830508474576272,eat with small bites,food,1,1
+give me some eggs,give me some eggs,eggs,food,direct,1.0,eggs,food,1,1
+give me some ggs,give me some ggs,eggs,food,fuzzy,0.9696969696969697,eggs,food,1,1
+give me some eggs,give me some eggs,eggs,food,direct,1.0,eggs,food,1,1
+give me fish and chips,give me fish and chips,fish and chips,food,tfidf,1.0000000000000002,fish and chips,food,1,1
+give me fihs and chips,give me fihs and chips,fish and chips,food,fuzzy,0.9545454545454546,fish and chips,food,1,1
+give me fish and chps,give me fish and chps,fish,food,direct,1.0,fish and chips,food,0,1
+give me fish and chip,give me fish and chip,fish,food,direct,1.0,fish and chips,food,0,1
+i want fish,i want fish,fish,food,direct,1.0,fish,food,1,1
+i want fish,i want fish,fish,food,direct,1.0,fish,food,1,1
+i wan fish,i want fish,fish,food,direct,1.0,fish,food,1,1
+take me to food court,take me to food court,food court,food,direct,1.0,food court,food,1,1
+take me to food court,take me to food court,food court,food,direct,1.0,food court,food,1,1
+take m to food court,take m to food court,food court,food,direct,1.0,food court,food,1,1
+takeme to food court,takeme to food court,food court,food,direct,1.0,food court,food,1,1
+give me some food,give me some food,food,food,direct,1.0,food,food,1,1
+give me som food,give me som food,food,food,direct,1.0,food,food,1,1
+give me sm food,give me sm food,food,food,direct,1.0,food,food,1,1
+give m some food,give m some food,food,food,direct,1.0,food,food,1,1
+make me some french toast,make me some french toast,french toast,food,direct,1.0,french toast,food,1,1
+make m some french toast,make m some french toast,french toast,food,direct,1.0,french toast,food,1,1
+make me somefrench toast,make me somefrench toast,french toast,food,fuzzy,0.9795918367346939,french toast,food,1,1
+make mesome french toast,make mesome french toast,french toast,food,direct,1.0,french toast,food,1,1
+i want fried rice,i want fried rice,fried rice,food,direct,1.0,fried rice,food,1,1
+i want rfied rice,i want rfied rice,rice,food,direct,1.0,fried rice,food,0,1
+ want fried rice,want fried rice,fried rice,food,direct,1.0,fried rice,food,1,1
+i want frd rice,i want frd rice,rice,food,direct,1.0,fried rice,food,0,1
+give me some frozen yogurt,give me some frozen yogurt,frozen yogurt,food,direct,1.0,frozen yogurt,food,1,1
+give me some frzn yogurt,give me some frzn yogurt,frozen yogurt,food,fuzzy,0.96,frozen yogurt,food,1,1
+give me some froze yogurt,give me some froze yogurt,frozen yogurt,food,fuzzy,0.9803921568627451,frozen yogurt,food,1,1
+giveme some frozen yogurt,giveme some frozen yogurt,frozen yogurt,food,direct,1.0,frozen yogurt,food,1,1
+give me fruit punch,give me fruit punch,fruit punch,food,direct,1.0,fruit punch,food,1,1
+give me fruit punch,give me fruit punch,fruit punch,food,direct,1.0,fruit punch,food,1,1
+give m fruit punch,give m fruit punch,fruit punch,food,direct,1.0,fruit punch,food,1,1
+give me salad,give me salad,salad,food,direct,1.0,fruit salad,food,0,1
+give m salad,give m salad,salad,food,direct,1.0,fruit salad,food,0,1
+gv me salad,gv me salad,salad,food,direct,1.0,fruit salad,food,0,1
+give me gajarhalwa,give me gajarhalwa,gajarhalwa,food,tfidf,1.0000000000000002,gajarhalwa,food,1,1
+giveme gajarhalwa,giveme gajarhalwa,gajarhalwa,food,direct,1.0,gajarhalwa,food,1,1
+giv me gajarhalwa,give me gajarhalwa,gajarhalwa,food,tfidf,1.0000000000000002,gajarhalwa,food,1,1
+give me a granola bar,give me a granola bar,granola bar,food,direct,1.0,granola bar,food,1,1
+give me a granola abr,give me a granola abr,granola bar,food,fuzzy,0.9523809523809523,granola bar,food,1,1
+give me a granolabar,give me a granolabar,granola bar,food,fuzzy,0.975609756097561,granola bar,food,1,1
+give me a granola bra,give me a granola bra,granola bar,food,fuzzy,0.9523809523809523,granola bar,food,1,1
+i love gulab jamun,i love gulab jamun,gulab jamun,food,tfidf,1.0000000000000002,gulab jamun,food,1,1
+i love gulab jamun,i love gulab jamun,gulab jamun,food,tfidf,1.0000000000000002,gulab jamun,food,1,1
+ love gulab jamun,love gulab jamun,gulab jamun,food,tfidf,1.0000000000000002,gulab jamun,food,1,1
+i love gulab jmaun,i love gulab jmaun,gulab jamun,food,fuzzy,0.9444444444444444,gulab jamun,food,1,1
+i want hamburger,i want hamburger,hamburger,food,direct,1.0,hamburger,food,1,1
+i want hamburger,i want hamburger,hamburger,food,direct,1.0,hamburger,food,1,1
+ want hamburger,want hamburger,hamburger,food,direct,1.0,hamburger,food,1,1
+i want hmaburger,i want hmaburger,hamburger,food,fuzzy,0.9375,hamburger,food,1,1
+i want hard boiled eggs,i want hard boiled eggs,eggs,food,direct,1.0,hard boiled eggs,food,0,1
+ want hard boiled eggs,want hard boiled eggs,eggs,food,direct,1.0,hard boiled eggs,food,0,1
+i want hardboiled eggs,i want hardboiled eggs,eggs,food,direct,1.0,hard boiled eggs,food,0,1
+i want hard bld eggs,i want hard bld eggs,eggs,food,direct,1.0,hard boiled eggs,food,0,1
+i want honey,i want honey,honey,food,direct,1.0,honey,food,1,1
+i want honye,i want honye,honey,food,fuzzy,0.9166666666666666,honey,food,1,1
+i want hoeny,i want hoeny,honey,food,fuzzy,0.9166666666666666,honey,food,1,1
+i wan honey,i want honey,honey,food,direct,1.0,honey,food,1,1
+i want hot chocolate,i want hot chocolate,hot chocolate,food,tfidf,1.0000000000000002,hot chocolate,food,1,1
+i want hot chocolate,i want hot chocolate,hot chocolate,food,tfidf,1.0000000000000002,hot chocolate,food,1,1
+i want hot chclt,i want hot chclt,hot,action,direct,1.0,hot chocolate,food,0,0
+i wnt hot chocolate,i wnt hot chocolate,hot,action,direct,1.0,hot chocolate,food,0,0
+i want some hotdog,i want some hotdog,hotdog,food,tfidf,1.0000000000000002,hotdog,food,1,1
+i want some hodtog,i want some hodtog,hotdog,food,fuzzy,0.9444444444444444,hotdog,food,1,1
+i want som hotdog,i want som hotdog,hotdog,food,direct,1.0,hotdog,food,1,1
+i want some hotdo,i want some hotdo,hotdog,food,fuzzy,0.9714285714285714,hotdog,food,1,1
+i want ice cream,i want ice cream,ice cream,food,direct,1.0,ice cream,food,1,1
+i watn ice cream,i watn ice cream,ice cream,food,direct,1.0,ice cream,food,1,1
+i wantice cream,i wantice cream,ice cream,food,fuzzy,0.967741935483871,ice cream,food,1,1
+i want ice cream,i want ice cream,ice cream,food,direct,1.0,icecream,food,0,1
+i want ic cream,i want ic cream,ice cream,food,fuzzy,0.967741935483871,icecream,food,0,1
+iwant ice cream,iwant ice cream,ice cream,food,direct,1.0,icecream,food,0,1
+i want ice crm,i want ice crm,ice cream,food,fuzzy,0.9333333333333333,icecream,food,0,1
+gve me some idli,gve me some idli,idli,food,direct,1.0,idli,food,1,1
+gve me some idl,gve me some idl,idli,food,fuzzy,0.967741935483871,idli,food,1,1
+gve me someidli,gve me someidli,idli,food,fuzzy,0.967741935483871,idli,food,1,1
+gve me soem idli,gve me soem idli,idli,food,direct,1.0,idli,food,1,1
+i want jalebi,i want jalebi,jalebi,food,direct,1.0,jalebi,food,1,1
+i want jalebi,i want jalebi,jalebi,food,direct,1.0,jalebi,food,1,1
+i wan jalebi,i want jalebi,jalebi,food,direct,1.0,jalebi,food,1,1
+i love khichidi,i love khichidi,khichdi,food,tfidf,1.0000000000000002,khichdi,food,1,1
+ love khichidi,love khichidi,khichdi,food,tfidf,1.0000000000000002,khichdi,food,1,1
+ilove khichidi,ilove khichidi,khichdi,food,fuzzy,0.9655172413793104,khichdi,food,1,1
+i want some laddoo,i want some laddoo,laddoo,food,tfidf,1.0000000000000002,laddoo,food,1,1
+i wantsome laddoo,i wantsome laddoo,laddoo,food,direct,1.0,laddoo,food,1,1
+i want some laddo,i want some laddo,laddoo,food,fuzzy,0.9714285714285714,laddoo,food,1,1
+i wan some laddoo,i want some laddoo,laddoo,food,tfidf,1.0000000000000002,laddoo,food,1,1
+i want mac and cheese,i want mac and cheese,cheese,food,direct,1.0,mac and cheese,food,0,1
+i want mac and cheese,i want mac and cheese,cheese,food,direct,1.0,mac and cheese,food,0,1
+i want mc and cheese,i want mc and cheese,cheese,food,direct,1.0,mac and cheese,food,0,1
+i want macand cheese,i want macand cheese,cheese,food,direct,1.0,mac and cheese,food,0,1
+i want macaroons,i want macaroons,macaroons,food,direct,1.0,macaroons,food,1,1
+i wan macaroons,i want macaroons,macaroons,food,direct,1.0,macaroons,food,1,1
+i want macaroons,i want macaroons,macaroons,food,direct,1.0,macaroons,food,1,1
+i want mashed potatoes,i want mashed potatoes,mashed potatoes,food,tfidf,1.0000000000000002,mashed potatoes,food,1,1
+i want mahsed potatoes,i want mahsed potatoes,mashed potatoes,food,fuzzy,0.9545454545454546,mashed potatoes,food,1,1
+ want mashed potatoes,want mashed potatoes,mashed potatoes,food,tfidf,1.0000000000000002,mashed potatoes,food,1,1
+i want mashed potatoe,i want mashed potatoe,mashed potatoes,food,fuzzy,0.9767441860465116,mashed potatoes,food,1,1
+i want medu wada,i want medu wada,medu wada,food,tfidf,1.0000000000000002,medu wada,food,1,1
+i want medu wad,i want medu wad,medu wada,food,fuzzy,0.967741935483871,medu wada,food,1,1
+i wantmedu wada,i wantmedu wada,medu wada,food,fuzzy,0.967741935483871,medu wada,food,1,1
+i want meduwada,i want meduwada,medu wada,food,fuzzy,0.967741935483871,medu wada,food,1,1
+give me museli,give me museli,muesli,food,tfidf,1.0000000000000002,muesli,food,1,1
+give memuseli,give memuseli,muesli,food,fuzzy,0.9629629629629629,muesli,food,1,1
+give me museli,give me museli,muesli,food,tfidf,1.0000000000000002,muesli,food,1,1
+gv me museli,gv me museli,muesli,food,fuzzy,0.9230769230769231,muesli,food,1,1
+where is the muffin,where is the muffin,muffin,food,tfidf,1.0000000000000002,muffin,food,1,1
+where isthe muffin,where isthe muffin,muffin,food,direct,1.0,muffin,food,1,1
+whereis the muffin,whereis the muffin,muffin,food,direct,1.0,muffin,food,1,1
+i need mutton,i need mutton,mutton,food,direct,1.0,mutton,food,1,1
+i need mttn,i need mttn,mutton,food,fuzzy,0.9166666666666666,mutton,food,1,1
+i need umtton,i need umtton,mutton,food,fuzzy,0.9230769230769231,mutton,food,1,1
+i need mutto,i need mutto,mutton,food,fuzzy,0.96,mutton,food,1,1
+noodles pls,noodles pls,noodles,food,direct,1.0,noodles,food,1,1
+noodles psl,noodles psl,noodles,food,direct,1.0,noodles,food,1,1
+noodlespls,noodlespls,noodles,food,fuzzy,0.9523809523809523,noodles,food,1,1
+give me some nuts,give me some nuts,nuts,food,direct,1.0,nuts,food,1,1
+give m some nuts,give m some nuts,nuts,food,direct,1.0,nuts,food,1,1
+give me somenuts,give me somenuts,nuts,food,fuzzy,0.9696969696969697,nuts,food,1,1
+give me som nuts,give me som nuts,nuts,food,direct,1.0,nuts,food,1,1
+i want oatmeal,i want oatmeal,oatmeal,food,direct,1.0,oatmeal,food,1,1
+i want oatmeal,i want oatmeal,oatmeal,food,direct,1.0,oatmeal,food,1,1
+i wnt oatmeal,i wnt oatmeal,oatmeal,food,direct,1.0,oatmeal,food,1,1
+i wantoatmeal,i wantoatmeal,oatmeal,food,fuzzy,0.9629629629629629,oatmeal,food,1,1
+omelette pls,omelette pls,omelette,food,tfidf,1.0000000000000002,omelette,food,1,1
+omelettepls,omelettepls,omelette,food,fuzzy,0.9565217391304348,omelette,food,1,1
+omeeltte pls,omeeltte pls,omelette,food,fuzzy,0.9166666666666666,omelette,food,1,1
+omelette psl,omelette psl,omelette,food,direct,1.0,omelette,food,1,1
+give me some pancakes,give me some pancakes,pancakes,food,direct,1.0,pancakes,food,1,1
+give me som pancakes,give me som pancakes,pancakes,food,direct,1.0,pancakes,food,1,1
+giev me some pancakes,giev me some pancakes,pancakes,food,direct,1.0,pancakes,food,1,1
+give m some pancakes,give m some pancakes,pancakes,food,direct,1.0,pancakes,food,1,1
+i want papad,i want papad,papad,food,direct,1.0,papad,food,1,1
+iwant papad,iwant papad,papad,food,direct,1.0,papad,food,1,1
+i want ppd,i want ppd,papad,food,fuzzy,0.9090909090909091,papad,food,1,1
+i want paapd,i want paapd,papad,food,fuzzy,0.9166666666666666,papad,food,1,1
+make some paratha,make some paratha,paratha,food,direct,1.0,paratha,food,1,1
+make some parath,make some parath,paratha,food,fuzzy,0.9696969696969697,paratha,food,1,1
+amke some paratha,amke some paratha,paratha,food,direct,1.0,paratha,food,1,1
+make smoe paratha,make smoe paratha,paratha,food,direct,1.0,paratha,food,1,1
+make some pasta,make some pasta,pasta,food,direct,1.0,pasta,food,1,1
+make some past,make some past,pasta,food,fuzzy,0.9655172413793104,pasta,food,1,1
+make some pasat,make some pasat,pasta,food,fuzzy,0.9333333333333333,pasta,food,1,1
+amke some pasta,amke some pasta,pasta,food,direct,1.0,pasta,food,1,1
+i want pav bhaji,i want pav bhaji,pav bhaji,food,tfidf,1.0000000000000002,pav bhaji,food,1,1
+i want pav bhaj,i want pav bhaj,pav bhaji,food,fuzzy,0.967741935483871,pav bhaji,food,1,1
+i want pav bhj,i want pav bhj,pav bhaji,food,fuzzy,0.9333333333333333,pav bhaji,food,1,1
+i want pie,i want pie,pie,food,direct,1.0,pie,food,1,1
+i want pie,i want pie,pie,food,direct,1.0,pie,food,1,1
+i want pi,i want pi,pie,food,fuzzy,0.9473684210526315,pie,food,1,1
+iwant pie,iwant pie,pie,food,direct,1.0,pie,food,1,1
+i want pizza,i want pizza,pizza,food,direct,1.0,pizza,food,1,1
+i wnt pizza,i wnt pizza,pizza,food,direct,1.0,pizza,food,1,1
+i wantpizza,i wantpizza,pizza,food,fuzzy,0.9565217391304348,pizza,food,1,1
+i want pizza,i want pizza,pizza,food,direct,1.0,pizza,food,1,1
+can you make me poached eggs,can you make me poached eggs,eggs,food,direct,1.0,poached eggs,food,0,1
+can you mak me poached eggs,can you mak me poached eggs,eggs,food,direct,1.0,poached eggs,food,0,1
+can y make me poached eggs,can y make me poached eggs,eggs,food,direct,1.0,poached eggs,food,0,1
+can you amke me poached eggs,can you amke me poached eggs,eggs,food,direct,1.0,poached eggs,food,0,1
+i want poha,i want poha,poha,food,direct,1.0,poha,food,1,1
+iwant poha,iwant poha,poha,food,direct,1.0,poha,food,1,1
+i want poha,i want poha,poha,food,direct,1.0,poha,food,1,1
+i wan poha,i want poha,poha,food,direct,1.0,poha,food,1,1
+i like popcorrn,i like popcorrn,popcorn,food,tfidf,1.0000000000000002,popcorn,food,1,1
+i like popcorr,i like popcorr,popcorn,food,fuzzy,0.9655172413793104,popcorn,food,1,1
+i liek popcorrn,i liek popcorrn,popcorn,food,fuzzy,0.9333333333333333,popcorn,food,1,1
+i want pork,i want pork,pork,food,direct,1.0,pork,food,1,1
+i wantpork,i wantpork,pork,food,fuzzy,0.9523809523809523,pork,food,1,1
+i wnt pork,i wnt pork,pork,food,direct,1.0,pork,food,1,1
+iwant pork,iwant pork,pork,food,direct,1.0,pork,food,1,1
+make some porridge,make some porridge,porridge,food,direct,1.0,porridge,food,1,1
+mak some porridge,mak some porridge,porridge,food,direct,1.0,porridge,food,1,1
+make som porridge,make som porridge,porridge,food,direct,1.0,porridge,food,1,1
+make some prrdg,make some prrdg,porridge,food,fuzzy,0.9090909090909091,porridge,food,1,1
+i want some rice,i want some rice,rice,food,direct,1.0,rice,food,1,1
+i wnt some rice,i wnt some rice,rice,food,direct,1.0,rice,food,1,1
+ want some rice,want some rice,rice,food,direct,1.0,rice,food,1,1
+i watn some rice,i watn some rice,rice,food,direct,1.0,rice,food,1,1
+can you roast beef,can you roast beef,roast beef,food,tfidf,1.0000000000000002,roast beef,food,1,1
+can you roast ebef,can you roast ebef,roast beef,food,fuzzy,0.9444444444444444,roast beef,food,1,1
+can y roast beef,can y roast beef,roast beef,food,direct,1.0,roast beef,food,1,1
+can you roast bee,can you roast bee,bee,animals,direct,1.0,roast beef,food,0,0
+i want roast chicken,i want roast chicken,roast chicken,food,tfidf,1.0000000000000002,roast chicken,food,1,1
+i want roastchicken,i want roastchicken,roast chicken,food,fuzzy,0.9743589743589743,roast chicken,food,1,1
+i want raost chicken,i want raost chicken,chicken,food,direct,1.0,roast chicken,food,0,1
+i wantroast chicken,i wantroast chicken,chicken,food,direct,1.0,roast chicken,food,0,1
+i want roast lamb,i want roast lamb,roast lamb,food,direct,1.0,roast lamb,food,1,1
+i wnt roast lamb,i wnt roast lamb,roast lamb,food,direct,1.0,roast lamb,food,1,1
+i want roast lmab,i want roast lmab,roast lamb,food,fuzzy,0.9411764705882353,roast lamb,food,1,1
+i want roast lamb,i want roast lamb,roast lamb,food,direct,1.0,roast lamb,food,1,1
+i want a roast pork,i want a roast pork,pork,food,direct,1.0,roast pork,food,0,1
+i want a roast pork,i want a roast pork,pork,food,direct,1.0,roast pork,food,0,1
+rosogulla is so tasty,rosogulla is so tasty,rosogulla,food,direct,1.0,rosogulla,food,1,1
+rosogulla is so tast,rosogulla is so tast,rosogulla,food,direct,1.0,rosogulla,food,1,1
+rosogullais so tasty,rosogullais so tasty,rosogulla,food,fuzzy,0.975609756097561,rosogulla,food,1,1
+rosogulla is so atsty,rosogulla is so atsty,rosogulla,food,direct,1.0,rosogulla,food,1,1
+i want some rotti,i want some rotti,roti,food,tfidf,1.0000000000000002,roti,food,1,1
+i want somerotti,i want somerotti,roti,food,fuzzy,0.9696969696969697,roti,food,1,1
+i wantsome rotti,i wantsome rotti,roti,food,fuzzy,0.9696969696969697,roti,food,1,1
+iwant some rotti,iwant some rotti,roti,food,fuzzy,0.9696969696969697,roti,food,1,1
+salad is nice,salad is nice,salad,food,direct,1.0,salad,food,1,1
+sala is nice,sala is nice,salad,food,fuzzy,0.96,salad,food,1,1
+aslad is nice,aslad is nice,salad,food,fuzzy,0.9230769230769231,salad,food,1,1
+salad i nice,salad i nice,salad,food,direct,1.0,salad,food,1,1
+salsa taste good,salsa taste good,salsa,food,tfidf,1.0000000000000002,salsa,food,1,1
+salsa taste gd,salsa taste gd,salsa,food,direct,1.0,salsa,food,1,1
+salsa tast good,salsa tast good,salsa,food,direct,1.0,salsa,food,1,1
+salsa taste godo,salsa taste godo,salsa,food,direct,1.0,salsa,food,1,1
+i need some sambhar,i need some sambhar,sambhar,food,tfidf,1.0000000000000002,sambhar,food,1,1
+i need some smbhr,i need some smbhr,sambhar,food,fuzzy,0.9444444444444444,sambhar,food,1,1
+i nee some sambhar,i nee some sambhar,sambhar,food,direct,1.0,sambhar,food,1,1
+i need some sambhar,i need some sambhar,sambhar,food,tfidf,1.0000000000000002,sambhar,food,1,1
+can you make a sandwich for me,can you make a sandwich for me,sandwich,food,direct,1.0,sandwich,food,1,1
+cna you make a sandwich for me,cna you make a sandwich for me,sandwich,food,direct,1.0,sandwich,food,1,1
+can you make a sandwich forme,can you make a sandwich forme,sandwich,food,direct,1.0,sandwich,food,1,1
+can you mkae a sandwich for me,can you mkae a sandwich for me,sandwich,food,direct,1.0,sandwich,food,1,1
+i love sausage,i love sausage,sausage,food,tfidf,1.0000000000000002,sausage,food,1,1
+ love sausage,love sausage,sausage,food,tfidf,1.0000000000000002,sausage,food,1,1
+i lovesausage,i lovesausage,sausage,food,fuzzy,0.9629629629629629,sausage,food,1,1
+i love ssg,i love ssg,sausage,food,fuzzy,0.8333333333333334,sausage,food,1,1
+can you make me some scrambled eggs,can you make me some scrambled eggs,scrambled eggs,food,tfidf,1.0000000000000002,scrambled eggs,food,1,1
+can you makeme some scrambled eggs,can you makeme some scrambled eggs,eggs,food,direct,1.0,scrambled eggs,food,0,1
+cn you make me some scrambled eggs,cn you make me some scrambled eggs,eggs,food,direct,1.0,scrambled eggs,food,0,1
+can you make m some scrambled eggs,can you make m some scrambled eggs,eggs,food,direct,1.0,scrambled eggs,food,0,1
+i want pudding,i want pudding,pudding,food,direct,1.0,pudding,food,1,1
+i want pddng,i want pddng,pudding,food,fuzzy,0.9230769230769231,pudding,food,1,1
+i want pudding,i want pudding,pudding,food,direct,1.0,pudding,food,1,1
+i want puddign,i want puddign,pudding,food,fuzzy,0.9285714285714286,pudding,food,1,1
+i want sheera,i want sheera,sheera,food,direct,1.0,sheera,food,1,1
+iwant sheera,iwant sheera,sheera,food,direct,1.0,sheera,food,1,1
+i want shr,i want shr,sheera,food,fuzzy,0.8695652173913043,sheera,food,1,1
+i awnt sheera,i awnt sheera,sheera,food,direct,1.0,sheera,food,1,1
+i want some snack mix,i want some snack mix,snack mix,food,tfidf,1.0000000000000002,snack mix,food,1,1
+i want som snack mix,i want som snack mix,snack mix,food,direct,1.0,snack mix,food,1,1
+ want some snack mix,want some snack mix,snack mix,food,tfidf,1.0000000000000002,snack mix,food,1,1
+i want some snack mi,i want some snack mi,snack mix,food,fuzzy,0.975609756097561,snack mix,food,1,1
+i want some snacks,i want some snacks,snacks,food,tfidf,1.0000000000000002,snacks,food,1,1
+iwant some snacks,iwant some snacks,snacks,food,direct,1.0,snacks,food,1,1
+i wantsome snacks,i wantsome snacks,snacks,food,direct,1.0,snacks,food,1,1
+i want som snacks,i want som snacks,snacks,food,direct,1.0,snacks,food,1,1
+i want apple,i want apple,apple,fruits,direct,1.0,apple,fruits,1,1
+i want appl,i want appl,apple,fruits,fuzzy,0.9565217391304348,apple,fruits,1,1
+ want apple,want apple,apple,fruits,direct,1.0,apple,fruits,1,1
+i need some avacado,i need some avacado,avacado,fruits,tfidf,1.0000000000000002,avacado,fruits,1,1
+i need sm avacado,i need sm avacado,avacado,fruits,direct,1.0,avacado,fruits,1,1
+i need some avacdao,i need some avacdao,avacado,fruits,fuzzy,0.9473684210526315,avacado,fruits,1,1
+ need some avacado,need some avacado,avacado,fruits,tfidf,1.0000000000000002,avacado,fruits,1,1
+give me banana,give me banana,banana,fruits,tfidf,1.0000000000000002,banana,fruits,1,1
+give me banaan,give me banaan,banana,fruits,fuzzy,0.9285714285714286,banana,fruits,1,1
+give me bnaana,give me bnaana,banana,fruits,fuzzy,0.8571428571428571,banana,fruits,1,1
+giv me banana,give me banana,banana,fruits,tfidf,1.0000000000000002,banana,fruits,1,1
+give me some berries,give me some berries,berries,fruits,direct,1.0,berries,fruits,1,1
+giveme some berries,giveme some berries,berries,fruits,direct,1.0,berries,fruits,1,1
+i want blueberry,i want blueberry,blueberry,fruits,direct,1.0,blueberry,fruits,1,1
+i want buleberry,i want buleberry,blueberry,fruits,fuzzy,0.9375,blueberry,fruits,1,1
+i want blueberry,i want blueberry,blueberry,fruits,direct,1.0,blueberry,fruits,1,1
+i want cherry,i want cherry,cherry,fruits,direct,1.0,cherry,fruits,1,1
+i want cherry,i want cherry,cherry,fruits,direct,1.0,cherry,fruits,1,1
+i wnat cherry,i wnat cherry,cherry,fruits,direct,1.0,cherry,fruits,1,1
+i wantcherry,i wantcherry,cherry,fruits,fuzzy,0.96,cherry,fruits,1,1
+i need some chikoo,i need some chikoo,chikoo,fruits,tfidf,1.0000000000000002,chikoo,fruits,1,1
+i nee some chikoo,i nee some chikoo,chikoo,fruits,direct,1.0,chikoo,fruits,1,1
+i need somechikoo,i need somechikoo,chikoo,fruits,fuzzy,0.9714285714285714,chikoo,fruits,1,1
+i needsome chikoo,i needsome chikoo,chikoo,fruits,direct,1.0,chikoo,fruits,1,1
+i love dragonfruit,i love dragonfruit,dragonfruit,fruits,tfidf,1.0000000000000002,dragonfruit,fruits,1,1
+i lv dragonfruit,i lv dragonfruit,dragonfruit,fruits,direct,1.0,dragonfruit,fruits,1,1
+ love dragonfruit,love dragonfruit,dragonfruit,fruits,tfidf,1.0000000000000002,dragonfruit,fruits,1,1
+i love drgaonfruit,i love drgaonfruit,dragonfruit,fruits,fuzzy,0.9444444444444444,dragonfruit,fruits,1,1
+give me some figs,give me some figs,figs,fruits,direct,1.0,figs,fruits,1,1
+give me some fig,give me some fig,figs,fruits,fuzzy,0.9696969696969697,figs,fruits,1,1
+give m some figs,give m some figs,figs,fruits,direct,1.0,figs,fruits,1,1
+i want fruit platter,i want fruit platter,fruit platter,fruits,direct,1.0,fruit platter,fruits,1,1
+ want fruit platter,want fruit platter,fruit platter,fruits,direct,1.0,fruit platter,fruits,1,1
+i want fruit platter,i want fruit platter,fruit platter,fruits,direct,1.0,fruit platter,fruits,1,1
+i wantfruit platter,i wantfruit platter,fruit platter,fruits,fuzzy,0.9743589743589743,fruit platter,fruits,1,1
+lets go to fruit shop,lets go to fruit shop,fruit shop,fruits,direct,1.0,fruit shop,fruits,1,1
+lets go tofruit shop,lets go tofruit shop,shop,place,direct,1.0,fruit shop,fruits,0,0
+elts go to fruit shop,elts go to fruit shop,fruit shop,fruits,direct,1.0,fruit shop,fruits,1,1
+lets go t fruit shop,lets go t fruit shop,fruit shop,fruits,direct,1.0,fruit shop,fruits,1,1
+give me some fruit,give me some fruit,fruit,fruits,direct,1.0,fruit,fruits,1,1
+give m some fruit,give m some fruit,fruit,fruits,direct,1.0,fruit,fruits,1,1
+give me some friut,give me some friut,fruit,fruits,fuzzy,0.9444444444444444,fruit,fruits,1,1
+i want some grapes,i want some grapes,grapes,fruits,tfidf,1.0000000000000002,grapes,fruits,1,1
+i want som grapes,i want som grapes,grapes,fruits,direct,1.0,grapes,fruits,1,1
+i like guava,i like guava,guava,fruits,tfidf,1.0000000000000002,guava,fruits,1,1
+i likeguava,i likeguava,guava,fruits,fuzzy,0.9565217391304348,guava,fruits,1,1
+i lk guava,i lk guava,guava,fruits,direct,1.0,guava,fruits,1,1
+i like gv,i like gv,guava,fruits,fuzzy,0.8571428571428571,guava,fruits,1,1
+i want jackfruit,i want jackfruit,jackfruit,fruits,direct,1.0,jackfruit,fruits,1,1
+i awnt jackfruit,i awnt jackfruit,jackfruit,fruits,direct,1.0,jackfruit,fruits,1,1
+i wantjackfruit,i wantjackfruit,jackfruit,fruits,fuzzy,0.967741935483871,jackfruit,fruits,1,1
+i want ajckfruit,i want ajckfruit,jackfruit,fruits,fuzzy,0.9375,jackfruit,fruits,1,1
+i want kiwi,i want kiwi,kiwi,fruits,direct,1.0,kiwi,fruits,1,1
+i wnat kiwi,i wnat kiwi,kiwi,fruits,direct,1.0,kiwi,fruits,1,1
+i want kw,i want kw,kiwi,fruits,fuzzy,0.9,kiwi,fruits,1,1
+i like lychee,i like lychee,lychee,fruits,tfidf,1.0000000000000002,lychee,fruits,1,1
+i lik lychee,i lik lychee,lychee,fruits,direct,1.0,lychee,fruits,1,1
+i like lyche,i like lyche,lychee,fruits,fuzzy,0.96,lychee,fruits,1,1
+i love mango,i love mango,mango,fruits,direct,1.0,mango,fruits,1,1
+i love manog,i love manog,mango,fruits,fuzzy,0.9166666666666666,mango,fruits,1,1
+i love mango,i love mango,mango,fruits,direct,1.0,mango,fruits,1,1
+i love mng,i love mng,mango,fruits,fuzzy,0.9090909090909091,mango,fruits,1,1
+give me muskmelon,give me muskmelon,muskmelon,fruits,tfidf,1.0000000000000002,muskmelon,fruits,1,1
+give me mskmln,give me mskmln,muskmelon,fruits,fuzzy,0.9032258064516129,muskmelon,fruits,1,1
+gv me muskmelon,gv me muskmelon,muskmelon,fruits,direct,1.0,muskmelon,fruits,1,1
+give m muskmelon,give m muskmelon,muskmelon,fruits,direct,1.0,muskmelon,fruits,1,1
+give orange,give orange,orange,fruits,tfidf,1.0000000000000002,orange,fruits,1,1
+giveorange,giveorange,orange,fruits,fuzzy,0.9523809523809523,orange,fruits,1,1
+give oragne,give oragne,orange,fruits,fuzzy,0.9090909090909091,orange,fruits,1,1
+give ornage,give ornage,orange,fruits,fuzzy,0.9090909090909091,orange,fruits,1,1
+give me papaya,give me papaya,papaya,fruits,tfidf,1.0000000000000002,papaya,fruits,1,1
+give me papaya,give me papaya,papaya,fruits,tfidf,1.0000000000000002,papaya,fruits,1,1
+give me papay,give me papay,papaya,fruits,fuzzy,0.9629629629629629,papaya,fruits,1,1
+it’s the peach,it’s the peach,peach,fruits,tfidf,1.0000000000000002,peach,fruits,1,1
+it’sthe peach,it’sthe peach,peach,fruits,direct,1.0,peach,fruits,1,1
+it’s thepeach,it’s thepeach,peach,fruits,fuzzy,0.9629629629629629,peach,fruits,1,1
+its’ the peach,its’ the peach,peach,fruits,direct,1.0,peach,fruits,1,1
+i want some pear,i want some pear,pear,fruits,tfidf,1.0000000000000002,pear,fruits,1,1
+iwant some pear,iwant some pear,pear,fruits,direct,1.0,pear,fruits,1,1
+i want some pea,i want some pea,pear,fruits,fuzzy,0.967741935483871,pear,fruits,1,1
+i want pineapple,i want pineapple,pineapple,fruits,direct,1.0,pineapple,fruits,1,1
+i wnat pineapple,i wnat pineapple,pineapple,fruits,direct,1.0,pineapple,fruits,1,1
+i want pineappl,i want pineappl,pineapple,fruits,fuzzy,0.967741935483871,pineapple,fruits,1,1
+i want plums,i want plums,plum,fruits,fuzzy,1.0,plum,fruits,1,1
+ want plums,want plums,plum,fruits,tfidf,1.0,plum,fruits,1,1
+i watn plums,i watn plums,plum,fruits,tfidf,0.9356846238313161,plum,fruits,1,1
+i wnt plums,i wnt plums,plum,fruits,fuzzy,0.9565217391304348,plum,fruits,1,1
+i want pomegranate,i want pomegranate,pomegranate,fruits,direct,1.0,pomegranate,fruits,1,1
+iwant pomegranate,iwant pomegranate,pomegranate,fruits,direct,1.0,pomegranate,fruits,1,1
+i watn pomegranate,i watn pomegranate,pomegranate,fruits,direct,1.0,pomegranate,fruits,1,1
+i want pomegranate,i want pomegranate,pomegranate,fruits,direct,1.0,pomegranate,fruits,1,1
+i like strawberry,i like strawberry,strawberry,fruits,tfidf,1.0000000000000002,strawberry,fruits,1,1
+i lk strawberry,i lk strawberry,strawberry,fruits,direct,1.0,strawberry,fruits,1,1
+i likestrawberry,i likestrawberry,strawberry,fruits,fuzzy,0.9696969696969697,strawberry,fruits,1,1
+there is the skiping rope,there is the skiping rope,skipping rope,game,tfidf,1.0000000000000004,skipping rope,game,1,1
+there is th skiping rope,there is th skiping rope,skipping rope,game,fuzzy,0.9795918367346939,skipping rope,game,1,1
+there is teh skiping rope,there is teh skiping rope,skipping rope,game,fuzzy,0.96,skipping rope,game,1,1
+i like basket ball,i like basket ball,basketball,game,fuzzy,1.0,basketball,game,1,1
+i like bsaket ball,i like bsaket ball,basketball,game,fuzzy,0.9444444444444444,basketball,game,1,1
+i like basket ball,i like basket ball,basketball,game,fuzzy,1.0,basketball,game,1,1
+i like basket abll,i like basket abll,basketball,game,fuzzy,0.9444444444444444,basketball,game,1,1
+take the bat and ball,take the bat and ball,bat and ball,game,tfidf,1.0000000000000002,bat and ball,game,1,1
+take the bat nd ball,take the bat nd ball,bat,birds,direct,1.0,bat and ball,game,0,0
+take the bat and bal,take the bat and bal,bat,birds,direct,1.0,bat and ball,game,0,0
+take th bat and ball,take th bat and ball,bat,birds,direct,1.0,bat and ball,game,0,0
+shall we play board game,shall we play board game,board game,game,direct,1.0,board game,game,1,1
+shall we play boar game,shall we play boar game,board game,game,fuzzy,0.9787234042553191,board game,game,1,1
+shall weplay board game,shall weplay board game,board game,game,direct,1.0,board game,game,1,1
+shall we play boardgame,shall we play boardgame,board game,game,fuzzy,0.9787234042553191,board game,game,1,1
+i love bowling,i love bowling,bowling,game,tfidf,1.0000000000000002,bowling,game,1,1
+ilove bowling,ilove bowling,bowling,game,direct,1.0,bowling,game,1,1
+i love bowling,i love bowling,bowling,game,tfidf,1.0000000000000002,bowling,game,1,1
+i lv bowling,i lv bowling,bowling,game,direct,1.0,bowling,game,1,1
+catch-catch,catch-catch,catch-catch,game,direct,1.0,catch-catch,game,1,1
+catch-catc,catch-catc,catch-catch,game,tfidf,1.0,catch-catch,game,1,1
+ctch-ctch,ctch-ctch,catch-catch,game,fuzzy,0.9,catch-catch,game,1,1
+i like to play chess,i like to play chess,chess,game,direct,1.0,chess,game,1,1
+i like to play chess,i like to play chess,chess,game,direct,1.0,chess,game,1,1
+ilike to play chess,ilike to play chess,chess,game,direct,1.0,chess,game,1,1
+i like to play hcess,i like to play hcess,chess,game,fuzzy,0.95,chess,game,1,1
+i want to watch cricket,i want to watch cricket,cricket,game,direct,1.0,cricket,game,1,1
+i want to watch cricke,i want to watch cricke,watch,object,direct,1.0,cricket,game,0,0
+i want to watchcricket,i want to watchcricket,cricket,game,fuzzy,0.9777777777777777,cricket,game,1,1
+i want to watch crckt,i want to watch crckt,watch,object,direct,1.0,cricket,game,0,0
+i want to watch football,i want to watch football,football,game,direct,1.0,football,game,1,1
+i want t watch football,i want t watch football,football,game,direct,1.0,football,game,1,1
+i want to wtach football,i want to wtach football,football,game,direct,1.0,football,game,1,1
+i want to watchfootball,i want to watchfootball,football,game,fuzzy,0.9787234042553191,football,game,1,1
+i want to play frisbee,i want to play frisbee,frisbee,game,tfidf,1.0000000000000002,frisbee,game,1,1
+i want t play frisbee,i want t play frisbee,frisbee,game,direct,1.0,frisbee,game,1,1
+i want to pla frisbee,i want to pla frisbee,frisbee,game,direct,1.0,frisbee,game,1,1
+i want to play frisbee,i want to play frisbee,frisbee,game,tfidf,1.0000000000000002,frisbee,game,1,1
+lets go to fun zone,lets go to fun zone,fun,emotions,direct,1.0,fun zone,game,0,0
+let go to fun zone,let go to fun zone,fun,emotions,direct,1.0,fun zone,game,0,0
+letsgo to fun zone,letsgo to fun zone,fun,emotions,direct,1.0,fun zone,game,0,0
+lets go tofun zone,lets go tofun zone,fun zone,game,fuzzy,0.972972972972973,fun zone,game,1,1
+i want to watch handball,i want to watch handball,handball,game,direct,1.0,handball,game,1,1
+i want to watch handbal,i want to watch handbal,watch,object,direct,1.0,handball,game,0,0
+i want to watch handball,i want to watch handball,handball,game,direct,1.0,handball,game,1,1
+i wnt to watch handball,i wnt to watch handball,handball,game,direct,1.0,handball,game,1,1
+can we play hide and seek,can we play hide and seek,hide and seek,game,tfidf,1.0000000000000002,hide and seek,game,1,1
+can we play hide nd seek,can we play hide nd seek,hide and seek,game,fuzzy,0.9795918367346939,hide and seek,game,1,1
+can we play hide an seek,can we play hide an seek,hide and seek,game,fuzzy,0.9795918367346939,hide and seek,game,1,1
+can we play hide and see,can we play hide and see,hide and seek,game,fuzzy,0.9795918367346939,hide and seek,game,1,1
+can w go to ice hockey,can w go to ice hockey,ice hockey,game,direct,1.0,ice hockey,game,1,1
+can w goto ice hockey,can w goto ice hockey,ice hockey,game,direct,1.0,ice hockey,game,1,1
+can w g to ice hockey,can w g to ice hockey,ice hockey,game,direct,1.0,ice hockey,game,1,1
+ca w go to ice hockey,ca w go to ice hockey,ice hockey,game,direct,1.0,ice hockey,game,1,1
+can we go ice skating,can we go ice skating,iceskating,game,fuzzy,1.0,iceskating,game,1,1
+can we go ice skatign,can we go ice skatign,iceskating,game,fuzzy,0.9523809523809523,iceskating,game,1,1
+can we go c skating,can we go c skating,iceskating,game,fuzzy,0.95,iceskating,game,1,1
+can w go ice skating,can w go ice skating,iceskating,game,fuzzy,0.975609756097561,iceskating,game,1,1
+can we play indoor games,can we play indoor games,indoor games,game,tfidf,1.0000000000000002,indoor games,game,1,1
+cn we play indoor games,cn we play indoor games,indoor games,game,direct,1.0,indoor games,game,1,1
+can we paly indoor games,can we paly indoor games,indoor games,game,direct,1.0,indoor games,game,1,1
+canwe play indoor games,canwe play indoor games,indoor games,game,direct,1.0,indoor games,game,1,1
+i want to play ipad games,i want to play ipad games,ipad games,game,direct,1.0,ipad games,game,1,1
+iwant to play ipad games,iwant to play ipad games,ipad games,game,direct,1.0,ipad games,game,1,1
+i want t play ipad games,i want t play ipad games,ipad games,game,direct,1.0,ipad games,game,1,1
+i want to play ipad game,i want to play ipad game,ipad games,game,fuzzy,0.9795918367346939,ipad games,game,1,1
+i like kabaddi,i like kabaddi,kabaddi,game,tfidf,1.0000000000000002,kabaddi,game,1,1
+i like kabaddi,i like kabaddi,kabaddi,game,tfidf,1.0000000000000002,kabaddi,game,1,1
+ilike kabaddi,ilike kabaddi,kabaddi,game,direct,1.0,kabaddi,game,1,1
+i lik kabaddi,i lik kabaddi,kabaddi,game,direct,1.0,kabaddi,game,1,1
+i want to fly kite,i want to fly kite,kite,game,direct,1.0,kite,game,1,1
+i want to fly kite,i want to fly kite,kite,game,direct,1.0,kite,game,1,1
+i want to fl kite,i want to fl kite,kite,game,direct,1.0,kite,game,1,1
+iwant to fly kite,iwant to fly kite,kite,game,direct,1.0,kite,game,1,1
+its my legos,its my legos,legos,game,tfidf,1.0000000000000002,legos,game,1,1
+its my lgs,its my lgs,legos,game,fuzzy,0.9090909090909091,legos,game,1,1
+its mylegos,its mylegos,legos,game,fuzzy,0.9565217391304348,legos,game,1,1
+its my legos,its my legos,legos,game,tfidf,1.0000000000000002,legos,game,1,1
+can you play with me,can you play with me,play with me,game,direct,1.0,play with me,game,1,1
+can you playwith me,can you playwith me,play with me,game,fuzzy,0.9743589743589743,play with me,game,1,1
+can youplay with me,can youplay with me,play with me,game,fuzzy,0.9743589743589743,play with me,game,1,1
+canyou play with me,canyou play with me,play with me,game,direct,1.0,play with me,game,1,1
+shall we play cards,shall we play cards,playing cards,game,tfidf,1.0000000000000002,playing cards,game,1,1
+shall we play carsd,shall we play carsd,playing cards,game,fuzzy,0.9473684210526315,playing cards,game,1,1
+shlal we play cards,shlal we play cards,playing cards,game,fuzzy,0.9473684210526315,playing cards,game,1,1
+shall we play cards,shall we play cards,playing cards,game,tfidf,1.0000000000000002,playing cards,game,1,1
+shall we play a puzzle,shall we play a puzzle,puzzle,game,tfidf,1.0000000000000002,puzzle,game,1,1
+shlal we play a puzzle,shlal we play a puzzle,puzzle,game,direct,1.0,puzzle,game,1,1
+shall we play apuzzle,shall we play apuzzle,puzzle,game,fuzzy,0.9767441860465116,puzzle,game,1,1
+shall we play a puzzle,shall we play a puzzle,puzzle,game,tfidf,1.0000000000000002,puzzle,game,1,1
+i love racquet sports,i love racquet sports,racquet sports,game,direct,1.0,racquet sports,game,1,1
+ilove racquet sports,ilove racquet sports,racquet sports,game,direct,1.0,racquet sports,game,1,1
+i love racquet spotrs,i love racquet spotrs,racquet sports,game,fuzzy,0.9523809523809523,racquet sports,game,1,1
+i lov racquet sports,i lov racquet sports,racquet sports,game,direct,1.0,racquet sports,game,1,1
+i like to watch rollerskating,i like to watch rollerskating,rollerskating,game,direct,1.0,rollerskating,game,1,1
+i lk to watch rollerskating,i lk to watch rollerskating,rollerskating,game,direct,1.0,rollerskating,game,1,1
+i like to wtch rollerskating,i like to wtch rollerskating,rollerskating,game,direct,1.0,rollerskating,game,1,1
+i like to watch rllrsktng,i like to watch rllrsktng,watch,object,direct,1.0,rollerskating,game,0,0
+i want to play scrabble,i want to play scrabble,scrabble,game,tfidf,1.0000000000000002,scrabble,game,1,1
+i want t play scrabble,i want t play scrabble,scrabble,game,direct,1.0,scrabble,game,1,1
+i watn to play scrabble,i watn to play scrabble,scrabble,game,direct,1.0,scrabble,game,1,1
+i awnt to play scrabble,i awnt to play scrabble,scrabble,game,direct,1.0,scrabble,game,1,1
+i want to play seesasw,i want to play seesasw,see-saw,game,tfidf,1.0000000000000002,see-saw,game,1,1
+i want t play seesasw,i want t play seesasw,see-saw,game,fuzzy,0.9767441860465116,see-saw,game,1,1
+i wnt to play seesasw,i wnt to play seesasw,see-saw,game,fuzzy,0.9767441860465116,see-saw,game,1,1
+i want to play seesasw,i want to play seesasw,see-saw,game,tfidf,1.0000000000000002,see-saw,game,1,1
+where is the ball pit,where is the ball pit,ball pit,game,direct,1.0,ball pit,game,1,1
+where is th ball pit,where is th ball pit,ball pit,game,direct,1.0,ball pit,game,1,1
+where is the blal pit,where is the blal pit,ball pit,game,fuzzy,0.9523809523809523,ball pit,game,1,1
+where is teh ball pit,where is teh ball pit,ball pit,game,direct,1.0,ball pit,game,1,1
+shall we play snake & ladder,shall we play snake & ladder,snake,animals,direct,1.0,snakes & ladders,game,0,0
+shallwe play snake & ladder,shallwe play snake & ladder,snake,animals,direct,1.0,snakes & ladders,game,0,0
+shall we play snake & ladder,shall we play snake & ladder,snake,animals,direct,1.0,snakes & ladders,game,0,0
+i want to go snowboarding,i want to go snowboarding,snowboarding,game,tfidf,1.0000000000000002,snowboarding,game,1,1
+i wantto go snowboarding,i wantto go snowboarding,snowboarding,game,direct,1.0,snowboarding,game,1,1
+i want to g snowboarding,i want to g snowboarding,snowboarding,game,direct,1.0,snowboarding,game,1,1
+i like soccer,i like soccer,soccer,game,tfidf,1.0000000000000002,soccer,game,1,1
+i like soccer,i like soccer,soccer,game,tfidf,1.0000000000000002,soccer,game,1,1
+i like socce,i like socce,soccer,game,fuzzy,0.96,soccer,game,1,1
+i lk soccer,i lk soccer,soccer,game,direct,1.0,soccer,game,1,1
+i like softball,i like softball,softball,game,tfidf,1.0000000000000002,softball,game,1,1
+ like softball,like softball,softball,game,tfidf,1.0000000000000002,softball,game,1,1
+i like softbal,i like softbal,softball,game,fuzzy,0.9655172413793104,softball,game,1,1
+ilike softball,ilike softball,softball,game,direct,1.0,softball,game,1,1
+i like sports,i like sports,sports,game,tfidf,1.0000000000000002,sports,game,1,1
+i like sports,i like sports,sports,game,tfidf,1.0000000000000002,sports,game,1,1
+ilike sports,ilike sports,sports,game,direct,1.0,sports,game,1,1
+i have allergy,i have allergy,allergy,health,tfidf,1.0000000000000002,allergy,health,1,1
+i have allerg,i have allerg,allergy,health,fuzzy,0.9629629629629629,allergy,health,1,1
+i hav allergy,i hav allergy,allergy,health,direct,1.0,allergy,health,1,1
+i have allergy,i have allergy,allergy,health,tfidf,1.0000000000000002,allergy,health,1,1
+my ankle aches,my ankle aches,ankle,health,tfidf,1.0000000000000002,ankle,health,1,1
+m ankle aches,m ankle aches,ankle,health,direct,1.0,ankle,health,1,1
+my ankleaches,my ankleaches,ankle,health,fuzzy,0.9629629629629629,ankle,health,1,1
+my ankle aches,my ankle aches,ankle,health,tfidf,1.0000000000000002,ankle,health,1,1
+put bandage,put bandage,bandage,health,tfidf,1.0000000000000002,bandage,health,1,1
+putbandage,putbandage,bandage,health,fuzzy,0.9523809523809523,bandage,health,1,1
+put badnage,put badnage,bandage,health,fuzzy,0.9090909090909091,bandage,health,1,1
+pu bandage,pu bandage,bandage,health,direct,1.0,bandage,health,1,1
+my shoulder aches,my shoulder aches,shoulder,health,tfidf,1.0000000000000002,shoulder,health,1,1
+my shoulder achse,my shoulder achse,shoulder,health,direct,1.0,shoulder,health,1,1
+my shoulde aches,my shoulde aches,shoulder,health,fuzzy,0.9696969696969697,shoulder,health,1,1
+my shoulderaches,my shoulderaches,shoulder,health,fuzzy,0.9696969696969697,shoulder,health,1,1
+i am sick,i am sick,sick,health,direct,1.0,sick,health,1,1
+i am isck,i am isck,sick,health,fuzzy,0.8888888888888888,sick,health,1,1
+i am sck,i am sck,sick,health,fuzzy,0.9411764705882353,sick,health,1,1
+i a sick,i a sick,sick,health,direct,1.0,sick,health,1,1
+my stomach aches,my stomach aches,stomach,health,tfidf,1.0000000000000002,stomach,health,1,1
+my stomach aches,my stomach aches,stomach,health,tfidf,1.0000000000000002,stomach,health,1,1
+m stomach aches,m stomach aches,stomach,health,direct,1.0,stomach,health,1,1
+my stomachaches,my stomachaches,stomach,health,fuzzy,0.967741935483871,stomach,health,1,1
+i want to change my footwear,i want to change my footwear,change footwear,help,tfidf,1.0000000000000002,change footwear,help,1,1
+i want to change my footwea,i want to change my footwea,change,help,direct,1.0,change footwear,help,0,1
+i want to change my footwear,i want to change my footwear,change footwear,help,tfidf,1.0000000000000002,change footwear,help,1,1
+i wan to change my footwear,i want to change my footwear,change footwear,help,tfidf,1.0000000000000002,change footwear,help,1,1
+i want to change my frock,i want to change my frock,change,help,direct,1.0,change frock,help,0,1
+i want t change my frock,i want t change my frock,change,help,direct,1.0,change frock,help,0,1
+i want to change my rfock,i want to change my rfock,change,help,direct,1.0,change frock,help,0,1
+i want to change my frock,i want to change my frock,change,help,direct,1.0,change frock,help,0,1
+i want to change my innerwear,i want to change my innerwear,change innerwear,help,tfidf,1.0000000000000002,change innerwear,help,1,1
+i awnt to change my innerwear,i awnt to change my innerwear,change,help,direct,1.0,change innerwear,help,0,1
+i want t change my innerwear,i want t change my innerwear,change,help,direct,1.0,change innerwear,help,0,1
+i want to chang my innerwear,i want to chang my innerwear,change innerwear,help,fuzzy,0.9824561403508771,change innerwear,help,1,1
+i want to change my jeans,i want to change my jeans,change jeans,help,tfidf,1.0000000000000002,change jeans,help,1,1
+i want to change my jeans,i want to change my jeans,change jeans,help,tfidf,1.0000000000000002,change jeans,help,1,1
+i want to chang my jeans,i want to chang my jeans,change jeans,help,fuzzy,0.9795918367346939,change jeans,help,1,1
+i want to change my leggins,i want to change my leggins,change leggings,help,tfidf,1.0000000000000002,change leggings,help,1,1
+i wnat to change my leggins,i wnat to change my leggins,change,help,direct,1.0,change leggings,help,0,1
+i want t change my leggins,i want t change my leggins,change,help,direct,1.0,change leggings,help,0,1
+i wan to change my leggins,i want to change my leggins,change leggings,help,tfidf,1.0000000000000002,change leggings,help,1,1
+can you change music,can you change music,change music,help,tfidf,1.0000000000000002,change music,help,1,1
+can you change musi,can you change musi,change,help,direct,1.0,change music,help,0,1
+canyou change music,canyou change music,change music,help,direct,1.0,change music,help,1,1
+can you chang music,can you chang music,change music,help,fuzzy,0.9743589743589743,change music,help,1,1
+i want to change my pants,i want to change my pants,change,help,direct,1.0,change pants,help,0,1
+i wan to change my pants,i want to change my pants,change,help,direct,1.0,change pants,help,0,1
+i wantto change my pants,i wantto change my pants,change,help,direct,1.0,change pants,help,0,1
+i want to hcange my pants,i want to hcange my pants,pants,help,direct,1.0,change pants,help,0,1
+i want to change my shoe,i want to change my shoe,change,help,direct,1.0,change shoes,help,0,1
+ want to change my shoe,want to change my shoe,change,help,direct,1.0,change shoes,help,0,1
+i awnt to change my shoe,i awnt to change my shoe,change,help,direct,1.0,change shoes,help,0,1
+iwant to change my shoe,iwant to change my shoe,change,help,direct,1.0,change shoes,help,0,1
+i want to change my shorts,i want to change my shorts,change,help,direct,1.0,change shorts,help,0,1
+i want to chng my shorts,i want to chng my shorts,shorts,help,direct,1.0,change shorts,help,0,1
+i want to chang my shorts,i want to chang my shorts,shorts,help,direct,1.0,change shorts,help,0,1
+i want to change my shrts,i want to change my shrts,change,help,direct,1.0,change shorts,help,0,1
+i want to change my skirts,i want to change my skirts,change,help,direct,1.0,change skirt,help,0,1
+i want tochange my skirts,i want tochange my skirts,change skirt,help,fuzzy,0.9803921568627451,change skirt,help,1,1
+i want to chang my skirts,i want to chang my skirts,change skirt,help,fuzzy,0.9803921568627451,change skirt,help,1,1
+i want to change my skirts,i want to change my skirts,change,help,direct,1.0,change skirt,help,0,1
+i want to change the slacks,i want to change the slacks,change,help,direct,1.0,change slacks,help,0,1
+i want to change theslacks,i want to change theslacks,change,help,tfidf,1.0000000000000002,change slacks,help,0,1
+i want to change the slacsk,i want to change the slacsk,change,help,direct,1.0,change slacks,help,0,1
+i want to change my socks,i want to change my socks,change,help,direct,1.0,change socks,help,0,1
+i want to chng my socks,i want to chng my socks,socks,help,direct,1.0,change socks,help,0,1
+i want t change my socks,i want t change my socks,change,help,direct,1.0,change socks,help,0,1
+ want to change my socks,want to change my socks,change,help,direct,1.0,change socks,help,0,1
+i want to change my t-shirt,i want to change my t-shirt,change,help,direct,1.0,change t-shirt,help,0,1
+i want to change my t-shirt,i want to change my t-shirt,change,help,direct,1.0,change t-shirt,help,0,1
+i want to chng my t-shirt,i want to chng my t-shirt,shirt,help,direct,1.0,change t-shirt,help,0,1
+i want t change my t-shirt,i want t change my t-shirt,change,help,direct,1.0,change t-shirt,help,0,1
+i want to change,i want to change,change,help,tfidf,1.0000000000000002,change,help,1,1
+i want to chnage,i want to chnage,change,help,fuzzy,0.9375,change,help,1,1
+iwant to change,iwant to change,change,help,direct,1.0,change,help,1,1
+can you comb my hair,can you comb my hair,comb hair,help,tfidf,1.0000000000000004,comb hair,help,1,1
+can you com my hair,can you com my hair,hair,body,direct,1.0,comb hair,help,0,0
+cn you comb my hair,cn you comb my hair,hair,body,direct,1.0,comb hair,help,0,0
+ca you comb my hair,ca you comb my hair,hair,body,direct,1.0,comb hair,help,0,0
+can you cut my nails,can you cut my nails,cut nails,help,tfidf,1.0000000000000002,cut nails,help,1,1
+can you cut my naisl,can you cut my naisl,cut nails,help,fuzzy,0.95,cut nails,help,1,1
+can you cut my nails,can you cut my nails,cut nails,help,tfidf,1.0000000000000002,cut nails,help,1,1
+can you cu my nails,can you cu my nails,cut nails,help,fuzzy,0.9743589743589743,cut nails,help,1,1
+take me to doctor,take me to doctor,doctor,help,direct,1.0,doctor,help,1,1
+take me to doctor,take me to doctor,doctor,help,direct,1.0,doctor,help,1,1
+tk me to doctor,tk me to doctor,doctor,help,direct,1.0,doctor,help,1,1
+take me to docto,take me to docto,doctor,help,fuzzy,0.9696969696969697,doctor,help,1,1
+i want to draw,i want to draw,draw,help,direct,1.0,draw,help,1,1
+i want to dra,i want to dra,draw,help,fuzzy,0.9629629629629629,draw,help,1,1
+i want todraw,i want todraw,draw,help,fuzzy,0.9629629629629629,draw,help,1,1
+i wantto draw,i wantto draw,draw,help,direct,1.0,draw,help,1,1
+take my dress,take my dress,dress,help,tfidf,1.0000000000000002,dress,help,1,1
+takemy dress,takemy dress,dress,help,direct,1.0,dress,help,1,1
+take my drss,take my drss,dress,help,fuzzy,0.96,dress,help,1,1
+i have an emergency,i have an emergency,emergency,help,direct,1.0,emergency,help,1,1
+ have an emergency,have an emergency,emergency,help,direct,1.0,emergency,help,1,1
+i have a emergency,i have a emergency,emergency,help,direct,1.0,emergency,help,1,1
+i have an emergency,i have an emergency,emergency,help,direct,1.0,emergency,help,1,1
+i want to wash my face,i want to wash my face,face wash,help,fuzzy,1.0,face wash,help,1,1
+i want to wash my face,i want to wash my face,face wash,help,fuzzy,1.0,face wash,help,1,1
+get me a glass,get me a glass,glass,help,tfidf,1.0000000000000002,glass,help,1,1
+ge me a glass,ge me a glass,glass,help,direct,1.0,glass,help,1,1
+get me a glss,get me a glss,glass,help,fuzzy,0.9629629629629629,glass,help,1,1
+get me a glas,get me a glas,glass,help,fuzzy,0.9629629629629629,glass,help,1,1
+i want my gloves,i want my gloves,gloves,help,direct,1.0,gloves,help,1,1
+i want my gloves,i want my gloves,gloves,help,direct,1.0,gloves,help,1,1
+i wantmy gloves,i wantmy gloves,gloves,help,direct,1.0,gloves,help,1,1
+i want mygloves,i want mygloves,gloves,help,fuzzy,0.967741935483871,gloves,help,1,1
+can you hepl me do this,can you hepl me do this,help me do this,help,fuzzy,1.0,help me do this,help,1,1
+can you hepl me do thi,can you hepl me do thi,help me do this,help,fuzzy,0.9777777777777777,help me do this,help,1,1
+can you hepl me do this,can you hepl me do this,help me do this,help,fuzzy,1.0,help me do this,help,1,1
+can you hepl me do ths,can you hepl me do ths,help me do this,help,fuzzy,0.9777777777777777,help me do this,help,1,1
+can you help put on clothes,can you help put on clothes,help put on clothes,help,tfidf,1.0000000000000002,help put on clothes,help,1,1
+can you help put on cltohes,can you help put on cltohes,help,help,direct,1.0,help put on clothes,help,0,1
+can you helpput on clothes,can you helpput on clothes,help put on clothes,help,fuzzy,0.9811320754716981,help put on clothes,help,1,1
+can you help pt on clothes,can you help pt on clothes,help,help,direct,1.0,help put on clothes,help,0,1
+can you help me remove clothes,can you help me remove clothes,help,help,direct,1.0,help remove clothes,help,0,1
+can you hel me remove clothes,can you hel me remove clothes,help remove clothes,help,fuzzy,0.9830508474576272,help remove clothes,help,1,1
+can you help me rmv clothes,can you help me rmv clothes,help,help,direct,1.0,help remove clothes,help,0,1
+can you help me remove clths,can you help me remove clths,help,help,direct,1.0,help remove clothes,help,0,1
+help me pls,help me pls,help,help,direct,1.0,help,help,1,1
+hlp me pls,hlp me pls,help,help,fuzzy,0.9523809523809523,help,help,1,1
+help me pls,help me pls,help,help,direct,1.0,help,help,1,1
+i need help,i need help,help,help,direct,1.0,i need help,help,0,1
+i need hel,i need hel,i need help,help,fuzzy,0.9523809523809523,i need help,help,1,1
+i nee help,i nee help,help,help,direct,1.0,i need help,help,0,1
+i want my jacket,i want my jacket,jacket,help,direct,1.0,jacket,help,1,1
+i want my jacket,i want my jacket,jacket,help,direct,1.0,jacket,help,1,1
+i want leggings,i want leggings,leggings,help,direct,1.0,leggings,help,1,1
+i want leggings,i want leggings,leggings,help,direct,1.0,leggings,help,1,1
+i wan leggings,i want leggings,leggings,help,direct,1.0,leggings,help,1,1
+i want my lunch box,i want my lunch box,lunch box,help,tfidf,1.0000000000000002,lunch box,help,1,1
+i want my lunch box,i want my lunch box,lunch box,help,tfidf,1.0000000000000002,lunch box,help,1,1
+i want mylunch box,i want mylunch box,lunch box,help,fuzzy,0.972972972972973,lunch box,help,1,1
+i wan my lunch box,i want my lunch box,lunch box,help,tfidf,1.0000000000000002,lunch box,help,1,1
+can you bring my medicine,can you bring my medicine,medicine,help,tfidf,1.0000000000000002,medicine,help,1,1
+can you bring my meidcine,can you bring my meidcine,medicine,help,fuzzy,0.96,medicine,help,1,1
+cn you bring my medicine,cn you bring my medicine,medicine,help,direct,1.0,medicine,help,1,1
+can you bring my medicin,can you bring my medicin,medicine,help,fuzzy,0.9795918367346939,medicine,help,1,1
+microwave it,microwave it,microwave,help,tfidf,1.0000000000000002,microwave,help,1,1
+microwave it,microwave it,microwave,help,tfidf,1.0000000000000002,microwave,help,1,1
+microawve it,microawve it,microwave,help,fuzzy,0.9166666666666666,microwave,help,1,1
+my clothes are loose,my clothes are loose,my clothes are loose,help,direct,1.0,my clothes are loose,help,1,1
+my clths are loose,my clths are loose,my clothes are loose,help,fuzzy,0.9473684210526315,my clothes are loose,help,1,1
+my clothes areloose,my clothes areloose,my clothes are loose,help,fuzzy,0.9743589743589743,my clothes are loose,help,1,1
+my clothes r loose,my clothes r loose,my clothes are loose,help,fuzzy,0.9473684210526315,my clothes are loose,help,1,1
+my clothes are tight,my clothes are tight,my clothes are tight,help,direct,1.0,my clothes are tight,help,1,1
+my clths are tight,my clths are tight,my clothes are tight,help,fuzzy,0.9473684210526315,my clothes are tight,help,1,1
+my clothes are tight,my clothes are tight,my clothes are tight,help,direct,1.0,my clothes are tight,help,1,1
+my clothes rae tight,my clothes rae tight,my clothes are tight,help,fuzzy,0.95,my clothes are tight,help,1,1
+switch to next channel,switch to next channel,next channel,help,direct,1.0,next channel,help,1,1
+switc to next channel,switc to next channel,next channel,help,direct,1.0,next channel,help,1,1
+switch tonext channel,switch tonext channel,next channel,help,fuzzy,0.9767441860465116,next channel,help,1,1
+i want to see nurse,i want to see nurse,nurse,help,direct,1.0,nurse,help,1,1
+i want t see nurse,i want t see nurse,nurse,help,direct,1.0,nurse,help,1,1
+i want to see nurse,i want to see nurse,nurse,help,direct,1.0,nurse,help,1,1
+where is my pants,where is my pants,pants,help,direct,1.0,pants,help,1,1
+where is my pants,where is my pants,pants,help,direct,1.0,pants,help,1,1
+whr is my pants,whr is my pants,pants,help,direct,1.0,pants,help,1,1
+whereis my pants,whereis my pants,pants,help,direct,1.0,pants,help,1,1
+please come here,please come here,please come here,help,tfidf,1.0000000000000002,please come here,help,1,1
+please cm here,please cm here,please,help,direct,1.0,please come here,help,0,1
+pls come here,pls come here,please come here,help,fuzzy,0.896551724137931,please come here,help,1,1
+pleasecome here,pleasecome here,please come here,help,fuzzy,0.967741935483871,please come here,help,1,1
+please give me,please give me,please give me,help,tfidf,1.0000000000000002,please give me,help,1,1
+please give m,please give m,please,help,direct,1.0,please give me,help,0,1
+please igve me,please igve me,please,help,direct,1.0,please give me,help,0,1
+please share,please share,please share,help,tfidf,1.0000000000000002,please share,help,1,1
+please shr,please shr,please,help,direct,1.0,please share,help,0,1
+please shar,please shar,please,help,direct,1.0,please share,help,0,1
+please show me,please show me,please show me,help,tfidf,1.0000000000000002,please show me,help,1,1
+pleaseshow me,pleaseshow me,please show me,help,fuzzy,0.9629629629629629,please show me,help,1,1
+please sho me,please sho me,please,help,direct,1.0,please show me,help,0,1
+pleaes show me,pleaes show me,please show me,help,fuzzy,0.9285714285714286,please show me,help,1,1
+please slow down,please slow down,please slow down,help,direct,1.0,please slow down,help,1,1
+please slw down,please slw down,please,help,direct,1.0,please slow down,help,0,1
+please slow odwn,please slow odwn,please,help,direct,1.0,please slow down,help,0,1
+please lsow down,please lsow down,please,help,direct,1.0,please slow down,help,0,1
+please take me,please take me,please take me,help,direct,1.0,please take me,help,1,1
+pleas take me,pleas take me,please take me,help,fuzzy,0.9629629629629629,please take me,help,1,1
+please atke me,please atke me,please,help,direct,1.0,please take me,help,0,1
+please tk me,please tk me,please,help,direct,1.0,please take me,help,0,1
+please tell me again,please tell me again,please tell me again,help,tfidf,1.0000000000000002,please tell me again,help,1,1
+please tell me again,please tell me again,please tell me again,help,tfidf,1.0000000000000002,please tell me again,help,1,1
+please tell me agani,please tell me agani,please,help,direct,1.0,please tell me again,help,0,1
+please tell m again,please tell m again,please,help,direct,1.0,please tell me again,help,0,1
+please,please,please,help,direct,1.0,please,help,1,1
+pleas,pleas,please,help,fuzzy,0.9090909090909091,please,help,1,1
+pls,pls,please,help,fuzzy,0.6666666666666666,please,help,1,1
+can you change to previous channel,can you change to previous channel,change,help,direct,1.0,previous channel,help,0,1
+can you change to previouschannel,can you change to previouschannel,change,help,direct,1.0,previous channel,help,0,1
+canyou change to previous channel,canyou change to previous channel,change,help,direct,1.0,previous channel,help,0,1
+can you change to previou channel,can you change to previou channel,change,help,direct,1.0,previous channel,help,0,1
+where is my raincoat,where is my raincoat,raincoat,help,direct,1.0,raincoat,help,1,1
+where is my raincoa,where is my raincoa,raincoat,help,fuzzy,0.9743589743589743,raincoat,help,1,1
+where is my ranicoat,where is my ranicoat,raincoat,help,fuzzy,0.95,raincoat,help,1,1
+where ismy raincoat,where ismy raincoat,raincoat,help,direct,1.0,raincoat,help,1,1
+can you read this for me,can you read this for me,read,help,tfidf,1.0000000000000002,read,help,1,1
+can you read this fo me,can you read this fo me,read,help,direct,1.0,read,help,1,1
+can youread this for me,can youread this for me,read,help,fuzzy,0.9787234042553191,read,help,1,1
+i want to request you,i want to request you,requests,help,tfidf,1.0000000000000002,requests,help,1,1
+i want to request you,i want to request you,requests,help,tfidf,1.0000000000000002,requests,help,1,1
+i want to requestyou,i want to requestyou,requests,help,fuzzy,0.975609756097561,requests,help,1,1
+i want torequest you,i want torequest you,requests,help,fuzzy,0.975609756097561,requests,help,1,1
+i want to wear salwar kameez,i want to wear salwar kameez,salwar kameez,help,direct,1.0,salwar kameez,help,1,1
+i want t wear salwar kameez,i want t wear salwar kameez,salwar kameez,help,direct,1.0,salwar kameez,help,1,1
+i want to wear salwar kameez,i want to wear salwar kameez,salwar kameez,help,direct,1.0,salwar kameez,help,1,1
+i want to wera salwar kameez,i want to wera salwar kameez,salwar kameez,help,direct,1.0,salwar kameez,help,1,1
+i need sanitary napkins,i need sanitary napkins,sanitary napkins,help,tfidf,1.0000000000000002,sanitary napkins,help,1,1
+i need saniatry napkins,i need saniatry napkins,sanitary napkins,help,fuzzy,0.9565217391304348,sanitary napkins,help,1,1
+i need sanitary napkins,i need sanitary napkins,sanitary napkins,help,tfidf,1.0000000000000002,sanitary napkins,help,1,1
+ineed sanitary napkins,ineed sanitary napkins,sanitary napkins,help,direct,1.0,sanitary napkins,help,1,1
+can you seal it,can you seal it,seal,help,tfidf,1.0000000000000002,seal,help,1,1
+can you sl it,can you sl it,seal,help,fuzzy,0.9285714285714286,seal,help,1,1
+can you sealit,can you sealit,seal,help,fuzzy,0.9655172413793104,seal,help,1,1
+can youseal it,can youseal it,seal,help,fuzzy,0.9655172413793104,seal,help,1,1
+take me to bathroom,take me to bathroom,bathroom,help,direct,1.0,bathroom,help,1,1
+takeme to bathroom,takeme to bathroom,bathroom,help,direct,1.0,bathroom,help,1,1
+take me t bathroom,take me t bathroom,bathroom,help,direct,1.0,bathroom,help,1,1
+take me to bathroom,take me to bathroom,bathroom,help,direct,1.0,bathroom,help,1,1
+take me to bedroom,take me to bedroom,bedroom,help,direct,1.0,bedroom,help,1,1
+take me t bedroom,take me t bedroom,bedroom,help,direct,1.0,bedroom,help,1,1
+takeme to bedroom,takeme to bedroom,bedroom,help,direct,1.0,bedroom,help,1,1
+there is my frock,there is my frock,frock,help,tfidf,1.0000000000000002,frock,help,1,1
+thereis my frock,thereis my frock,frock,help,direct,1.0,frock,help,1,1
+there is my frock,there is my frock,frock,help,tfidf,1.0000000000000002,frock,help,1,1
+there ismy frock,there ismy frock,frock,help,direct,1.0,frock,help,1,1
+help me with my shirt,help me with my shirt,help,help,direct,1.0,shirt,help,0,1
+hlp me with my shirt,hlp me with my shirt,shirt,help,direct,1.0,shirt,help,1,1
+help me with my shir,help me with my shir,help,help,direct,1.0,shirt,help,0,1
+help me with my shoes,help me with my shoes,shoes,help,tfidf,1.0000000000000002,shoes,help,1,1
+help me with my shoes,help me with my shoes,shoes,help,tfidf,1.0000000000000002,shoes,help,1,1
+help me with my sohes,help me with my sohes,help,help,direct,1.0,shoes,help,0,1
+hlp me with my shoes,hlp me with my shoes,shoes,help,direct,1.0,shoes,help,1,1
+i want to wear shorts,i want to wear shorts,shorts,help,tfidf,1.0000000000000002,shorts,help,1,1
+iwant to wear shorts,iwant to wear shorts,shorts,help,direct,1.0,shorts,help,1,1
+i awnt to wear shorts,i awnt to wear shorts,shorts,help,direct,1.0,shorts,help,1,1
+i want to wear shorts,i want to wear shorts,shorts,help,tfidf,1.0000000000000002,shorts,help,1,1
+i want to wear socks,i want to wear socks,socks,help,tfidf,1.0000000000000002,socks,help,1,1
+i awnt to wear socks,i awnt to wear socks,socks,help,direct,1.0,socks,help,1,1
+iwant to wear socks,iwant to wear socks,socks,help,direct,1.0,socks,help,1,1
+i wan to wear socks,i want to wear socks,socks,help,tfidf,1.0000000000000002,socks,help,1,1
+make me sit in sofa,make me sit in sofa,sofa,help,tfidf,1.0000000000000002,sofa,help,1,1
+make me sit in sf,make me sit in sf,sofa,help,fuzzy,0.9444444444444444,sofa,help,1,1
+mk me sit in sofa,mk me sit in sofa,sofa,help,direct,1.0,sofa,help,1,1
+make me sit insofa,make me sit insofa,sofa,help,fuzzy,0.972972972972973,sofa,help,1,1
+where is my spectacles,where is my spectacles,spectacles,help,direct,1.0,spectacles,help,1,1
+where is my spectaclse,where is my spectaclse,spectacles,help,fuzzy,0.9545454545454546,spectacles,help,1,1
+where is my spctcls,where is my spctcls,spectacles,help,fuzzy,0.926829268292683,spectacles,help,1,1
+wher is my spectacles,wher is my spectacles,spectacles,help,direct,1.0,spectacles,help,1,1
+give me apple juice,give me apple juice,apple juice,juice,tfidf,1.0000000000000002,apple juice,juice,1,1
+give me apple juice,give me apple juice,apple juice,juice,tfidf,1.0000000000000002,apple juice,juice,1,1
+give m apple juice,give m apple juice,apple,fruits,direct,1.0,apple juice,juice,0,0
+giveme apple juice,giveme apple juice,apple,fruits,direct,1.0,apple juice,juice,0,0
+make me banana milkshake,make me banana milkshake,banana milkshake,juice,tfidf,1.0000000000000002,banana milkshake,juice,1,1
+make me banana milkshak,make me banana milkshak,banana,fruits,direct,1.0,banana milkshake,juice,0,0
+makeme banana milkshake,makeme banana milkshake,milkshake,drinks,direct,1.0,banana milkshake,juice,0,0
+make m banana milkshake,make m banana milkshake,milkshake,drinks,direct,1.0,banana milkshake,juice,0,0
+i want chikoo milkshake,i want chikoo milkshake,milkshake,drinks,direct,1.0,chikoo milkshake,juice,0,0
+i want chikoomilkshake,i want chikoomilkshake,chikoo milkshake,juice,fuzzy,0.9777777777777777,chikoo milkshake,juice,1,1
+i watn chikoo milkshake,i watn chikoo milkshake,milkshake,drinks,direct,1.0,chikoo milkshake,juice,0,0
+iwant chikoo milkshake,iwant chikoo milkshake,milkshake,drinks,direct,1.0,chikoo milkshake,juice,0,0
+i like chocolate milkshake,i like chocolate milkshake,milkshake,drinks,direct,1.0,chocolate milkshake,juice,0,0
+i lik chocolate milkshake,i lik chocolate milkshake,milkshake,drinks,direct,1.0,chocolate milkshake,juice,0,0
+i like hcocolate milkshake,i like hcocolate milkshake,milkshake,drinks,direct,1.0,chocolate milkshake,juice,0,0
+i like chocolate milkshake,i like chocolate milkshake,milkshake,drinks,direct,1.0,chocolate milkshake,juice,0,0
+i want some lemon juice,i want some lemon juice,lemon juice,juice,direct,1.0,lemon juice,juice,1,1
+iwant some lemon juice,iwant some lemon juice,lemon juice,juice,direct,1.0,lemon juice,juice,1,1
+i wan some lemon juice,i want some lemon juice,lemon juice,juice,direct,1.0,lemon juice,juice,1,1
+i want some lemo juice,i want some lemo juice,lemon juice,juice,fuzzy,0.9777777777777777,lemon juice,juice,1,1
+i want mango juice,i want mango juice,mango,fruits,direct,1.0,mango juice,juice,0,0
+i want mang juice,i want mang juice,mango juice,juice,fuzzy,0.9714285714285714,mango juice,juice,1,1
+i wan mango juice,i want mango juice,mango,fruits,direct,1.0,mango juice,juice,0,0
+i want mng juice,i want mng juice,mango juice,juice,fuzzy,0.9411764705882353,mango juice,juice,1,1
+i want mango milkshake,i want mango milkshake,milkshake,drinks,direct,1.0,mango milkshake,juice,0,0
+i want mango milkshake,i want mango milkshake,milkshake,drinks,direct,1.0,mango milkshake,juice,0,0
+i want mango milskhake,i want mango milskhake,mango,fruits,direct,1.0,mango milkshake,juice,0,0
+iwant mango milkshake,iwant mango milkshake,milkshake,drinks,direct,1.0,mango milkshake,juice,0,0
+i want orange juice,i want orange juice,orange juice,juice,tfidf,1.0000000000000002,orange juice,juice,1,1
+iwant orange juice,iwant orange juice,orange,fruits,direct,1.0,orange juice,juice,0,0
+i want orangejuice,i want orangejuice,orange juice,juice,fuzzy,0.972972972972973,orange juice,juice,1,1
+i wnt orange juice,i wnt orange juice,orange,fruits,direct,1.0,orange juice,juice,0,0
+i want pineapple juice,i want pineapple juice,pineapple juice,juice,tfidf,1.0000000000000002,pineapple juice,juice,1,1
+i want pineapplejuice,i want pineapplejuice,pineapple juice,juice,fuzzy,0.9767441860465116,pineapple juice,juice,1,1
+i want pineapple juice,i want pineapple juice,pineapple juice,juice,tfidf,1.0000000000000002,pineapple juice,juice,1,1
+it is 10 rupees,it is 10 rupees,inr 10,money,fuzzy,1.0,inr 10,money,1,1
+it is 10 urpees,it is 10 urpees,inr 10,money,fuzzy,0.9333333333333333,inr 10,money,1,1
+it s 10 rupees,it s 10 rupees,inr 10,money,fuzzy,0.9655172413793104,inr 10,money,1,1
+it is 10 rps,it is 10 rps,inr 10,money,fuzzy,0.8888888888888888,inr 10,money,1,1
+it is 100 rupees,it is 100 rupees,inr 100,money,fuzzy,1.0,inr 100,money,1,1
+it is 100 rupees,it is 100 rupees,inr 100,money,fuzzy,1.0,inr 100,money,1,1
+it s 100 rupees,it s 100 rupees,inr 100,money,fuzzy,0.967741935483871,inr 100,money,1,1
+it is 20 rupees,it is 20 rupees,inr 20,money,fuzzy,1.0,inr 20,money,1,1
+it is 20 rupee,it is 20 rupee,inr 20,money,fuzzy,0.9655172413793104,inr 20,money,1,1
+it is 20 rupees,it is 20 rupees,inr 20,money,fuzzy,1.0,inr 20,money,1,1
+itis 20 rupees,itis 20 rupees,inr 20,money,fuzzy,0.9655172413793104,inr 20,money,1,1
+it is 200 rupees,it is 200 rupees,inr 200,money,fuzzy,1.0,inr 200,money,1,1
+it is 200 rupees,it is 200 rupees,inr 200,money,fuzzy,1.0,inr 200,money,1,1
+it is 200 rps,it is 200 rps,inr 200,money,fuzzy,0.896551724137931,inr 200,money,1,1
+i is 200 rupees,i is 200 rupees,inr 200,money,fuzzy,0.967741935483871,inr 200,money,1,1
+it is 2000 rupees,it is 2000 rupees,inr 2000,money,fuzzy,1.0,inr 2000,money,1,1
+it is2000 rupees,it is2000 rupees,inr 2000,money,fuzzy,0.9696969696969697,inr 2000,money,1,1
+t is 2000 rupees,t is 2000 rupees,inr 2000,money,fuzzy,0.9696969696969697,inr 2000,money,1,1
+it is 50 rupees,it is 50 rupees,inr 50,money,fuzzy,1.0,inr 50,money,1,1
+it is 50 rps,it is 50 rps,inr 50,money,fuzzy,0.8888888888888888,inr 50,money,1,1
+it is 50 rupees,it is 50 rupees,inr 50,money,fuzzy,1.0,inr 50,money,1,1
+it i 50 rupees,it i 50 rupees,inr 50,money,fuzzy,0.9655172413793104,inr 50,money,1,1
+it is 500 rupees,it is 500 rupees,inr 500,money,fuzzy,1.0,inr 500,money,1,1
+it is 500rupees,it is 500rupees,inr 500,money,fuzzy,0.967741935483871,inr 500,money,1,1
+it is 500 rupees,it is 500 rupees,inr 500,money,fuzzy,1.0,inr 500,money,1,1
+i is 500 rupees,i is 500 rupees,inr 500,money,fuzzy,0.967741935483871,inr 500,money,1,1
+no biting please,no biting please,no biting please,no,tfidf,1.0000000000000002,no biting please,no,1,1
+no btng please,no btng please,please,help,direct,1.0,no biting please,no,0,0
+nobiting please,nobiting please,please,help,direct,1.0,no biting please,no,0,0
+no biting pleas,no biting pleas,no biting please,no,fuzzy,0.967741935483871,no biting please,no,1,1
+no hands in underpants,no hands in underpants,no hands in underpants,no,tfidf,1.0000000000000002,no hands in underpants,no,1,1
+no hands i underpants,no hands i underpants,hands,body,direct,1.0,no hands in underpants,no,0,0
+no hands in underpant,no hands in underpant,hands,body,direct,1.0,no hands in underpants,no,0,0
+no hnds in underpants,no hnds in underpants,no hands in underpants,no,fuzzy,0.9767441860465116,no hands in underpants,no,1,1
+no hitting please,no hitting please,no hitting please,no,tfidf,1.0000000000000002,no hitting please,no,1,1
+n hitting please,n hitting please,please,help,direct,1.0,no hitting please,no,0,0
+no ihtting please,no ihtting please,please,help,direct,1.0,no hitting please,no,0,0
+no hitting pls,no hitting pls,no hitting please,no,fuzzy,0.9032258064516129,no hitting please,no,1,1
+no inappropriate touch please,no inappropriate touch please,no inappropriate touch please,no,tfidf,1.0000000000000002,no inappropriate touch please,no,1,1
+no inappropriate touchplease,no inappropriate touchplease,no inappropriate touch please,no,fuzzy,0.9824561403508771,no inappropriate touch please,no,1,1
+no inappropriate touc please,no inappropriate touc please,please,help,direct,1.0,no inappropriate touch please,no,0,0
+no inappropriate tch please,no inappropriate tch please,please,help,direct,1.0,no inappropriate touch please,no,0,0
+no kicking please,no kicking please,no kicking please,no,tfidf,1.0000000000000002,no kicking please,no,1,1
+no kicking plaese,no kicking plaese,no kicking please,no,fuzzy,0.9411764705882353,no kicking please,no,1,1
+no kickin please,no kickin please,please,help,direct,1.0,no kicking please,no,0,0
+no kckng please,no kckng please,please,help,direct,1.0,no kicking please,no,0,0
+no picking nose please,no picking nose please,nose,body,direct,1.0,no picking nose please,no,0,0
+no picking nos please,no picking nos please,please,help,direct,1.0,no picking nose please,no,0,0
+no picking onse please,no picking onse please,please,help,direct,1.0,no picking nose please,no,0,0
+n picking nose please,n picking nose please,nose,body,direct,1.0,no picking nose please,no,0,0
+no pinching please,no pinching please,no pinching please,no,tfidf,1.0000000000000002,no pinching please,no,1,1
+no pinching pleas,no pinching pleas,no pinching please,no,fuzzy,0.9714285714285714,no pinching please,no,1,1
+n pinching please,n pinching please,please,help,direct,1.0,no pinching please,no,0,0
+no pushing please,no pushing please,no pushing please,no,tfidf,1.0000000000000002,no pushing please,no,1,1
+no pushing plesae,no pushing plesae,no pushing please,no,fuzzy,0.9411764705882353,no pushing please,no,1,1
+no psuhing please,no psuhing please,please,help,direct,1.0,no pushing please,no,0,0
+no pushing please,no pushing please,no pushing please,no,tfidf,1.0000000000000002,no pushing please,no,1,1
+no spitting please,no spitting please,no spitting please,no,tfidf,1.0000000000000002,no spitting please,no,1,1
+no spttng please,no spttng please,please,help,direct,1.0,no spitting please,no,0,0
+no spittin please,no spittin please,please,help,direct,1.0,no spitting please,no,0,0
+no spitting pls,no spitting pls,no spitting please,no,fuzzy,0.9090909090909091,no spitting please,no,1,1
+no talking while eating please!,no talking while eating please!,eating,action,direct,1.0,no talking while eating please!,no,0,0
+no talking while eatingplease!,no talking while eatingplease!,no talking while eating please!,no,fuzzy,0.9836065573770492,no talking while eating please!,no,1,1
+no talking whileeating please!,no talking whileeating please!,please,help,direct,1.0,no talking while eating please!,no,0,0
+no talking while eating please!,no talking while eating please!,eating,action,direct,1.0,no talking while eating please!,no,0,0
+stranger,stranger,stranger,no,direct,1.0,stranger,no,1,1
+strange,strange,stranger,no,fuzzy,0.9333333333333333,stranger,no,1,1
+stranegr,stranegr,stranger,no,fuzzy,0.875,stranger,no,1,1
+strangers- beware!,strangers- beware!,strangers- beware!,no,tfidf,1.0000000000000002,strangers- beware!,no,1,1
+strangers- bewar!e,strangers- bewar!e,strangers- beware!,no,fuzzy,0.9444444444444444,strangers- beware!,no,1,1
+strangers- beware,strangers- beware,strangers- beware!,no,tfidf,1.0000000000000002,strangers- beware!,no,1,1
+strnagers- beware!,strnagers- beware!,strangers- beware!,no,fuzzy,0.9444444444444444,strangers- beware!,no,1,1
+switch on the air conditioner,switch on the air conditioner,air conditioner,object,tfidf,1.0000000000000002,air conditioner,object,1,1
+switch on the air conditioner,switch on the air conditioner,air conditioner,object,tfidf,1.0000000000000002,air conditioner,object,1,1
+switch on the ari conditioner,switch on the ari conditioner,air conditioner,object,fuzzy,0.9655172413793104,air conditioner,object,1,1
+switch on the r conditioner,switch on the r conditioner,air conditioner,object,fuzzy,0.9642857142857143,air conditioner,object,1,1
+take my bag,take my bag,bag,object,tfidf,1.0000000000000002,bag,object,1,1
+take my bag,take my bag,bag,object,tfidf,1.0000000000000002,bag,object,1,1
+take my abg,take my abg,bag,object,fuzzy,0.9090909090909091,bag,object,1,1
+take my bg,take my bg,bag,object,fuzzy,0.9523809523809523,bag,object,1,1
+take a blank paper,take a blank paper,blank paper,object,tfidf,1.0000000000000002,blank paper,object,1,1
+take ablank paper,take ablank paper,blank paper,object,fuzzy,0.9714285714285714,blank paper,object,1,1
+take a blank paper,take a blank paper,blank paper,object,tfidf,1.0000000000000002,blank paper,object,1,1
+take a blankpaper,take a blankpaper,blank paper,object,fuzzy,0.9714285714285714,blank paper,object,1,1
+take that book,take that book,book,object,direct,1.0,book,object,1,1
+take thatbook,take thatbook,book,object,fuzzy,0.9629629629629629,book,object,1,1
+take that obok,take that obok,book,object,fuzzy,0.9285714285714286,book,object,1,1
+take that bk,take that bk,book,object,fuzzy,0.9230769230769231,book,object,1,1
+take all the books,take all the books,books,object,tfidf,1.0000000000000002,books,object,1,1
+tak all the books,take all the books,books,object,tfidf,1.0000000000000002,books,object,1,1
+take all the book,take all the book,book,object,direct,1.0,books,object,0,1
+take all thebooks,take all thebooks,books,object,fuzzy,0.9714285714285714,books,object,1,1
+i want my boot,i want my boot,boot,object,direct,1.0,boot,object,1,1
+i wan my boot,i want my boot,boot,object,direct,1.0,boot,object,1,1
+i want my boto,i want my boto,boot,object,fuzzy,0.9285714285714286,boot,object,1,1
+i wantmy boot,i wantmy boot,boot,object,direct,1.0,boot,object,1,1
+take that bowl,take that bowl,bowl,object,tfidf,1.0000000000000002,bowl,object,1,1
+take taht bowl,take taht bowl,bowl,object,direct,1.0,bowl,object,1,1
+take thta bowl,take thta bowl,bowl,object,direct,1.0,bowl,object,1,1
+take my cap,take my cap,cap,object,tfidf,1.0000000000000002,cap,object,1,1
+take my cap,take my cap,cap,object,tfidf,1.0000000000000002,cap,object,1,1
+take my cp,take my cp,cap,object,fuzzy,0.9523809523809523,cap,object,1,1
+take mycap,take mycap,cap,object,fuzzy,0.9523809523809523,cap,object,1,1
+sit in chair,sit in chair,chair,object,tfidf,1.0000000000000002,chair,object,1,1
+si in chair,si in chair,chair,object,direct,1.0,chair,object,1,1
+sitin chair,sitin chair,chair,object,direct,1.0,chair,object,1,1
+sit in chai,sit in chai,chair,object,fuzzy,0.9565217391304348,chair,object,1,1
+i need a chalk,i need a chalk,chalk,object,direct,1.0,chalk,object,1,1
+i need a chalk,i need a chalk,chalk,object,direct,1.0,chalk,object,1,1
+i nee a chalk,i nee a chalk,chalk,object,direct,1.0,chalk,object,1,1
+give me coloured paper,give me coloured paper,coloured paper,object,tfidf,1.0000000000000002,coloured paper,object,1,1
+give me clrd paper,give me clrd paper,coloured paper,object,fuzzy,0.9,coloured paper,object,1,1
+gv me coloured paper,gv me coloured paper,coloured paper,object,direct,1.0,coloured paper,object,1,1
+give me coloured paepr,give me coloured paepr,coloured paper,object,fuzzy,0.9545454545454546,coloured paper,object,1,1
+i need computer,i need computer,computer,object,direct,1.0,computer,object,1,1
+i need cmptr,i need cmptr,computer,object,fuzzy,0.8888888888888888,computer,object,1,1
+i needcomputer,i needcomputer,computer,object,fuzzy,0.9655172413793104,computer,object,1,1
+give me a crayon,give me a crayon,crayon,object,tfidf,1.0000000000000002,crayon,object,1,1
+give me a crayon,give me a crayon,crayon,object,tfidf,1.0000000000000002,crayon,object,1,1
+giv me a crayon,give me a crayon,crayon,object,tfidf,1.0000000000000002,crayon,object,1,1
+give me a cup,give me a cup,cup,object,tfidf,1.0000000000000002,cup,object,1,1
+give me acup,give me acup,cup,object,fuzzy,0.96,cup,object,1,1
+give me a cup,give me a cup,cup,object,tfidf,1.0000000000000002,cup,object,1,1
+it’s a diamond,it’s a diamond,diamond,object,tfidf,1.0000000000000002,diamond,object,1,1
+it’s a diamond,it’s a diamond,diamond,object,tfidf,1.0000000000000002,diamond,object,1,1
+its’ a diamond,its’ a diamond,diamond,object,direct,1.0,diamond,object,1,1
+it’s a dmnd,it’s a dmnd,diamond,object,fuzzy,0.88,diamond,object,1,1
+this is my favorite book,this is my favorite book,favorite book,object,tfidf,1.0000000000000004,favorite book,object,1,1
+this is my favorite book,this is my favorite book,favorite book,object,tfidf,1.0000000000000004,favorite book,object,1,1
+there is the mug,there is the mug,mug,object,direct,1.0,mug,object,1,1
+there isthe mug,there isthe mug,mug,object,direct,1.0,mug,object,1,1
+there is themug,there is themug,mug,object,fuzzy,0.967741935483871,mug,object,1,1
+there is th mug,there is th mug,mug,object,direct,1.0,mug,object,1,1
+give me pen,give me pen,pen,object,tfidf,1.0000000000000002,pen,object,1,1
+give mepen,give mepen,pen,object,fuzzy,0.9523809523809523,pen,object,1,1
+give me pe,give me pe,pen,object,fuzzy,0.9523809523809523,pen,object,1,1
+there is the picture book,there is the picture book,picture book,object,tfidf,1.0000000000000004,picture book,object,1,1
+there s the picture book,there s the picture book,book,object,direct,1.0,picture book,object,0,1
+tehre is the picture book,tehre is the picture book,book,object,direct,1.0,picture book,object,0,1
+thr is the picture book,thr is the picture book,book,object,direct,1.0,picture book,object,0,1
+i want my scarf,i want my scarf,scarf,object,direct,1.0,scarf,object,1,1
+i want m scarf,i want m scarf,scarf,object,direct,1.0,scarf,object,1,1
+i want my scarf,i want my scarf,scarf,object,direct,1.0,scarf,object,1,1
+where is the scissors,where is the scissors,scissors,object,tfidf,1.0000000000000002,scissors,object,1,1
+where is thescissors,where is thescissors,scissors,object,fuzzy,0.975609756097561,scissors,object,1,1
+where i the scissors,where i the scissors,scissors,object,direct,1.0,scissors,object,1,1
+i want stapler,i want stapler,stapler,object,direct,1.0,stapler,object,1,1
+i wnt stapler,i wnt stapler,stapler,object,direct,1.0,stapler,object,1,1
+i wan stapler,i want stapler,stapler,object,direct,1.0,stapler,object,1,1
+iwant stapler,iwant stapler,stapler,object,direct,1.0,stapler,object,1,1
+i want to buy some stationary,i want to buy some stationary,stationery,object,fuzzy,1.0,stationery,object,1,1
+i want to buysome stationary,i want to buysome stationary,stationery,object,fuzzy,0.9824561403508771,stationery,object,1,1
+i wnt to buy some stationary,i wnt to buy some stationary,stationery,object,fuzzy,0.9824561403508771,stationery,object,1,1
+what is the current month,what is the current month,current month,others,direct,1.0,current month,others,1,1
+what is hte current month,what is hte current month,current month,others,direct,1.0,current month,others,1,1
+what is th current month,what is th current month,current month,others,direct,1.0,current month,others,1,1
+wha is the current month,wha is the current month,current month,others,direct,1.0,current month,others,1,1
+what is the current season,what is the current season,current season,others,direct,1.0,current season,others,1,1
+what is the crrnt season,what is the crrnt season,current season,others,fuzzy,0.96,current season,others,1,1
+what is the current season,what is the current season,current season,others,direct,1.0,current season,others,1,1
+what is the current time,what is the current time,current time,others,direct,1.0,current time,others,1,1
+what is th current time,what is th current time,current time,others,direct,1.0,current time,others,1,1
+what is hte current time,what is hte current time,current time,others,direct,1.0,current time,others,1,1
+what i the current time,what i the current time,current time,others,direct,1.0,current time,others,1,1
+there is a divider,there is a divider,divider,others,direct,1.0,divider,others,1,1
+there is a divider,there is a divider,divider,others,direct,1.0,divider,others,1,1
+there isa divider,there isa divider,divider,others,direct,1.0,divider,others,1,1
+there is a divide,there is a divide,divider,others,fuzzy,0.9714285714285714,divider,others,1,1
+its italian,its italian,italian,others,tfidf,1.0000000000000002,italian,others,1,1
+its italina,its italina,italian,others,fuzzy,0.9090909090909091,italian,others,1,1
+itsitalian,itsitalian,italian,others,fuzzy,0.9523809523809523,italian,others,1,1
+there are some blocks,there are some blocks,blocks,others,direct,1.0,blocks,others,1,1
+there rae some blocks,there rae some blocks,blocks,others,direct,1.0,blocks,others,1,1
+there r some blocks,there r some blocks,blocks,others,direct,1.0,blocks,others,1,1
+there are soem blocks,there are soem blocks,blocks,others,direct,1.0,blocks,others,1,1
+draw a slanting line,draw a slanting line,slanting line,others,tfidf,1.0000000000000002,slanting line,others,1,1
+dra a slanting line,dra a slanting line,slanting line,others,direct,1.0,slanting line,others,1,1
+drawa slanting line,drawa slanting line,slanting line,others,direct,1.0,slanting line,others,1,1
+draw aslanting line,draw aslanting line,draw,help,direct,1.0,slanting line,others,0,0
+i want to slide,i want to slide,slide,others,tfidf,1.0000000000000002,slide,others,1,1
+i want to slide,i want to slide,slide,others,tfidf,1.0000000000000002,slide,others,1,1
+i want t slide,i want t slide,slide,others,direct,1.0,slide,others,1,1
+i wantto slide,i wantto slide,slide,others,direct,1.0,slide,others,1,1
+is this the standing line,is this the standing line,standing line,others,tfidf,1.0000000000000002,standing line,others,1,1
+isthis the standing line,isthis the standing line,standing line,others,direct,1.0,standing line,others,1,1
+is this teh standing line,is this teh standing line,standing line,others,direct,1.0,standing line,others,1,1
+i this the standing line,i this the standing line,standing line,others,direct,1.0,standing line,others,1,1
+take me to canteen,take me to canteen,canteen,place,direct,1.0,canteen,place,1,1
+take me tocanteen,take me tocanteen,canteen,place,fuzzy,0.9714285714285714,canteen,place,1,1
+take me to cntn,take me to cntn,canteen,place,fuzzy,0.9090909090909091,canteen,place,1,1
+takeme to canteen,takeme to canteen,canteen,place,direct,1.0,canteen,place,1,1
+i want to go to church,i want to go to church,church,place,tfidf,1.0000000000000002,church,place,1,1
+i want to go to church,i want to go to church,church,place,tfidf,1.0000000000000002,church,place,1,1
+i wan to go to church,i want to go to church,church,place,tfidf,1.0000000000000002,church,place,1,1
+i want to g to church,i want to g to church,church,place,direct,1.0,church,place,1,1
+i want to go to clinic,i want to go to clinic,clinic,place,tfidf,1.0000000000000002,clinic,place,1,1
+i want to go to clini,i want to go to clini,clinic,place,fuzzy,0.9767441860465116,clinic,place,1,1
+i want to go to clinic,i want to go to clinic,clinic,place,tfidf,1.0000000000000002,clinic,place,1,1
+lets go to clothes shop,lets go to clothes shop,clothes shop,place,direct,1.0,clothes shop,place,1,1
+lets go to lcothes shop,lets go to lcothes shop,shop,place,direct,1.0,clothes shop,place,0,1
+lets go t clothes shop,lets go t clothes shop,clothes shop,place,direct,1.0,clothes shop,place,1,1
+letsgo to clothes shop,letsgo to clothes shop,clothes shop,place,direct,1.0,clothes shop,place,1,1
+lets go to grocery shop,lets go to grocery shop,grocery shop,place,tfidf,1.0000000000000002,grocery shop,place,1,1
+lets go to grcry shop,lets go to grcry shop,shop,place,direct,1.0,grocery shop,place,0,1
+lets go to grocery sho,lets go to grocery sho,grocery shop,place,fuzzy,0.9777777777777777,grocery shop,place,1,1
+lts go to grocery shop,lts go to grocery shop,grocery shop,place,direct,1.0,grocery shop,place,1,1
+take me to gymnastics,take me to gymnastics,gymnastics,place,direct,1.0,gymnastics,place,1,1
+take me t gymnastics,take me t gymnastics,gymnastics,place,direct,1.0,gymnastics,place,1,1
+take me to gymnsatics,take me to gymnsatics,gymnastics,place,fuzzy,0.9523809523809523,gymnastics,place,1,1
+tak me to gymnastics,take me to gymnastics,gymnastics,place,direct,1.0,gymnastics,place,1,1
+take me to hospital,take me to hospital,hospital,place,direct,1.0,hospital,place,1,1
+take m to hospital,take m to hospital,hospital,place,direct,1.0,hospital,place,1,1
+take me t hospital,take me t hospital,hospital,place,direct,1.0,hospital,place,1,1
+take me to hospital,take me to hospital,hospital,place,direct,1.0,hospital,place,1,1
+its in kitchen,its in kitchen,kitchen,place,direct,1.0,kitchen,place,1,1
+its in kitchen,its in kitchen,kitchen,place,direct,1.0,kitchen,place,1,1
+its inkitchen,its inkitchen,kitchen,place,fuzzy,0.9629629629629629,kitchen,place,1,1
+its in our living room,its in our living room,living room,place,direct,1.0,living room,place,1,1
+its inour living room,its inour living room,living room,place,direct,1.0,living room,place,1,1
+its in our livin room,its in our livin room,living room,place,fuzzy,0.9767441860465116,living room,place,1,1
+its in r living room,its in r living room,living room,place,direct,1.0,living room,place,1,1
+lets go to the mall,lets go to the mall,mall,place,tfidf,1.0000000000000002,mall,place,1,1
+lets g to the mall,lets g to the mall,mall,place,direct,1.0,mall,place,1,1
+lts go to the mall,lts go to the mall,mall,place,direct,1.0,mall,place,1,1
+lets goto the mall,lets goto the mall,mall,place,direct,1.0,mall,place,1,1
+go to the meet shop,go to the meet shop,meat shop,place,tfidf,1.0000000000000002,meat shop,place,1,1
+go to the meet sho,go to the meet sho,meat shop,place,fuzzy,0.972972972972973,meat shop,place,1,1
+go to hte meet shop,go to hte meet shop,shop,place,direct,1.0,meat shop,place,0,1
+go t the meet shop,go t the meet shop,shop,place,direct,1.0,meat shop,place,0,1
+go to medical shop,go to medical shop,medical shop-chemist's shop-pharmacy,place,tfidf,1.0000000000000002,medical shop-chemist's shop-pharmacy,place,1,1
+g to medical shop,g to medical shop,shop,place,direct,1.0,medical shop-chemist's shop-pharmacy,place,0,1
+goto medical shop,goto medical shop,shop,place,direct,1.0,medical shop-chemist's shop-pharmacy,place,0,1
+go to medical shop,go to medical shop,medical shop-chemist's shop-pharmacy,place,tfidf,1.0000000000000002,medical shop-chemist's shop-pharmacy,place,1,1
+take me to museum,take me to museum,museum,place,direct,1.0,museum,place,1,1
+take me t museum,take me t museum,museum,place,direct,1.0,museum,place,1,1
+this is my house,this is my house,my house,place,direct,1.0,my house,place,1,1
+this is my house,this is my house,my house,place,direct,1.0,my house,place,1,1
+thsi is my house,thsi is my house,my house,place,direct,1.0,my house,place,1,1
+take me to the park,take me to the park,park,place,tfidf,1.0000000000000002,park,place,1,1
+tk me to the park,tk me to the park,park,place,direct,1.0,park,place,1,1
+take m to the park,take m to the park,park,place,direct,1.0,park,place,1,1
+take me tothe park,take me tothe park,park,place,direct,1.0,park,place,1,1
+it is the place of worship,it is the place of worship,places of worship,place,tfidf,1.0000000000000002,places of worship,place,1,1
+it i the place of worship,it i the place of worship,places of worship,place,fuzzy,0.9803921568627451,places of worship,place,1,1
+it is the place of worshi,it is the place of worshi,places of worship,place,fuzzy,0.9803921568627451,places of worship,place,1,1
+it is the place of worship,it is the place of worship,places of worship,place,tfidf,1.0000000000000002,places of worship,place,1,1
+take me to play room,take me to play room,play room,place,direct,1.0,play room,place,1,1
+take meto play room,take meto play room,play room,place,direct,1.0,play room,place,1,1
+take me to play orom,take me to play orom,play room,place,fuzzy,0.95,play room,place,1,1
+takeme to play room,takeme to play room,play room,place,direct,1.0,play room,place,1,1
+shall we go to playground,shall we go to playground,playground,place,tfidf,1.0000000000000002,playground,place,1,1
+shall we go to playgroudn,shall we go to playgroudn,playground,place,fuzzy,0.96,playground,place,1,1
+shall we go t playground,shall we go t playground,playground,place,direct,1.0,playground,place,1,1
+shall we go to playgroun,shall we go to playgroun,playground,place,fuzzy,0.9795918367346939,playground,place,1,1
+shall we go to an restaurant,shall we go to an restaurant,restaurant,place,direct,1.0,restaurant,place,1,1
+shall we g to an restaurant,shall we g to an restaurant,restaurant,place,direct,1.0,restaurant,place,1,1
+shall we go t an restaurant,shall we go t an restaurant,restaurant,place,direct,1.0,restaurant,place,1,1
+shall w go to an restaurant,shall w go to an restaurant,restaurant,place,direct,1.0,restaurant,place,1,1
+i want to see my  school,i want to see my school,school,place,tfidf,1.0000000000000002,school,place,1,1
+iwant to see my school,iwant to see my school,school,place,direct,1.0,school,place,1,1
+i want to see my school,i want to see my school,school,place,tfidf,1.0000000000000002,school,place,1,1
+take me to balcony,take me to balcony,balcony,place,direct,1.0,balcony,place,1,1
+take me to balcony,take me to balcony,balcony,place,direct,1.0,balcony,place,1,1
+take me to blcny,take me to blcny,balcony,place,fuzzy,0.9411764705882353,balcony,place,1,1
+take me tobalcony,take me tobalcony,balcony,place,fuzzy,0.9714285714285714,balcony,place,1,1
+take me to the shop,take me to the shop,shop,place,direct,1.0,shop,place,1,1
+take m to the shop,take m to the shop,shop,place,direct,1.0,shop,place,1,1
+take me to the shop,take me to the shop,shop,place,direct,1.0,shop,place,1,1
+take me to the hsop,take me to the hsop,shop,place,fuzzy,0.9473684210526315,shop,place,1,1
+take me to staffroom,take me to staffroom,staffroom,place,direct,1.0,staffroom,place,1,1
+tk me to staffroom,tk me to staffroom,staffroom,place,direct,1.0,staffroom,place,1,1
+take meto staffroom,take meto staffroom,staffroom,place,direct,1.0,staffroom,place,1,1
+take m to staffroom,take m to staffroom,staffroom,place,direct,1.0,staffroom,place,1,1
+can you repeat that question,can you repeat that question,questions,question,tfidf,1.0000000000000002,questions,question,1,1
+can you repeat that qusetion,can you repeat that qusetion,questions,question,fuzzy,0.9642857142857143,questions,question,1,1
+can you rpt that question,can you rpt that question,questions,question,fuzzy,0.9433962264150944,questions,question,1,1
+can you repeat that questio,can you repeat that questio,questions,question,fuzzy,0.9818181818181818,questions,question,1,1
+it’s a circle,it’s a circle,circle,shape,tfidf,1.0000000000000002,circle,shape,1,1
+it’s a cirlce,it’s a cirlce,circle,shape,fuzzy,0.9230769230769231,circle,shape,1,1
+it’s a circle,it’s a circle,circle,shape,tfidf,1.0000000000000002,circle,shape,1,1
+it’s  circle,it’s circle,circle,shape,tfidf,1.0000000000000002,circle,shape,1,1
+it’s a cube,it’s a cube,cube,shape,tfidf,1.0000000000000002,cube,shape,1,1
+it’ a cube,it’ a cube,cube,shape,tfidf,1.0000000000000002,cube,shape,1,1
+i’ts a cube,i’ts a cube,cube,shape,direct,1.0,cube,shape,1,1
+it’s a cube,it’s a cube,cube,shape,tfidf,1.0000000000000002,cube,shape,1,1
+its in rectangle in shape,its in rectangle in shape,rectangle,shape,tfidf,1.0000000000000002,rectangle,shape,1,1
+its in rectangle in shape,its in rectangle in shape,rectangle,shape,tfidf,1.0000000000000002,rectangle,shape,1,1
+its in rectangle inshape,its in rectangle inshape,rectangle,shape,direct,1.0,rectangle,shape,1,1
+its inrectangle in shape,its inrectangle in shape,rectangle,shape,fuzzy,0.9795918367346939,rectangle,shape,1,1
+its a square,its a square,square,shape,tfidf,1.0000000000000002,square,shape,1,1
+it a square,it a square,square,shape,direct,1.0,square,shape,1,1
+itsa square,itsa square,square,shape,direct,1.0,square,shape,1,1
+i want to wear belt,i want to wear belt,belt,things,direct,1.0,belt,things,1,1
+i want to wear belt,i want to wear belt,belt,things,direct,1.0,belt,things,1,1
+i want to wear blt,i want to wear blt,belt,things,fuzzy,0.972972972972973,belt,things,1,1
+i want to wea belt,i want to wea belt,belt,things,direct,1.0,belt,things,1,1
+i like bracelet,i like bracelet,bracelet,things,tfidf,1.0000000000000002,bracelet,things,1,1
+i lk bracelet,i lk bracelet,bracelet,things,direct,1.0,bracelet,things,1,1
+i like brclt,i like brclt,bracelet,things,fuzzy,0.8888888888888888,bracelet,things,1,1
+i like bracelet,i like bracelet,bracelet,things,tfidf,1.0000000000000002,bracelet,things,1,1
+this is my chappals,this is my chappals,chappals,things,direct,1.0,chappals,things,1,1
+thisis my chappals,thisis my chappals,chappals,things,direct,1.0,chappals,things,1,1
+this s my chappals,this s my chappals,chappals,things,direct,1.0,chappals,things,1,1
+this is my chappals,this is my chappals,chappals,things,direct,1.0,chappals,things,1,1
+take my coat,take my coat,coat,things,tfidf,1.0000000000000002,coat,things,1,1
+take my coat,take my coat,coat,things,tfidf,1.0000000000000002,coat,things,1,1
+take my caot,take my caot,coat,things,fuzzy,0.9166666666666666,coat,things,1,1
+take m coat,take m coat,coat,things,direct,1.0,coat,things,1,1
+take my drawing book,take my drawing book,book,object,direct,1.0,drawing book,things,0,0
+take my drawing boo,take my drawing boo,drawing book,things,fuzzy,0.9743589743589743,drawing book,things,1,1
+tak my drawing book,take my drawing book,book,object,direct,1.0,drawing book,things,0,0
+take my drwng book,take my drwng book,book,object,direct,1.0,drawing book,things,0,0
+where is my errings,where is my errings,earrings,things,fuzzy,1.0,earrings,things,1,1
+where is myerrings,where is myerrings,earrings,things,fuzzy,0.972972972972973,earrings,things,1,1
+where is my errings,where is my errings,earrings,things,fuzzy,1.0,earrings,things,1,1
+wehre is my errings,wehre is my errings,earrings,things,fuzzy,0.9473684210526315,earrings,things,1,1
+there is the english book,there is the english book,english book,things,tfidf,1.0000000000000004,english book,things,1,1
+thr is the english book,thr is the english book,book,object,direct,1.0,english book,things,0,0
+there is the english bk,there is the english bk,english book,things,fuzzy,0.9583333333333334,english book,things,1,1
+there is the english boo,there is the english boo,english book,things,fuzzy,0.9795918367346939,english book,things,1,1
+give me an eraser,give me an eraser,eraser,things,tfidf,1.0000000000000002,eraser,things,1,1
+give mean eraser,give mean eraser,eraser,things,direct,1.0,eraser,things,1,1
+give me aneraser,give me aneraser,eraser,things,fuzzy,0.9696969696969697,eraser,things,1,1
+giveme an eraser,giveme an eraser,eraser,things,direct,1.0,eraser,things,1,1
+these are my favourites,these are my favourites,favourites,things,tfidf,1.0000000000000002,favourites,things,1,1
+ths are my favourites,ths are my favourites,favourites,things,direct,1.0,favourites,things,1,1
+these ar my favourites,these ar my favourites,favourites,things,direct,1.0,favourites,things,1,1
+these r my favourites,these r my favourites,favourites,things,direct,1.0,favourites,things,1,1
+give me fork,give me fork,fork,things,tfidf,1.0000000000000002,fork,things,1,1
+gv me fork,gv me fork,fork,things,direct,1.0,fork,things,1,1
+my hat,my hat,hat,things,direct,1.0,hat,things,1,1
+myhat,myhat,hat,things,fuzzy,0.9090909090909091,hat,things,1,1
+my ha,my ha,hat,things,fuzzy,0.9090909090909091,hat,things,1,1
+my aht,my aht,hat,things,fuzzy,0.8333333333333334,hat,things,1,1
+there is the knife,there is the knife,knife,things,direct,1.0,knife,things,1,1
+thereis the knife,thereis the knife,knife,things,direct,1.0,knife,things,1,1
+there is theknife,there is theknife,knife,things,fuzzy,0.9714285714285714,knife,things,1,1
+there is the lamp,there is the lamp,lamp,things,direct,1.0,lamp,things,1,1
+there is the lamp,there is the lamp,lamp,things,direct,1.0,lamp,things,1,1
+there is the lmp,there is the lmp,lamp,things,fuzzy,0.9696969696969697,lamp,things,1,1
+there is teh lamp,there is teh lamp,lamp,things,direct,1.0,lamp,things,1,1
+there is the lock and key,there is the lock and key,lock and key,things,tfidf,1.0000000000000002,lock and key,things,1,1
+there is the lock andkey,there is the lock andkey,lock and key,things,fuzzy,0.9795918367346939,lock and key,things,1,1
+there isthe lock and key,there isthe lock and key,lock and key,things,direct,1.0,lock and key,things,1,1
+get my necklace,get my necklace,necklace,things,tfidf,1.0000000000000002,necklace,things,1,1
+get m necklace,get m necklace,necklace,things,direct,1.0,necklace,things,1,1
+get my necklace,get my necklace,necklace,things,tfidf,1.0000000000000002,necklace,things,1,1
+give me paint,give me paint,paint,things,tfidf,1.0000000000000002,paint,things,1,1
+give me paitn,give me paitn,paint,things,fuzzy,0.9230769230769231,paint,things,1,1
+give me pain,give me pain,paint,things,fuzzy,0.96,paint,things,1,1
+give me piant,give me piant,paint,things,fuzzy,0.9230769230769231,paint,things,1,1
+use paper clip,use paper clip,paper clip,things,tfidf,1.0000000000000002,paper clip,things,1,1
+us paper clip,us paper clip,paper clip,things,direct,1.0,paper clip,things,1,1
+use paperclip,use paperclip,paper clip,things,fuzzy,0.9629629629629629,paper clip,things,1,1
+use paper cli,use paper cli,paper clip,things,fuzzy,0.9629629629629629,paper clip,things,1,1
+where is the pencil lead,where is the pencil lead,pencil lead,things,tfidf,1.0000000000000002,pencil lead,things,1,1
+where s the pencil lead,where s the pencil lead,pencil lead,things,direct,1.0,pencil lead,things,1,1
+where is the pncl lead,where is the pncl lead,pencil lead,things,fuzzy,0.9565217391304348,pencil lead,things,1,1
+whr is the pencil lead,whr is the pencil lead,pencil lead,things,direct,1.0,pencil lead,things,1,1
+give me pencil,give me pencil,pencil,things,direct,1.0,pencil,things,1,1
+give me pncl,give me pncl,pencil,things,fuzzy,0.9230769230769231,pencil,things,1,1
+gv me pencil,gv me pencil,pencil,things,direct,1.0,pencil,things,1,1
+give mepencil,give mepencil,pencil,things,fuzzy,0.9629629629629629,pencil,things,1,1
+give my pillows,give my pillows,pillows,things,direct,1.0,pillows,things,1,1
+giev my pillows,giev my pillows,pillows,things,direct,1.0,pillows,things,1,1
+give mypillows,give mypillows,pillows,things,fuzzy,0.9655172413793104,pillows,things,1,1
+give my pillow,give my pillow,pillows,things,fuzzy,0.9655172413793104,pillows,things,1,1
+where is my plate,where is my plate,plate,things,direct,1.0,plate,things,1,1
+where is myplate,where is myplate,plate,things,fuzzy,0.9696969696969697,plate,things,1,1
+where s my plate,where s my plate,plate,things,direct,1.0,plate,things,1,1
+where is the scale,where is the scale,scale,things,tfidf,1.0000000000000002,scale,things,1,1
+where is th scale,where is th scale,scale,things,direct,1.0,scale,things,1,1
+where is the scl,where is the scl,scale,things,fuzzy,0.9411764705882353,scale,things,1,1
+where isthe scale,where isthe scale,scale,things,direct,1.0,scale,things,1,1
+it is my school notebook,it is my school notebook,school,place,direct,1.0,school notebook,things,0,0
+it is my school ntbk,it is my school ntbk,school,place,direct,1.0,school notebook,things,0,0
+it is my schoolnotebook,it is my schoolnotebook,school notebook,things,fuzzy,0.9787234042553191,school notebook,things,1,1
+where is the sellotape,where is the sellotape,sellotape,things,tfidf,1.0000000000000002,sellotape,things,1,1
+wher is the sellotape,wher is the sellotape,sellotape,things,direct,1.0,sellotape,things,1,1
+where is hte sellotape,where is hte sellotape,sellotape,things,direct,1.0,sellotape,things,1,1
+where is the sellotape,where is the sellotape,sellotape,things,tfidf,1.0000000000000002,sellotape,things,1,1
+i want shampoo,i want shampoo,shampoo,things,direct,1.0,shampoo,things,1,1
+i wan shampoo,i want shampoo,shampoo,things,direct,1.0,shampoo,things,1,1
+ want shampoo,want shampoo,shampoo,things,direct,1.0,shampoo,things,1,1
+its my soap,its my soap,soap,things,direct,1.0,soap,things,1,1
+ts my soap,ts my soap,soap,things,direct,1.0,soap,things,1,1
+its mysoap,its mysoap,soap,things,fuzzy,0.9523809523809523,soap,things,1,1
+its my osap,its my osap,soap,things,fuzzy,0.9090909090909091,soap,things,1,1
+i want a soft toy,i want a soft toy,soft toy,things,tfidf,1.0000000000000002,soft toy,things,1,1
+i want a softtoy,i want a softtoy,soft toy,things,fuzzy,0.9696969696969697,soft toy,things,1,1
+i want a sotf toy,i want a sotf toy,soft toy,things,fuzzy,0.9411764705882353,soft toy,things,1,1
+i want a soft oty,i want a soft oty,soft toy,things,fuzzy,0.9411764705882353,soft toy,things,1,1
+give me a spoon,give me a spoon,spoon,things,tfidf,1.0000000000000002,spoon,things,1,1
+give mea spoon,give mea spoon,spoon,things,direct,1.0,spoon,things,1,1
+give me a spoon,give me a spoon,spoon,things,tfidf,1.0000000000000002,spoon,things,1,1
+give me bear,give me bear,bear,toy,tfidf,1.0000000000000002,bear,toy,1,1
+gv me bear,gv me bear,bear,toy,direct,1.0,bear,toy,1,1
+give mebear,give mebear,bear,toy,fuzzy,0.9565217391304348,bear,toy,1,1
+giveme bear,giveme bear,bear,toy,direct,1.0,bear,toy,1,1
+i want doll,i want doll,doll,toy,direct,1.0,doll,toy,1,1
+i wantdoll,i wantdoll,doll,toy,fuzzy,0.9523809523809523,doll,toy,1,1
+i want doll,i want doll,doll,toy,direct,1.0,doll,toy,1,1
+iwant doll,iwant doll,doll,toy,direct,1.0,doll,toy,1,1
+there is the bus,there is the bus,bus,transport,tfidf,1.0000000000000002,bus,transport,1,1
+thr is the bus,thr is the bus,bus,transport,direct,1.0,bus,transport,1,1
+thereis the bus,thereis the bus,bus,transport,direct,1.0,bus,transport,1,1
+it’s the school bus,it’s the school bus,school bus,transport,tfidf,1.0000000000000002,school bus,transport,1,1
+it’s the schoolbus,it’s the schoolbus,school bus,transport,fuzzy,0.972972972972973,school bus,transport,1,1
+it’sthe school bus,it’sthe school bus,school,place,direct,1.0,school bus,transport,0,0
+it’ the school bus,it’ the school bus,school bus,transport,tfidf,1.0000000000000002,school bus,transport,1,1
+shall we go in ship,shall we go in ship,ship,transport,direct,1.0,ship,transport,1,1
+shall we go in shp,shall we go in shp,ship,transport,fuzzy,0.972972972972973,ship,transport,1,1
+shall we go in ship,shall we go in ship,ship,transport,direct,1.0,ship,transport,1,1
+bake some vegitables,bake some vegitables,baked vegetables,vegetables,fuzzy,1.0,baked vegetables,vegetables,1,1
+bake som vegitables,bake som vegitables,baked vegetables,vegetables,fuzzy,0.9743589743589743,baked vegetables,vegetables,1,1
+bk some vegitables,bk some vegitables,baked vegetables,vegetables,fuzzy,0.9473684210526315,baked vegetables,vegetables,1,1
+i want some steamed veggies,i want some steamed veggies,steamed veggies,vegetables,tfidf,1.0000000000000002,steamed veggies,vegetables,1,1
+i wantsome steamed veggies,i wantsome steamed veggies,steamed veggies,vegetables,direct,1.0,steamed veggies,vegetables,1,1
+i want some steamed vggs,i want some steamed vggs,steamed veggies,vegetables,fuzzy,0.9411764705882353,steamed veggies,vegetables,1,1
+i want sm steamed veggies,i want sm steamed veggies,steamed veggies,vegetables,direct,1.0,steamed veggies,vegetables,1,1
+its cloudy,its cloudy,cloudy,weather,tfidf,1.0000000000000002,cloudy,weather,1,1
+its cluody,its cluody,cloudy,weather,fuzzy,0.9,cloudy,weather,1,1
+its cldy,its cldy,cloudy,weather,fuzzy,0.8888888888888888,cloudy,weather,1,1
+its cloud,its cloud,cloudy,weather,fuzzy,0.9473684210526315,cloudy,weather,1,1
+its so foggy,its so foggy,foggy,weather,tfidf,1.0000000000000002,foggy,weather,1,1
+its s foggy,its s foggy,foggy,weather,direct,1.0,foggy,weather,1,1
+its sofoggy,its sofoggy,foggy,weather,fuzzy,0.9565217391304348,foggy,weather,1,1
+tis so foggy,tis so foggy,foggy,weather,direct,1.0,foggy,weather,1,1
+its snowy,its snowy,snowy,weather,tfidf,1.0000000000000002,snowy,weather,1,1
+its snow,its snow,snowy,weather,fuzzy,0.9411764705882353,snowy,weather,1,1
+its spring time,its spring time,spring,weather,tfidf,1.0000000000000002,spring,weather,1,1
+its sprin time,its sprin time,spring,weather,fuzzy,0.9655172413793104,spring,weather,1,1
+its springtime,its springtime,spring,weather,fuzzy,0.9655172413793104,spring,weather,1,1
+happy birthday,happy birthday,birthdays,wishes,tfidf,1.0000000000000002,birthdays,wishes,1,1
+happy birthda,happy birthda,happy,action,direct,1.0,birthdays,wishes,0,0
+hpapy birthday,hpapy birthday,birthdays,wishes,fuzzy,0.9285714285714286,birthdays,wishes,1,1
+happy birthday,happy birthday,birthdays,wishes,tfidf,1.0000000000000002,brother's birthday,wishes,0,1
+hapyp birthday,hapyp birthday,birthdays,wishes,fuzzy,0.9285714285714286,brother's birthday,wishes,0,1
+happy birthda,happy birthda,happy,action,direct,1.0,brother's birthday,wishes,0,0
+happybirthday,happybirthday,birthdays,wishes,fuzzy,0.9629629629629629,brother's birthday,wishes,0,1
+bye,bye,bye,wishes,direct,1.0,bye,wishes,1,1
+by,by,bye,wishes,fuzzy,0.8,bye,wishes,1,1
+happy christmas,happy christmas,happy,action,direct,1.0,christmas,wishes,0,0
+happ christmas,happ christmas,christmas,wishes,direct,1.0,christmas,wishes,1,1
+happy hcristmas,happy hcristmas,happy,action,direct,1.0,christmas,wishes,0,0
+happy chrstms,happy chrstms,happy,action,direct,1.0,christmas,wishes,0,0
+happy birthday,happy birthday,birthdays,wishes,tfidf,1.0000000000000002,cousin's birthday,wishes,0,1
+happy birthda,happy birthda,happy,action,direct,1.0,cousin's birthday,wishes,0,0
+hppy birthday,hppy birthday,birthdays,wishes,fuzzy,0.9629629629629629,cousin's birthday,wishes,0,1
+have a good day,have a good day,day,wishes,tfidf,1.0000000000000002,day,wishes,1,1
+hvae a good day,hvae a good day,day,wishes,direct,1.0,day,wishes,1,1
+have a ogod day,have a ogod day,day,wishes,direct,1.0,day,wishes,1,1
+havea good day,havea good day,day,wishes,direct,1.0,day,wishes,1,1
+happy diwali,happy diwali,happy,action,direct,1.0,diwali,wishes,0,0
+happy diwlai,happy diwlai,happy,action,direct,1.0,diwali,wishes,0,0
+happ diwali,happ diwali,diwali,wishes,direct,1.0,diwali,wishes,1,1
+hppy diwali,hppy diwali,diwali,wishes,direct,1.0,diwali,wishes,1,1
+happy dussehra,happy dussehra,happy,action,direct,1.0,dussehra,wishes,0,0
+happy dsshr,happy dsshr,happy,action,direct,1.0,dussehra,wishes,0,0
+happydussehra,happydussehra,dussehra,wishes,fuzzy,0.9629629629629629,dussehra,wishes,1,1
+happy easter,happy easter,happy,action,direct,1.0,easter,wishes,0,0
+happyeaster,happyeaster,easter,wishes,fuzzy,0.9565217391304348,easter,wishes,1,1
+happy str,happy str,happy,action,direct,1.0,easter,wishes,0,0
+happy eid,happy eid,happy,action,direct,1.0,eid,wishes,0,0
+hapyp eid,hapyp eid,eid,wishes,direct,1.0,eid,wishes,1,1
+happy ied,happy ied,happy,action,direct,1.0,eid,wishes,0,0
+happyeid,happyeid,eid,wishes,fuzzy,0.9411764705882353,eid,wishes,1,1
+good evening,good evening,evening,wishes,direct,1.0,evening,wishes,1,1
+good vnng,good vnng,evening,wishes,fuzzy,0.8571428571428571,evening,wishes,1,1
+good eevning,good eevning,evening,wishes,fuzzy,0.9166666666666666,evening,wishes,1,1
+happy birthday,happy birthday,birthdays,wishes,tfidf,1.0000000000000002,father's birthday,wishes,0,1
+happybirthday,happybirthday,birthdays,wishes,fuzzy,0.9629629629629629,father's birthday,wishes,0,1
+happy brthdy,happy brthdy,happy,action,direct,1.0,father's birthday,wishes,0,0
+hppy birthday,hppy birthday,birthdays,wishes,fuzzy,0.9629629629629629,father's birthday,wishes,0,1
+happy birthday,happy birthday,birthdays,wishes,tfidf,1.0000000000000002,friend's birthday,wishes,0,1
+happy birthda,happy birthda,happy,action,direct,1.0,friend's birthday,wishes,0,0
+happy brthdy,happy brthdy,happy,action,direct,1.0,friend's birthday,wishes,0,0
+happy birthdya,happy birthdya,happy,action,direct,1.0,friend's birthday,wishes,0,0
+happy ganesh chaturthi,happy ganesh chaturthi,happy,action,direct,1.0,ganesh chaturthi,wishes,0,0
+happ ganesh chaturthi,happ ganesh chaturthi,ganesh chaturthi,wishes,direct,1.0,ganesh chaturthi,wishes,1,1
+happy ganes chaturthi,happy ganes chaturthi,happy,action,direct,1.0,ganesh chaturthi,wishes,0,0
+happy ganeshchaturthi,happy ganeshchaturthi,happy,action,direct,1.0,ganesh chaturthi,wishes,0,0
+good afternoon,good afternoon,good afternoon,wishes,tfidf,1.0000000000000002,good afternoon,wishes,1,1
+gd afternoon,gd afternoon,good afternoon,wishes,fuzzy,0.9230769230769231,good afternoon,wishes,1,1
+goodafternoon,goodafternoon,good afternoon,wishes,fuzzy,0.9629629629629629,good afternoon,wishes,1,1
+good evening,good evening,evening,wishes,direct,1.0,good evening,wishes,0,1
+good vnng,good vnng,evening,wishes,fuzzy,0.8571428571428571,good evening,wishes,0,1
+gd evening,gd evening,evening,wishes,direct,1.0,good evening,wishes,0,1
+good evneing,good evneing,evening,wishes,fuzzy,0.9166666666666666,good evening,wishes,0,1
+good friday,good friday,good friday,wishes,tfidf,1.0000000000000002,good friday,wishes,1,1
+goo friday,goo friday,good friday,wishes,fuzzy,0.9523809523809523,good friday,wishes,1,1
+gd friday,gd friday,good friday,wishes,fuzzy,0.9,good friday,wishes,1,1
+good morning,good morning,good morning,wishes,direct,1.0,good morning,wishes,1,1
+good mornnig,good mornnig,good morning,wishes,fuzzy,0.9166666666666666,good morning,wishes,1,1
+goo morning,goo morning,morning,wishes,direct,1.0,good morning,wishes,0,1
+good mornin,good mornin,good morning,wishes,fuzzy,0.9565217391304348,good morning,wishes,1,1
+good night,good night,good night,wishes,direct,1.0,good night,wishes,1,1
+good night,good night,good night,wishes,direct,1.0,good night,wishes,1,1
+good ngiht,good ngiht,good night,wishes,fuzzy,0.9,good night,wishes,1,1
+good nigh,good nigh,good night,wishes,fuzzy,0.9473684210526315,good night,wishes,1,1
+hi grandpa,hi grandpa,hi,wishes,direct,1.0,grandfather,wishes,0,1
+hi granpda,hi granpda,hi,wishes,direct,1.0,grandfather,wishes,0,1
+h grandpa,h grandpa,grandfather,wishes,fuzzy,0.9473684210526315,grandfather,wishes,1,1
+hi gradnpa,hi gradnpa,hi,wishes,direct,1.0,grandfather,wishes,0,1
+happy birthday,happy birthday,birthdays,wishes,tfidf,1.0000000000000002,grandma's birthday,wishes,0,1
+happybirthday,happybirthday,birthdays,wishes,fuzzy,0.9629629629629629,grandma's birthday,wishes,0,1
+happ birthday,happ birthday,birthdays,wishes,fuzzy,0.9629629629629629,grandma's birthday,wishes,0,1
+hello grandma,hello grandma,grandmother,wishes,tfidf,1.0000000000000002,grandmother,wishes,1,1
+hellograndma,hellograndma,grandmother,wishes,fuzzy,0.96,grandmother,wishes,1,1
+hello grandma,hello grandma,grandmother,wishes,tfidf,1.0000000000000002,grandmother,wishes,1,1
+hello grndm,hello grndm,hello,wishes,direct,1.0,grandmother,wishes,0,1
+happy birthday,happy birthday,birthdays,wishes,tfidf,1.0000000000000002,grandpa's birthday,wishes,0,1
+happy birthda,happy birthda,happy,action,direct,1.0,grandpa's birthday,wishes,0,0
+hpapy birthday,hpapy birthday,birthdays,wishes,fuzzy,0.9285714285714286,grandpa's birthday,wishes,0,1
+great job,great job,great job!!!,wishes,tfidf,1.0000000000000002,great job!!!,wishes,1,1
+great jbo,great jbo,great job!!!,wishes,fuzzy,0.8888888888888888,great job!!!,wishes,1,1
+gerat job,gerat job,great job!!!,wishes,fuzzy,0.8888888888888888,great job!!!,wishes,1,1
+greatjob,greatjob,great job!!!,wishes,fuzzy,0.9411764705882353,great job!!!,wishes,1,1
+welcome,welcome,greetings,wishes,fuzzy,1.0,greetings,wishes,1,1
+wlcm,wlcm,greetings,wishes,fuzzy,0.7272727272727273,greetings,wishes,1,1
+welcom,welcom,greetings,wishes,fuzzy,0.9230769230769231,greetings,wishes,1,1
+welcoem,welcoem,greetings,wishes,fuzzy,0.8571428571428571,greetings,wishes,1,1
+happy halloween,happy halloween,happy,action,direct,1.0,halloween,wishes,0,0
+happy hllwn,happy hllwn,happy,action,direct,1.0,halloween,wishes,0,0
+happyhalloween,happyhalloween,halloween,wishes,fuzzy,0.9655172413793104,halloween,wishes,1,1
+happy hallowee,happy hallowee,happy,action,direct,1.0,halloween,wishes,0,0
+hello,hello,hello,wishes,direct,1.0,hello,wishes,1,1
+hll,hll,hello,wishes,fuzzy,0.75,hello,wishes,1,1
+hell,hell,hello,wishes,fuzzy,0.8888888888888888,hello,wishes,1,1
+hi-five,hi-five,hi-five,wishes,direct,1.0,hi-five,wishes,1,1
+hi-fiv,hi-fiv,hi,wishes,direct,1.0,hi-five,wishes,0,1
+h-fv,h-fv,hi-five,wishes,fuzzy,0.7272727272727273,hi-five,wishes,1,1
+hi,hi,hi,wishes,direct,1.0,hi,wishes,1,1
+hi,hi,hi,wishes,direct,1.0,hi,wishes,1,1
+h,h,hi,wishes,fuzzy,0.6666666666666666,hi,wishes,1,1
+happy holi,happy holi,happy,action,direct,1.0,holi,wishes,0,0
+happy hol,happy hol,happy,action,direct,1.0,holi,wishes,0,0
+happyholi,happyholi,holi,wishes,fuzzy,0.9473684210526315,holi,wishes,1,1
+how are you,how are you,how are you,wishes,tfidf,1.0000000000000002,how are you,wishes,1,1
+hw are you,hw are you,how are you,wishes,fuzzy,0.9523809523809523,how are you,wishes,1,1
+hwo are you,hwo are you,how are you,wishes,fuzzy,0.9090909090909091,how are you,wishes,1,1
+how ar you,how ar you,how,action,direct,1.0,how are you,wishes,0,0
+how do you do,how do you do,how,action,direct,1.0,how do you do,wishes,0,0
+how doyou do,how doyou do,how,action,direct,1.0,how do you do,wishes,0,0
+how do youdo,how do youdo,how,action,direct,1.0,how do you do,wishes,0,0
+how d you do,how d you do,how,action,direct,1.0,how do you do,wishes,0,0
+how was your day,how was your day,how,action,direct,1.0,how was your day,wishes,0,0
+how wa your day,how want your day,how,action,direct,1.0,how was your day,wishes,0,0
+how was yr day,how was yr day,how,action,direct,1.0,how was your day,wishes,0,0
+how was yourday,how was yourday,how,action,direct,1.0,how was your day,wishes,0,0
+happy independence day,happy independence day,independence day,wishes,tfidf,1.0000000000000002,independence day,wishes,1,1
+happy independenc day,happy independenc day,happy,action,direct,1.0,independence day,wishes,0,0
+happ independence day,happ independence day,day,wishes,direct,1.0,independence day,wishes,0,1
+happy independence ady,happy independence ady,happy,action,direct,1.0,independence day,wishes,0,0
+i'm irritated,i'm irritated,irritated,wishes,direct,1.0,irritated,wishes,1,1
+i'm irrittaed,i'm irrittaed,irritated,wishes,fuzzy,0.9230769230769231,irritated,wishes,1,1
+i'm rrttd,i'm rrttd,irritated,wishes,fuzzy,0.8181818181818182,irritated,wishes,1,1
+happy labour day,happy labour day,labour day,wishes,tfidf,1.0000000000000002,labour day,wishes,1,1
+happy labour dya,happy labour dya,happy,action,direct,1.0,labour day,wishes,0,0
+happy labourday,happy labourday,happy,action,direct,1.0,labour day,wishes,0,0
+happy labour ady,happy labour ady,happy,action,direct,1.0,labour day,wishes,0,0
+happy birthday mom,happy birthday mom,happy,action,direct,1.0,mom's birthday,wishes,0,0
+happy birthday mom,happy birthday mom,happy,action,direct,1.0,mom's birthday,wishes,0,0
+happy birthday mo,happy birthday mo,birthdays,wishes,tfidf,1.0000000000000002,mom's birthday,wishes,0,1
+happy birthday mmo,happy birthday mmo,birthdays,wishes,tfidf,1.0000000000000002,mom's birthday,wishes,0,1
+good morning,good morning,good morning,wishes,direct,1.0,morning,wishes,0,1
+goo morning,goo morning,morning,wishes,direct,1.0,morning,wishes,1,1
+good mornin,good mornin,good morning,wishes,fuzzy,0.9565217391304348,morning,wishes,0,1
+hi mom,hi mom,mother,wishes,tfidf,1.0000000000000002,mother,wishes,1,1
+himom,himom,mother,wishes,fuzzy,0.9090909090909091,mother,wishes,1,1
+hi mm,hi mm,hi,wishes,direct,1.0,mother,wishes,0,1
+hi mo,hi mo,hi,wishes,direct,1.0,mother,wishes,0,1
+happy new year,happy new year,happy,action,direct,1.0,new year,wishes,0,0
+happy newyear,happy newyear,happy,action,direct,1.0,new year,wishes,0,0
+hpapy new year,hpapy new year,new year,wishes,direct,1.0,new year,wishes,1,1
+nice to meet you,nice to meet you,nice to meet you,wishes,tfidf,1.0000000000000002,nice to meet you,wishes,1,1
+nice tomeet you,nice tomeet you,nice to meet you,wishes,fuzzy,0.967741935483871,nice to meet you,wishes,1,1
+nice to mt you,nice to mt you,nice to meet you,wishes,fuzzy,0.9333333333333333,nice to meet you,wishes,1,1
+good night,good night,good night,wishes,direct,1.0,night,wishes,0,1
+goodnight,goodnight,good night,wishes,fuzzy,0.9473684210526315,night,wishes,0,1
+goo night,goo night,night,wishes,direct,1.0,night,wishes,1,1
+i want to wear watch,i want to wear watch,watch,object,tfidf,1.0000000000000002,watch,object,1,1
+i want to wear watch,i want to wear watch,watch,object,tfidf,1.0000000000000002,watch,object,1,1
+i want to wea watch,i want to wea watch,watch,object,direct,1.0,watch,object,1,1
+ want to wear watch,want to wear watch,watch,object,tfidf,1.0000000000000002,watch,object,1,1
+i need cable,i need cable,cable,object,direct,1.0,cable,object,1,1
+i nd cable,i nd cable,cable,object,direct,1.0,cable,object,1,1
+ need cable,need cable,cable,object,direct,1.0,cable,object,1,1
+the color is white,the color is white,white,color,tfidf,1.0000000000000002,white,color,1,1
+the color s white,the color s white,white,color,direct,1.0,white,color,1,1
+the color is wht,the color is wht,white,color,fuzzy,0.9411764705882353,white,color,1,1
+get the key,get the key,key,object,tfidf,1.0000000000000002,key,object,1,1
+gt the key,gt the key,key,object,direct,1.0,key,object,1,1
+ge the key,ge the key,key,object,direct,1.0,key,object,1,1
+get th key,get th key,key,object,direct,1.0,key,object,1,1
+"""please give me a dosa.""","""please give me a dosa.""",dosa,food,direct,1.0,dosa,food,1,1
+"""please giv me a dosa.""","""please give me a dosa.""",dosa,food,direct,1.0,dosa,food,1,1
+"""please gv me a dosa.""","""please gv me a dosa.""",dosa,food,direct,1.0,dosa,food,1,1
+"""please give mea dosa.""","""please give mea dosa.""",dosa,food,direct,1.0,dosa,food,1,1
+"""please give me a dosa.""","""please give me a dosa.""",dosa,food,direct,1.0,kabab,food,0,1
+"""please give me  dosa.""","""please give me dosa.""",dosa,food,direct,1.0,kabab,food,0,1
+"""please giveme a dosa.""","""please giveme a dosa.""",dosa,food,direct,1.0,kabab,food,0,1
+"""please give me a dosa.""","""please give me a dosa.""",dosa,food,direct,1.0,kabab,food,0,1
+"""give me water.""","""give me water.""",water,drinks,tfidf,1.0000000000000002,water,drinks,1,1
+"""giveme water.""","""giveme water.""",water,drinks,direct,1.0,water,drinks,1,1
+"""gv me water.""","""gv me water.""",water,drinks,direct,1.0,water,drinks,1,1
+"""give mewater.""","""give mewater.""",water,drinks,fuzzy,0.967741935483871,water,drinks,1,1
