@@ -466,33 +466,11 @@ logging.basicConfig(level=logging.DEBUG)
 - **Testing**: Test new features thoroughly before submission
 - **Backwards Compatibility**: Maintain compatibility with existing data
 
-### Areas Needing Help
-- **Accessibility**: Improve support for users with disabilities
-- **Performance**: Optimize processing speed and memory usage
-- **Mobile Support**: Adapt interface for mobile devices
-- **Localization**: Add support for multiple languages
-- **Voice Profiles**: Custom voice generation and selection
-
-
 ### Third-Party Licenses
 - **ARASAAC Pictograms**: Creative Commons license
 - **OpenAI DALL-E**: Commercial API usage terms
 - **Google Drive API**: Google API terms of service
 - **Python Libraries**: Various open source licenses (see individual packages)
-
-## 🆘 Support & Community
-
-### Getting Help
-- **GitHub Issues**: Report bugs and request features
-- **Discussions**: Join community discussions in repository
-- **Documentation**: Comprehensive inline documentation in code
-- **Examples**: Sample configurations and usage examples
-
-### Community Resources
-- **Wiki**: Detailed guides and tutorials
-- **FAQ**: Frequently asked questions and solutions
-- **Video Tutorials**: Step-by-step setup and usage guides
-- **User Forums**: Community support and best practices sharing
 
 ### Version History
 - **v1.0.0** (Initial Release) - Core AAC functionality with basic TTS and pictograms
