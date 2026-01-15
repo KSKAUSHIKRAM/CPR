@@ -30,6 +30,12 @@ from PIL import Image, ImageDraw
 from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
 from pydrive2.auth import RefreshError
+# Add these imports at the top with your other imports
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 ICON_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "icons"))
 if not os.path.exists(ICON_DIR):
@@ -1254,7 +1260,7 @@ class AACScreen(Screen):
                 
                 # Generate DALL-E image
                 from openai import OpenAI
-                client = OpenAI(api_key="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")
+                client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                 
                 dalle_prompt = (
                     f"3D cartoon folder icon for '{category_name}' category, "
@@ -1500,7 +1506,7 @@ class AACScreen(Screen):
             def dalle_worker():
                 try:
                     from openai import OpenAI
-                    client = OpenAI(api_key="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")
+                    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                     
                     dalle_prompt = (
                         f"3D cartoon folder icon for '{category_name}' category, "
@@ -1847,7 +1853,7 @@ class AACScreen(Screen):
             def dalle_worker():
                 try:
                     from openai import OpenAI
-                    client = OpenAI(api_key="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")
+                    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                     
                     dalle_prompt = (
                         f"3D cartoon icon for '{label_text}', "
@@ -2326,7 +2332,7 @@ class AACScreen(Screen):
             def dalle_worker():
                 try:
                     from openai import OpenAI
-                    client = OpenAI(api_key="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")
+                    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                     
                     dalle_prompt = (
                         f"3D cartoon icon for '{current_label}', "
@@ -2573,7 +2579,7 @@ class AACScreen(Screen):
                         import tempfile
                         import os
                         
-                        client = OpenAI(api_key="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")
+                        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                         
                         dalle_prompt = (
                             f"3D cartoon folder icon for '{category_name}' category, "
@@ -3032,6 +3038,7 @@ class AACScreen(Screen):
                         location=self.location_label,
                         time_phase=getattr(self, "time_phase", "unspecified"),
                     ).lower().strip()
+                    
                     import re
                     norm_word = re.sub(r'["\'\.\,\;\:\!\?]', '', norm_word)  # Remove quotes, periods, punctuation
                     norm_word = re.sub(r'\s+', ' ', norm_word).strip()        # Remove extra spaces
@@ -3072,7 +3079,7 @@ class AACScreen(Screen):
             print(f"[DALL·E] No dataset match even after AI normalization → generating image for '{norm_word}'")
             try:
                 from openai import OpenAI
-                client = OpenAI(api_key="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")
+                client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                 dalle_prompt = (
                     f"3D cartoon icon, pictogram style, "
                     f"no text, minimal, high contrast; concept: '{norm_word}'."
@@ -3127,22 +3134,43 @@ class AACScreen(Screen):
 
                 # ✅ HARD PRESENCE MATCH (TOP PRIORITY)
                 if text_lower in sent:
+                    print("Hard Presence")
                     print(f"[FORCED MATCH] Input present in dataset sentence: '{sent}'")
                     forced_match = {
                         "sentence": sent,
                         "label": (row.get("label") or "").lower(),
                         "category": (row.get("category") or "").lower(),
                     }
-                    best_score = 1.0
+                    best_score = 1.5
                     break
 
                 # Normal similarity fallback
-                score = SequenceMatcher(None, text_lower, sent).ratio()
-                if score > best_score:
-                    best_score = score
-                    matched_sentence = sent
-                    matched_label = (row.get("label") or "").lower()
-                    matched_category = (row.get("category") or "").lower()
+                else:
+                    self.update_go_status("AI sentence correction...")
+                    try:
+                        self.mul_norm_text = ai_normalize_input(
+                            text_lower,
+                            location=self.location_label,
+                            time_phase=getattr(self, "time_phase", "unspecified"),
+                        ).lower().strip()
+                        #Clock.schedule_once(lambda dt: setattr(self.text_input, "text", norm_text), 0)
+                        #process_text_input()
+                    except Exception as e:
+                        print("[AI NORMALIZER ERROR]", e)
+                        self.mul_norm_text = text_lower
+                    
+                    score = SequenceMatcher(None, self.mul_norm_text, sent).ratio()
+                    print("score:",score)
+                    if score < best_score:
+                        print("score inside if:",score)
+                        print("inside")
+                        best_score = score
+                        matched_sentence = sent
+                        matched_label = (row.get("label") or "").lower()
+                        matched_category = (row.get("category") or "").lower()
+                        
+                #self.text_input.text=norm_text
+                break
 
             # ==========================================================
             # STEP 2 — TF-IDF (ONLY IF NO FORCED MATCH)
@@ -3264,18 +3292,21 @@ class AACScreen(Screen):
             # STEP 5 — AI NORMALIZATION (ONLY IF NOTHING MATCHED)
             # ==========================================================
             self.update_go_status("AI sentence correction...")
-            try:
-                norm_text = ai_normalize_input(
+            
+            """try:
+                self.mul_norm_text = ai_normalize_input(
                     text_lower,
                     location=self.location_label,
                     time_phase=getattr(self, "time_phase", "unspecified"),
                 ).lower().strip()
-                Clock.schedule_once(lambda dt: setattr(self.text_input, "text", norm_text), 0)
-                process_text_input()
+                print("normalized text:", self.mul_norm_text)
+                #Clock.schedule_once(lambda dt: setattr(self.text_input, "text", self.mul_norm_text), 0)
+                
             except Exception as e:
                 print("[AI NORMALIZER ERROR]", e)
-                norm_text = text_lower
-
+                self.mul_norm_text = text_lower"""
+                
+            Clock.schedule_once(lambda dt: setattr(self.text_input, "text", self.mul_norm_text), 0)
             best_score = 0.0
             forced_match = None
 
@@ -3284,7 +3315,7 @@ class AACScreen(Screen):
                 if not sent:
                     continue
 
-                if norm_text in sent:
+                if self.mul_norm_text in sent:
                     forced_match = {
                         "sentence": sent,
                         "label": (row.get("label") or "").lower(),
@@ -3293,7 +3324,7 @@ class AACScreen(Screen):
                     best_score = 1.0
                     break
 
-                score = SequenceMatcher(None, norm_text, sent).ratio()
+                score = SequenceMatcher(None, self.mul_norm_text, sent).ratio()
                 if score > best_score:
                     best_score = score
                     matched_sentence = sent
@@ -3348,7 +3379,7 @@ class AACScreen(Screen):
                     self.content_area.add_widget(self.sug_scroll)
                     self.back_btn.opacity, self.back_btn.disabled = 1, False
                     self.dismiss_go_loading_popup()
-
+                Clock.schedule_once(lambda dt: setattr(self.text_input, "text", self.mul_norm_text), 0)
                 Clock.schedule_once(update_ai_match_ui, 0)
                 return
 
@@ -3358,13 +3389,13 @@ class AACScreen(Screen):
 
             # --- DALL·E fallback ---
             self.update_go_status("Generating image for sentence...")
-            print(f"[DALL·E] No dataset match after AI normalization → generating image for '{norm_text}'")
+            print(f"[DALL·E] No dataset match after AI normalization → generating image for '{self.mul_norm_text}'")
             try:
                 from openai import OpenAI
-                client = OpenAI(api_key="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")
+                client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                 dalle_prompt = (
                     f"3D colorful icon, pictogram style, "
-                    f"no text, minimal, high contrast; concept: generate an cartoon 3d icon for '{norm_text}'."
+                    f"no text, minimal, high contrast; concept: generate an cartoon 3d icon for '{self.mul_norm_text}'."
                 )
                 resp = client.images.generate(
                     model="dall-e-3",
@@ -3374,7 +3405,7 @@ class AACScreen(Screen):
                     n=1,
                 )
                 b64 = resp.data[0].b64_json
-                safe = re.sub(r"[^a-z0-9_]+", "_", norm_text)
+                safe = re.sub(r"[^a-z0-9_]+", "_", self.mul_norm_text)
                 out_path = os.path.join(tempfile.gettempdir(), f"dalle_{safe}.png")
                 
                 with open(out_path, "wb") as f:
@@ -3382,7 +3413,7 @@ class AACScreen(Screen):
                 
                 # ✅ Update UI on main thread
                 def update_multi_dalle_ui(dt):
-                    self.show_add_button_for_dalle_result(label=norm_text, img_path=out_path, sentence=norm_text)
+                    self.show_add_button_for_dalle_result(label=self.mul_norm_text, img_path=out_path, sentence=self.mul_norm_text)
                     self.dismiss_go_loading_popup()
                 
                 Clock.schedule_once(update_multi_dalle_ui, 0)
@@ -3439,6 +3470,7 @@ class AACScreen(Screen):
 
     def dismiss_go_loading_popup(self):
         from kivy.clock import Clock
+        #Clock.schedule_once(lambda dt: setattr(self.text_input, "text", self.mul_norm_text), 0)
         if hasattr(self, "_go_anim"):
             Clock.unschedule(self._go_anim)
 
@@ -3531,7 +3563,7 @@ class AACScreen(Screen):
                 """
 
                 print(f"[AI PROMPT] Location={location}, TimePhase={time_phase}")
-                client = OpenAI(api_key="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")
+                client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
                 response = client.chat.completions.create(
                     model="gpt-4o-mini",

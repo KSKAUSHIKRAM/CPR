@@ -4,6 +4,11 @@ import os, re, csv, math
 from difflib import get_close_matches, SequenceMatcher
 from typing import List, Tuple, Iterable, Set, Dict, Optional
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ===================== Utilities =====================
 WORD_RE = re.compile(r"[A-Za-z']+")
@@ -493,7 +498,7 @@ def ai_normalize_input(text: str, location: str = "home", time_phase: str = "uns
 
     try:
         client = OpenAI(
-            api_key="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"
+            api_key=os.getenv("OPENAI_API_KEY")
         )
         response = client.chat.completions.create(
             model="gpt-4o-mini",
