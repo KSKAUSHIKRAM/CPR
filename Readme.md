@@ -1,6 +1,6 @@
-# AAC Communication System 🗣️
+# CPR - An Assistive AAC Communication System 🗣️
 
-An advanced Augmentative and Alternative Communication (AAC) application built with Python and Kivy, featuring AI-powered image generation, intelligent text processing, speech synthesis, and context-aware recommendations for users with communication difficulties.
+A high-tech aided Augmentative and Alternative Communication (AAC) application built with Python and Kivy, featuring AI-powered image generation, intelligent text processing, speech synthesis, and context-aware recommendations for users with communication difficulties.
 
 ## 🌟 Features
 
