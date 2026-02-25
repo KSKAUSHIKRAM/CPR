@@ -1,0 +1,13 @@
+name: cprsat-eval
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pandas=1.5.3
+  - numpy=1.23.5
+  - scikit-learn=1.3.2
+  - pip
+  - pip:
+      - rapidfuzz==3.6.1
