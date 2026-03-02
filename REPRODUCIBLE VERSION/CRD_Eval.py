@@ -7,6 +7,9 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from rapidfuzz import fuzz
 
 
+# -----------------------------------------
+# Dataset Loader
+# -----------------------------------------
 def load_dataset(path="CPR_CRD.csv"):
     df = pd.read_csv(path)
     df["normalized"] = df["normalized"].astype(str).str.lower().str.strip()
@@ -14,30 +17,100 @@ def load_dataset(path="CPR_CRD.csv"):
     return df
 
 
-class Retriever:
+# -----------------------------------------
+# Hybrid Linguistic Normalization
+# -----------------------------------------
+def rule_based_correction(query):
+    # Example deterministic corrections (extend as needed)
+    rules = {
+        "watr": "water",
+        "mil": "milk",
+        "pls": "please",
+        "luv": "love"
+    }
+    tokens = query.split()
+    corrected = [rules.get(tok, tok) for tok in tokens]
+    return " ".join(corrected)
+
+
+def grammar_valid(query):
+    # Placeholder: assume valid if not empty
+    return len(query.strip()) > 0
+
+
+def lexical_confidence(query):
+    # Basic confidence proxy using token length
+    return min(1.0, len(query.split()) / 3.0)
+
+
+def ai_normalize(query):
+    # AI fallback stub (kept deterministic for reproducibility)
+    # Replace with actual LLM call if needed
+    return None
+
+
+def hybrid_normalize(query, corpus_sentences, tau=0.75):
+
+    q = query.lower().strip()
+
+    # Stage I: Rule-based
+    q_rule = rule_based_correction(q)
+
+    if grammar_valid(q_rule) and lexical_confidence(q_rule) >= 0.8:
+        return q_rule
+
+    # Stage II: Similarity-based autocorrection
+    similarity_scores = [
+        fuzz.token_sort_ratio(q_rule, sent)/100.0
+        for sent in corpus_sentences
+    ]
+
+    best_idx = np.argmax(similarity_scores)
+    best_score = similarity_scores[best_idx]
+
+    if best_score >= tau:
+        return corpus_sentences[best_idx]
+
+    # Stage III: AI fallback
+    q_ai = ai_normalize(query)
+
+    if q_ai is not None:
+        return q_ai
+
+    return q_rule
+
+
+# -----------------------------------------
+# Retriever Class
+# -----------------------------------------
+class CPRSatRetriever:
     def __init__(self, train_df, use_context=False):
-        self.train_df = train_df
         self.sentences = train_df["normalized"].tolist()
         self.labels = train_df["correct_label"].tolist()
         self.time = train_df["time_context"].tolist()
         self.location = train_df["location_context"].tolist()
         self.use_context = use_context
 
-        self.vectorizer = TfidfVectorizer(ngram_range=(1,2))
+        self.vectorizer = TfidfVectorizer(ngram_range=(1, 2))
         self.sentence_vectors = self.vectorizer.fit_transform(self.sentences)
 
-    def rank(self, query, time_context, location_context):
+    def rank(self, query, time_context=None, location_context=None):
+
+        # 🔹 Hybrid Normalization (Manuscript aligned)
+        query = hybrid_normalize(query, self.sentences)
 
         query_vec = self.vectorizer.transform([query])
         tfidf_scores = cosine_similarity(query_vec, self.sentence_vectors).flatten()
 
         fuzzy_scores = np.array([
-                    fuzz.token_sort_ratio(query, sent)/100.0
-                    for sent in self.sentences
-                ])
+            fuzz.token_sort_ratio(query, sent)/100.0
+            for sent in self.sentences
+        ])
 
         scores = 0.7 * tfidf_scores + 0.3 * fuzzy_scores
-        if self.use_context:
+
+        # Context-aware re-ranking
+        if self.use_context and time_context is not None:
             context_boost = np.zeros(len(scores))
             for i in range(len(scores)):
                 if self.time[i] == time_context:
@@ -50,10 +123,12 @@ class Retriever:
         return ranked_indices
 
 
+# -----------------------------------------
+# Fold Evaluation
+# -----------------------------------------
 def evaluate_fold(train_df, test_df, use_context):
 
-    retriever = Retriever(train_df, use_context)
-
+    retriever = CPRSatRetriever(train_df, use_context)
     predicted_ranks = []
 
     for _, row in test_df.iterrows():
@@ -82,9 +157,12 @@ def evaluate_fold(train_df, test_df, use_context):
     return mae, rmse, p1, p3, p5
 
 
+# -----------------------------------------
+# Cross Validation
+# -----------------------------------------
 def main():
 
-    df = load_dataset()
+    df = load_dataset("CPR_CRD.csv")
     skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
 
     print("\n===== BASELINE (No Context) =====")
